@@ -1,0 +1,31 @@
+project:
+  type: website
+
+website:
+  title: "Ethel Ogallo"
+  navbar:
+    search: true
+    right:
+      - href: index.qmd
+        text: About
+      - href: projects.qmd
+        text: Projects
+      - href: resume.qmd
+        text: CV
+      - href: more.qmd
+        text: Others
+    pinned: true
+        
+  page-footer: 
+    center: "Made with [Quarto](https://quarto.org/).Copyright 2024, Ethel Ogallo" 
+    background: "#F3F3F3ff"
+
+format:
+  html:
+    theme: spacelab
+    css: styles.css
+    fontsize: 1em
+    toc: true
+
+editor: visual
+
