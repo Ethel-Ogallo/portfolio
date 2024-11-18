@@ -1,0 +1,51 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Ethel Ogallo",
+    "section": "",
+    "text": "Hi! I am Ethel, a data science professional with a background in Geinformatics. I am currently undertaking the Copernicus Master in Digital Earth (CDE), specializing in GeoDataScience, at both the University of Salzburg and University of South Brittany in Vannes . This master’s degree is fully funded by the Erasmus Mundus Joint Masters Programme.\nIn this portfolio, you will find a collection of my academic projects and other relevant work and research that showcases my journey and growth in Earth Observation and GeoDataScience."
+  },
+  {
+    "objectID": "resume.html",
+    "href": "resume.html",
+    "title": "CV",
+    "section": "",
+    "text": "Education\n\n\n\n\nParis-Lodron Universität Salzburg(Oct 2024 - Present)\nCopernicus Master in Digital Earth\n\n\nThe Technical University of Kenya(2019)\nBachelor of Applied Science in Geoinformatics\n\n\n\n\n\nProfessional Experience\n\n\nCEMA-Africa\nData Science Research Assistant (Feb 2024 - Sept 2024)\n\nEstimated catchment areas and travel time to health facilities and the services offered, providing insights to support better health service delivery, utilizing statistical and spatial modeling techniques in R.\nDeveloped a comprehensive dashboard visualizing health facility accessibility in Kenya and the various services they provide Link\n\nData Science Intern (Aug 2023- Jan 2024)\n\nLeveraged statistical and spatial models to examine cholera outbreak patterns over time and space, focusing on socio-demographic and environmental factors.\nMapped cholera hotspots at the ward level, offering actionable insights for targeted interventions and improved disease control strategies.\n\n\n\nCentunion East Africa\nEnvironmental Engineer (Jun 2021 - Dec 2022)\n\nDeveloped, implemented and maintained a robust environmental management system (EMS), conducting 4 internal audits to ensure compliance with ISO standards and local regulations.\nProactively monitored operations and implemented corrective actions, minimizing risks and demonstrating a strong commitment to environmental sustainability.\n\nJunior Draughtsman (Nov 2020 - May 2021)\n\nAssisted in creating technical and shop drawings for road construction projects, ensuring precision in specifications and measurements.\n\n\n\nOakar\nGIS Research Assistant (Mar 2020 - Aug 2020)\n\nCollected and managed spatial and non-spatial data for a farmer registration project in Kiambu County, using mobile client configuration tools."
+  },
+  {
+    "objectID": "projects/project2/example.html",
+    "href": "projects/project2/example.html",
+    "title": "project2",
+    "section": "",
+    "text": "Coming Soon!"
+  },
+  {
+    "objectID": "more.html",
+    "href": "more.html",
+    "title": "Other works",
+    "section": "",
+    "text": "Coming Soon!"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About me",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2\n\n\nabout: links: - icon: linkedin text: LinkedIn href: https://www.linkedin.com/in/ethel-ogallo-8bb08893/ - icon: github text: Github href: https://github.com/Ethel-Ogallo"
+  },
+  {
+    "objectID": "projects/project1/example.html",
+    "href": "projects/project1/example.html",
+    "title": "project1",
+    "section": "",
+    "text": "Coming Soon!"
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "project1\n\n\n\n\n\n\n\n\n\nOct 8, 2024\n\n\n\n\n\n\n\n\n\n\n\n\nproject2\n\n\n\n\n\n\n\n\n\nOct 8, 2024\n\n\n\n\n\n\n\n\nNo matching items"
+  }
+]

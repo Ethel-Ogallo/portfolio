@@ -1,0 +1,43 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Ethel Ogallo"
+  navbar:
+    search: true
+    right:
+      - href: index.qmd
+        text: Home
+      - href: projects.qmd
+        text: Projects
+      - href: resume.qmd
+        text: CV
+      - href: more.qmd
+        text: Others
+    pinned: true
+
+  page-footer: 
+    center: |
+      <p style="display: flex; justify-content: center; align-items: center; gap: 10px;">
+        <img src="/images/EMJM.jpg" alt="EMJM+" style="height:70px;">
+        <img src="/images/CDE.png" alt="CDE" style="height:80px;">
+        <img src="/images/PLUS.jpg" alt="PLUS" style="height:80px;">
+        <img src="/images/UBS.png" alt="UBS" style="height:90px;">
+      </p>
+      <p>Made with <a href="https://quarto.org/">Quarto</a>. Copyright 2024, Ethel Ogallo.</p>
+    background: "#EEEEEE"
+    
+  page-navigation: true
+
+format:
+  html:
+    theme: spacelab
+    css: styles.css
+    fontsize: 1em
+    fontcolor: black
+    toc: true
+
+editor: visual
+
+

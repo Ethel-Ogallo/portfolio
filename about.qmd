@@ -1,0 +1,11 @@
+---
+title: "About me"
+---
+
+About this site
+
+```{r}
+1 + 1
+```
+
+about: links: - icon: linkedin text: LinkedIn href: <https://www.linkedin.com/in/ethel-ogallo-8bb08893/> - icon: github text: Github href: <https://github.com/Ethel-Ogallo>
