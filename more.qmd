@@ -1,5 +1,5 @@
 ---
-title: "Other works"
+title: "Experience beyond the classroom"
 layout: default
 ---
 
