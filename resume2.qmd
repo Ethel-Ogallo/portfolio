@@ -2,8 +2,8 @@
 title: "Curriculum Vitae"
 format:
   html:
-    toc: false  # You can enable the table of contents by setting this to true
-    css: styles.css  # Custom styling file
+    toc: false  
+    css: styles.css 
 ---
 
 <div>
