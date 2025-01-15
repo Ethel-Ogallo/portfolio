@@ -1,0 +1,13 @@
+---
+title: "Change detection using OBIA"
+#date: "01.10.2025"
+layout: default
+image: "kakuma_camp.png"
+draft: false
+description: " "
+categories: [Earth Observation, OBIA, Deep Learning]
+---
+
++------------------------+
+| # Under Construction!  |
++------------------------+

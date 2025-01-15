@@ -1,12 +1,21 @@
 ---
 title: "Projects"
 listing:
-  contents: projects
+  contents:
+    - projects
+    - path : https://storymaps.arcgis.com/stories/8edbb90f9fa34a69babdfc5c53da9e77
+      title: "RADAR - Remote sensing"
+      #date: "01.15.2025"
+      image: "images/img4.png"
+      layout: default 
+      description: " "
+      categories: [Earth Observation, Radar Analysis]
+      
   sort: "date desc"
   type: grid
   categories: true
   sort-ui: false
   filter-ui: false
 page-layout: full
-title-block-banner: true
+title-block-banner: false
 ---
