@@ -2,13 +2,14 @@
 title: "Development of Employment Figures by Gender in Austria"
 #date: "01.10.2025"
 layout: default
+image: "images/sdi_logo.jpg"
 description: " "
 categories: [SDI, Geospatial standards]
 ---
 
 *Explore Austria’s gender employment trends through this interactive dashboard, powered by a robust Spatial Data Infrastructure (SDI). This platform integrates spatial and temporal data, uncovering employment disparities across regions and over time. Read on to learn how this SDI was designed.*
 
-*(Embed video here)*
+{{< video images\DEFGA.mp4 >}}
 
 ### **Introduction**
 
@@ -71,4 +72,4 @@ The interactive dashboard serves as the tangible outcome of this SDI project, sh
 
 **Experience the Dashboard**
 
--   Explore the dashboard in action: add link
+-   Explore the dashboard in action: [Click to dashboard](https://gy5f2i-ethel-ogallo.shinyapps.io/DEFGA_app/)

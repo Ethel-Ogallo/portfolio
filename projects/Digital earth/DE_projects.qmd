@@ -1,0 +1,31 @@
+---
+title: "Digital Earth"
+#date: "01.10.2025"
+layout: default
+image: "main_logo.png"
+format:
+  html:
+    toc: true 
+    css: DE_styles.css 
+draft: false
+description: " "
+categories: [Earth Observation, GEE, DataCubes, Copernicus]
+---
+
+## Project 1: Temporal Analysis using Google Earth Engine
+
+::: card
+Using GEE blah blah
+:::
+
+## Project 2: EO Browser
+
+::: card
+Using EO browser blahblah
+:::
+
+## Project 3: Sen2Cube
+
+::: card
+using sen2cube blah blah
+:::

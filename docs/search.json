@@ -46,21 +46,21 @@
     "href": "projects.html",
     "title": "Projects",
     "section": "",
-    "text": "Development of Employment Figures by Gender in Austria\n\n\n\nSDI\n\n\nGeospatial standards\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nChange detection using OBIA\n\n\n\nEarth Observation\n\n\nOBIA\n\n\nDeep Learning\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRADAR - Remote sensing\n\n\n\nEarth Observation\n\n\nRadar Analysis\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Digital Earth\n\n\n\nEarth Observation\n\n\nGEE\n\n\nDataCubes\n\n\nCopernicus\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDevelopment of Employment Figures by Gender in Austria\n\n\n\nSDI\n\n\nGeospatial standards\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOBIA for estimating building density\n\n\n\nEarth Observation\n\n\nOBIA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRADAR - Remote sensing\n\n\n\nEarth Observation\n\n\nRadar Analysis\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "projects/Spatial thinking/Change_detection_OBIA.html",
     "href": "projects/Spatial thinking/Change_detection_OBIA.html",
-    "title": "Change detection using OBIA",
+    "title": "OBIA for estimating building density",
     "section": "",
-    "text": "Under Construction!"
+    "text": "Scientific Poster"
   },
   {
     "objectID": "projects/SDI/DEFGA.html",
     "href": "projects/SDI/DEFGA.html",
     "title": "Development of Employment Figures by Gender in Austria",
     "section": "",
-    "text": "Explore Austria’s gender employment trends through this interactive dashboard, powered by a robust Spatial Data Infrastructure (SDI). This platform integrates spatial and temporal data, uncovering employment disparities across regions and over time. Read on to learn how this SDI was designed.\n(Embed video here)\n\nIntroduction\nIn today’s data-driven world, effective decision-making relies heavily on the ability to manage, analyze, and visualize complex datasets. A well-designed Spatial Data Infrastructure (SDI) enables this by integrating geospatial data across multiple sources, fostering collaboration, and supporting informed decisions.\nThis project focuses on developing an SDI tailored to Austria’s gender employment figures over a period of time. By leveraging open-source tools and technologies, the project highlights how SDIs can be applied to address pressing societal challenges, such as gender disparities in employment, while delivering actionable insights through interactive dashboards\n\n\nObjective\nThe project’s primary objective was to design a comprehensive SDI that could:\n\nCollect and integrate employment data from multiple sources, including Statistik Austria and Eurostat.\n\n\n\nDevelop web services to share geospatial data and visualizations with diverse stakeholders.\nEnable spatial analysis to identify employment trends and disparities across Austria’s urban and rural regions.\n\n\n\nSDI Architecture\nThe architecture of this SDI was designed with flexibility, accessibility, and functionality in mind, leveraging open-source tools to ensure scalability and sustainability.\n\nData Integration\n\n\nEmployment data from Statistik Austria and administrative datasets from Eurostat were standardized and stored in a PostGIS-enabled PostgreSQL database.\nData , code and project management documents can be found here: Gitlab\n\n\nOpen Geoservices\n\n\nThe project prioritized interoperability by publishing OGC-compliant web services through GeoServer.\n\nWMS (Web Map Services) were used to provide real-time access to geospatial data.\nMetadata was managed and published using GeoNetwork, ensuring discoverability and standardization.\n\n\n\nVisualization Tools\n\n\nThe interactive dashboard was developed using Streamlit, a Python-based framework for building data apps.\nIt integrates spatial and temporal datasets, providing users with:\n\nCustomizable maps highlighting gender imbalances and urban-rural disparities.\nInteractive charts and filters to explore trends by gender, region, and year.\n\n\n\nScalable Architecture\n\n\nBy using open-source software, the SDI ensures adaptability for future applications, making it a sustainable solution for ongoing spatial data challenges.\n\n\n\n\nResults\nThe interactive dashboard serves as the tangible outcome of this SDI project, showcasing its capabilities in visualizing and analyzing gender employment trends across Austria over a 10-year period.\n\nUsers can explore gender-specific disparities in employment across regions.\nThe dashboard provides dynamic visualizations that highlight temporal trends and urban-rural contrasts.\n\nExperience the Dashboard\n\nExplore the dashboard in action: add link"
+    "text": "Explore Austria’s gender employment trends through this interactive dashboard, powered by a robust Spatial Data Infrastructure (SDI). This platform integrates spatial and temporal data, uncovering employment disparities across regions and over time. Read on to learn how this SDI was designed.\n\n\nIntroduction\nIn today’s data-driven world, effective decision-making relies heavily on the ability to manage, analyze, and visualize complex datasets. A well-designed Spatial Data Infrastructure (SDI) enables this by integrating geospatial data across multiple sources, fostering collaboration, and supporting informed decisions.\nThis project focuses on developing an SDI tailored to Austria’s gender employment figures over a period of time. By leveraging open-source tools and technologies, the project highlights how SDIs can be applied to address pressing societal challenges, such as gender disparities in employment, while delivering actionable insights through interactive dashboards\n\n\nObjective\nThe project’s primary objective was to design a comprehensive SDI that could:\n\nCollect and integrate employment data from multiple sources, including Statistik Austria and Eurostat.\n\n\n\nDevelop web services to share geospatial data and visualizations with diverse stakeholders.\nEnable spatial analysis to identify employment trends and disparities across Austria’s urban and rural regions.\n\n\n\nSDI Architecture\nThe architecture of this SDI was designed with flexibility, accessibility, and functionality in mind, leveraging open-source tools to ensure scalability and sustainability.\n\nData Integration\n\n\nEmployment data from Statistik Austria and administrative datasets from Eurostat were standardized and stored in a PostGIS-enabled PostgreSQL database.\nData , code and project management documents can be found here: Gitlab\n\n\nOpen Geoservices\n\n\nThe project prioritized interoperability by publishing OGC-compliant web services through GeoServer.\n\nWMS (Web Map Services) were used to provide real-time access to geospatial data.\nMetadata was managed and published using GeoNetwork, ensuring discoverability and standardization.\n\n\n\nVisualization Tools\n\n\nThe interactive dashboard was developed using Streamlit, a Python-based framework for building data apps.\nIt integrates spatial and temporal datasets, providing users with:\n\nCustomizable maps highlighting gender imbalances and urban-rural disparities.\nInteractive charts and filters to explore trends by gender, region, and year.\n\n\n\nScalable Architecture\n\n\nBy using open-source software, the SDI ensures adaptability for future applications, making it a sustainable solution for ongoing spatial data challenges.\n\n\n\n\nResults\nThe interactive dashboard serves as the tangible outcome of this SDI project, showcasing its capabilities in visualizing and analyzing gender employment trends across Austria over a 10-year period.\n\nUsers can explore gender-specific disparities in employment across regions.\nThe dashboard provides dynamic visualizations that highlight temporal trends and urban-rural contrasts.\n\nExperience the Dashboard\n\nExplore the dashboard in action: Click to dashboard"
   },
   {
     "objectID": "projects/Advanced Remote Sensing/example.html",
@@ -117,5 +117,40 @@
     "title": "Curriculum Vitae",
     "section": "Oakar",
     "text": "Oakar\n\nGIS Research Assistant (Mar 2020 - Aug 2020)\n\nCollected and managed spatial and non-spatial data for a farmer registration project in Kiambu County, using mobile client configuration tools."
+  },
+  {
+    "objectID": "projects/Digital earth/projects.html",
+    "href": "projects/Digital earth/projects.html",
+    "title": "Digital Earth",
+    "section": "",
+    "text": "OBIA for estimating building density\n\n\n\nEarth Observation\n\n\nOBIA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOBIA for estimating building density\n\n\n\nEarth Observation\n\n\nOBIA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOBIA for estimating building density\n\n\n\nEarth Observation\n\n\nOBIA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projects/Digital earth/DE_projects.html",
+    "href": "projects/Digital earth/DE_projects.html",
+    "title": "Digital Earth",
+    "section": "",
+    "text": "Using GEE blah blah"
+  },
+  {
+    "objectID": "projects/Digital earth/DE_projects.html#project-1-temporal-analysis-using-google-earth-engine",
+    "href": "projects/Digital earth/DE_projects.html#project-1-temporal-analysis-using-google-earth-engine",
+    "title": "Digital Earth",
+    "section": "",
+    "text": "Using GEE blah blah"
+  },
+  {
+    "objectID": "projects/Digital earth/DE_projects.html#project-2-eo-browser",
+    "href": "projects/Digital earth/DE_projects.html#project-2-eo-browser",
+    "title": "Digital Earth",
+    "section": "Project 2: EO Browser",
+    "text": "Project 2: EO Browser\n\nUsing EO browser blahblah"
+  },
+  {
+    "objectID": "projects/Digital earth/DE_projects.html#project-3-sen2cube",
+    "href": "projects/Digital earth/DE_projects.html#project-3-sen2cube",
+    "title": "Digital Earth",
+    "section": "Project 3: Sen2Cube",
+    "text": "Project 3: Sen2Cube\n\nusing sen2cube blah blah"
   }
 ]

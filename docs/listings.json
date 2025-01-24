@@ -2,8 +2,25 @@
   {
     "listing": "/projects.html",
     "items": [
+      "/projects/Digital earth/DE_projects.html",
       "/projects/SDI/DEFGA.html",
       "/projects/Spatial thinking/Change_detection_OBIA.html"
+    ]
+  },
+  {
+    "listing": "/projects/Digital earth/projects.html",
+    "items": [
+      "/projects/Digital earth/sub_projects/EObrowser/Change_detection_OBIA.html",
+      "/projects/Digital earth/sub_projects/GEE/Change_detection_OBIA.html",
+      "/projects/Digital earth/sub_projects/Sen2cube/Change_detection_OBIA.html"
+    ]
+  },
+  {
+    "listing": "/projects/Digital earth/DE_projects.html",
+    "items": [
+      "/projects/Digital earth/posts/eo_browser.html",
+      "/projects/Digital earth/posts/GEE.html",
+      "/projects/Digital earth/posts/sen2cube.html"
     ]
   }
 ]
