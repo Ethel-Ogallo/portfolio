@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -120,9 +154,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#project-1-temporal-analysis-using-google-earth-engine" id="toc-project-1-temporal-analysis-using-google-earth-engine" class="nav-link active" data-scroll-target="#project-1-temporal-analysis-using-google-earth-engine">Project 1: Temporal Analysis using Google Earth Engine</a></li>
-  <li><a href="#project-2-eo-browser" id="toc-project-2-eo-browser" class="nav-link" data-scroll-target="#project-2-eo-browser">Project 2: EO Browser</a></li>
-  <li><a href="#project-3-sen2cube" id="toc-project-3-sen2cube" class="nav-link" data-scroll-target="#project-3-sen2cube">Project 3: Sen2Cube</a></li>
+  <li><a href="#digital-earth-projects" id="toc-digital-earth-projects" class="nav-link active" data-scroll-target="#digital-earth-projects"><strong>Digital Earth Projects</strong></a>
+  <ul class="collapse">
+  <li><a href="#project-1-temporal-analysis-using-gee-mau-forest" id="toc-project-1-temporal-analysis-using-gee-mau-forest" class="nav-link" data-scroll-target="#project-1-temporal-analysis-using-gee-mau-forest"><strong>Project 1: Temporal Analysis using GEE; Mau Forest</strong></a></li>
+  <li><a href="#project-2-eo-browser-for-soil-moisture-monitoring" id="toc-project-2-eo-browser-for-soil-moisture-monitoring" class="nav-link" data-scroll-target="#project-2-eo-browser-for-soil-moisture-monitoring"><strong>Project 2: EO Browser for Soil Moisture Monitoring</strong></a></li>
+  <li><a href="#project-3-leveraging-sen2cube-for-seasonal-water-monitoring" id="toc-project-3-leveraging-sen2cube-for-seasonal-water-monitoring" class="nav-link" data-scroll-target="#project-3-leveraging-sen2cube-for-seasonal-water-monitoring"><strong>Project 3: Leveraging Sen2Cube for Seasonal Water Monitoring</strong></a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -154,25 +191,183 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="project-1-temporal-analysis-using-google-earth-engine" class="level2">
-<h2 class="anchored" data-anchor-id="project-1-temporal-analysis-using-google-earth-engine">Project 1: Temporal Analysis using Google Earth Engine</h2>
-<div class="card">
-<p>Using GEE blah blah</p>
+<section id="digital-earth-projects" class="level1">
+<h1><strong>Digital Earth Projects</strong></h1>
+<section id="project-1-temporal-analysis-using-gee-mau-forest" class="level2">
+<h2 class="anchored" data-anchor-id="project-1-temporal-analysis-using-gee-mau-forest"><strong>Project 1: Temporal Analysis using GEE; Mau Forest</strong></h2>
+<div class="scrollable" style="max-height: 700px; overflow-y: auto; background-color: #f9f9f9; padding: 10px; border-radius: 5px;">
+<p><strong>Introduction</strong></p>
+<p>Mau Forest, one of Kenya’s most vital water towers, has been experiencing significant deforestation due to human activities such as logging and agricultural expansion over the past decade or so. Monitoring these changes is essential for conservation efforts, and satellite-based remote sensing provides a powerful tool for such analysis. This project utilizes Google Earth Engine (GEE) to assess vegetation changes in Mau Forest between <strong>2018 and 2024</strong>.</p>
+<p><strong>Analysis</strong></p>
+<p>The analysis was conducted using <strong>Sentinel-2 imagery</strong> in <strong>Google Earth Engine (GEE)</strong>, where the applied the <strong>NDVI</strong> to detect vegetation change over time.</p>
+<div class="scrollable" style="max-height: 300px; overflow-y: auto; background-color: #f9f9f9; color: #ffffff; padding: 10px; border-radius: 5px;">
+<div class="sourceCode" id="cb1"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">// First define an area of interest</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> lat <span class="op">=</span> <span class="op">-</span><span class="fl">0.55</span><span class="op">;</span> </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> lng <span class="op">=</span> <span class="fl">35.65</span><span class="op">;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> point <span class="op">=</span> ee<span class="op">.</span><span class="at">Geometry</span><span class="op">.</span><span class="fu">Point</span>(lng<span class="op">,</span> lat)<span class="op">;</span> <span class="co">// Corrected: swapped lat and lng</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> aoi <span class="op">=</span> point<span class="op">.</span><span class="fu">buffer</span>(<span class="dv">1000</span>)<span class="op">;</span> <span class="co">// Create an area (1km buffer around point)</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="bu">Map</span><span class="op">.</span><span class="fu">setCenter</span>(lng<span class="op">,</span> lat<span class="op">,</span> <span class="dv">10</span>)<span class="op">;</span> <span class="co">// Center the map on this location, zoom level 10</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">// Download the Sentinel-2 imagery collection</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> s2 <span class="op">=</span> ee<span class="op">.</span><span class="fu">ImageCollection</span>(<span class="st">'COPERNICUS/S2'</span>)<span class="op">;</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">// Filter the collection by location, date boundaries, and cloud cover percentage for the 'before' image</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> s2_filtered <span class="op">=</span> s2<span class="op">.</span><span class="fu">filterBounds</span>(aoi)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">filterDate</span>(<span class="st">'2018-01-01'</span><span class="op">,</span><span class="st">'2019-12-31'</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">filterMetadata</span>(<span class="st">'CLOUDY_PIXEL_PERCENTAGE'</span><span class="op">,</span> <span class="st">'less_than'</span><span class="op">,</span> <span class="dv">30</span>)<span class="op">;</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co">// This will sort the images by lowest cloud cover first.</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> sorted <span class="op">=</span> s2_filtered<span class="op">.</span><span class="fu">sort</span>(<span class="st">'CLOUDY_PIXEL_PERCENTAGE'</span><span class="op">,</span> <span class="kw">true</span>)<span class="op">;</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co">// Pick the first image from the sorted and filtered collection</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> image <span class="op">=</span> ee<span class="op">.</span><span class="fu">Image</span>(sorted<span class="op">.</span><span class="fu">first</span>())<span class="op">;</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co">// Calculate NDVI for the "before" image</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> NDVI <span class="op">=</span> image<span class="op">.</span><span class="fu">normalizedDifference</span>([<span class="st">'B8'</span><span class="op">,</span> <span class="st">'B4'</span>])<span class="op">;</span> <span class="co">// NIR: B8, Red: B4</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="co">// Define the visualisation parameters to display the image </span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> vizParams <span class="op">=</span> {</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>  <span class="dt">palette</span><span class="op">:</span> [<span class="st">'#FF0000'</span><span class="op">,</span> <span class="st">'#FFFF00'</span><span class="op">,</span> <span class="st">'#007F00'</span>]<span class="op">,</span> <span class="co">// used a color pallette to highlight the vegetation</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>  <span class="dt">min</span><span class="op">:</span> <span class="dv">0</span><span class="op">,</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>  <span class="dt">max</span><span class="op">:</span> <span class="dv">1</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="co">// Add the image to the default Map.</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="bu">Map</span><span class="op">.</span><span class="fu">addLayer</span>(NDVI<span class="op">,</span> vizParams<span class="op">,</span> <span class="st">"NDVI before"</span>)<span class="op">;</span> </span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a><span class="co">// Make another map for the 'after' image.</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> linkedMap <span class="op">=</span> ui<span class="op">.</span><span class="fu">Map</span>()<span class="op">;</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="co">// Filter the collection by location, date boundaries, and cloud cover percentage for the 'after' image</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> s2_filtered <span class="op">=</span> s2<span class="op">.</span><span class="fu">filterBounds</span>(aoi)</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">filterDate</span>(<span class="st">'2023-01-01'</span><span class="op">,</span><span class="st">'2024-11-30'</span>)</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>    <span class="op">.</span><span class="fu">filterMetadata</span>(<span class="st">'CLOUDY_PIXEL_PERCENTAGE'</span><span class="op">,</span> <span class="st">'less_than'</span><span class="op">,</span> <span class="dv">30</span>)<span class="op">;</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="co">// This will sort the images by lowest cloud cover first.</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> sorted <span class="op">=</span> s2_filtered<span class="op">.</span><span class="fu">sort</span>(<span class="st">'CLOUDY_PIXEL_PERCENTAGE'</span><span class="op">,</span> <span class="kw">true</span>)<span class="op">;</span></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="co">// Pick the first image from the sorted and filtered collection</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> image <span class="op">=</span> ee<span class="op">.</span><span class="fu">Image</span>(sorted<span class="op">.</span><span class="fu">first</span>())<span class="op">;</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="co">// Calculate NDVI for the "after" image</span></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> NDVI <span class="op">=</span> image<span class="op">.</span><span class="fu">normalizedDifference</span>([<span class="st">'B8'</span><span class="op">,</span> <span class="st">'B4'</span>])<span class="op">;</span> <span class="co">// NIR: B8, Red: B4</span></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a><span class="co">// Add the NDVI layer for the "after" image to the linked map</span></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>linkedMap<span class="op">.</span><span class="fu">addLayer</span>(NDVI<span class="op">,</span> vizParams<span class="op">,</span> <span class="st">"NDVI after"</span>)<span class="op">;</span> </span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="co">// Link the default Map to the other map.</span></span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> linker <span class="op">=</span> ui<span class="op">.</span><span class="at">Map</span><span class="op">.</span><span class="fu">Linker</span>([ui<span class="op">.</span><span class="at">root</span><span class="op">.</span><span class="fu">widgets</span>()<span class="op">.</span><span class="fu">get</span>(<span class="dv">0</span>)<span class="op">,</span> linkedMap])<span class="op">;</span></span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="co">// Create a SplitPanel which holds the linked maps side-by-side.</span></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> splitPanel <span class="op">=</span> ui<span class="op">.</span><span class="fu">SplitPanel</span>({</span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a>  <span class="dt">firstPanel</span><span class="op">:</span> linker<span class="op">.</span><span class="fu">get</span>(<span class="dv">0</span>)<span class="op">,</span></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a>  <span class="dt">secondPanel</span><span class="op">:</span> linker<span class="op">.</span><span class="fu">get</span>(<span class="dv">1</span>)<span class="op">,</span></span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>  <span class="dt">orientation</span><span class="op">:</span> <span class="st">'horizontal'</span><span class="op">,</span></span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>  <span class="dt">wipe</span><span class="op">:</span> <span class="kw">true</span><span class="op">,</span></span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>  <span class="dt">style</span><span class="op">:</span> {<span class="dt">stretch</span><span class="op">:</span> <span class="st">'both'</span>}</span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a><span class="co">// Set the SplitPanel as the only thing in root.</span></span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>ui<span class="op">.</span><span class="at">root</span><span class="op">.</span><span class="fu">widgets</span>()<span class="op">.</span><span class="fu">reset</span>([splitPanel])<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>Visualization Results</strong></p>
+<p>The NDVI maps show the changes in vegetation over time:</p>
+<p>- <em>Green areas</em> → high NDVI for dense or healthy vegetation.</p>
+<p>- <em>Yellow areas</em> → Moderate dense vegetation.</p>
+<p>- <em>Red areas</em> → NDVI for barren land or urban areas or unhealthy vegetation.</p>
+<iframe src="https://ee-ogalloethel.projects.earthengine.app/view/mauforest" width="100%" height="500px" style="border: none;">
+</iframe>
 </div>
 </section>
-<section id="project-2-eo-browser" class="level2">
-<h2 class="anchored" data-anchor-id="project-2-eo-browser">Project 2: EO Browser</h2>
-<div class="card">
-<p>Using EO browser blahblah</p>
+<section id="project-2-eo-browser-for-soil-moisture-monitoring" class="level2">
+<h2 class="anchored" data-anchor-id="project-2-eo-browser-for-soil-moisture-monitoring"><strong>Project 2: EO Browser for Soil Moisture Monitoring</strong></h2>
+<div class="scrollable" style="max-height: 700px; overflow-y: auto; background-color: #f9f9f9; padding: 10px; border-radius: 5px;">
+<p><strong>Introduction</strong></p>
+<p>EO Browser is a user-friendly online tool developed by Sinergise that facilitates easy access to analysis-ready satellite data, including imagery from the Copernicus Sentinel missions. It allows users to visualize and analyze environmental conditions using Sentinel-2 Level-2A imagery, making Earth observation data accessible without requiring advanced technical expertise.</p>
+<p>In this project, the Barren Soil Index -script developed by Monja Sebela- was applied to assess soil moisture across different regions. The Barren Soil Index leverages specific spectral bands from Sentinel-2 data to distinguish between various land cover types, such as dry soil, vegetation, and water bodies.</p>
+<p><strong>Analysis</strong></p>
+<div class="scrollable" style="max-height: 200px; overflow-y: auto; background-color: #f9f9f9; color: #ffffff; padding: 10px; border-radius: 5px;">
+<div class="sourceCode" id="cb2"><pre class="sourceCode javascript code-with-copy"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">//VERSION=3 (auto-converted from 1)</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">//Author: Monja Sebela</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">evaluatePixel</span>(s) {</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> val <span class="op">=</span> <span class="fl">2.5</span> <span class="op">*</span> ((s<span class="op">.</span><span class="at">B11</span> <span class="op">+</span> s<span class="op">.</span><span class="at">B04</span>)<span class="op">-</span>(s<span class="op">.</span><span class="at">B08</span> <span class="op">+</span> s<span class="op">.</span><span class="at">B02</span>))<span class="op">/</span>((s<span class="op">.</span><span class="at">B11</span> <span class="op">+</span> s<span class="op">.</span><span class="at">B04</span>)<span class="op">+</span>(s<span class="op">.</span><span class="at">B08</span> <span class="op">+</span> s<span class="op">.</span><span class="at">B02</span>))<span class="op">;</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> [<span class="fl">2.5</span><span class="op">*</span> val<span class="op">,</span> s<span class="op">.</span><span class="at">B08</span><span class="op">,</span> s<span class="op">.</span><span class="at">B11</span>]<span class="op">;</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">setup</span>() {</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> {</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="dt">input</span><span class="op">:</span> [{</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>      <span class="dt">bands</span><span class="op">:</span> [</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>          <span class="st">"B02"</span><span class="op">,</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>          <span class="st">"B04"</span><span class="op">,</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>          <span class="st">"B08"</span><span class="op">,</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>          <span class="st">"B11"</span><span class="op">,</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>          <span class="st">"B12"</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>      ]</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    }]<span class="op">,</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    <span class="dt">output</span><span class="op">:</span> { <span class="dt">bands</span><span class="op">:</span> <span class="dv">3</span> }</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>Results</strong></p>
+<p>The application of the Barren Soil Index was evaluated across multiple regions to assess its performance in differentiating soil moisture levels and land cover types.</p>
+<p><br>
+Salzburg, Austria (November 2024)</p>
+<p>In Salzburg, the Barren Soil Index effectively highlighted the varying land cover types. The Salzach River was prominently displayed in black, indicating water bodies. Vegetation appeared in green, and dry soil was distinctly represented in red. The results provide a clear delineation of soil moisture variations, with the index offering valuable insights into the region’s environmental conditions.</p>
+<p><img src="images/clipboard-1328890550.png" class="img-fluid"></p>
+<p><em>Kisumu, Kenya (October 2024)</em></p>
+<p>For Kisumu, located near Lake Victoria, the analysis revealed dry land in red, vegetation in green, and water in black. Cloud cover was indicated in blue. A noteworthy observation was that urban areas, typically associated with reflective surfaces such as concrete and asphalt, also appeared red. This similarity in spectral reflectance to dry soil suggests the utility of the Barren Soil Index in urban contexts.</p>
+<p><img src="images/clipboard-303631823.png" class="img-fluid"></p>
+<p><em>Barbados (November 2024)</em></p>
+<p>In Barbados, the index highlighted barren soil in red, vegetation in green, water in black, and cloud cover in a bluish-green hue. An interesting feature of the analysis was the appearance of a red boundary over the ocean. This could potentially be attributed to underlying dry soil on nearby islands or the influence of sensor angle, providing an additional layer of insight into the interaction between atmospheric and land features in coastal areas.</p>
+<p><img src="images/clipboard-1926561016.png" class="img-fluid"></p>
+<p><strong>Conclusion</strong></p>
+<p>This analysis demonstrates the practical application of EO Browser , with the Barren Soil Index for monitoring soil moisture variations, across diverse geographical regions. The results underscore the efficacy of satellite-based remote sensing tools in environmental monitoring, particularly in the context of soil moisture and vegetation health assessment.</p>
+<p>By utilizing Sentinel-2 imagery and advanced spectral analysis, this study illustrates the growing importance of remote sensing techniques in sustainable land management and climate monitoring. The ability to monitor land surface conditions on a global scale provides invaluable support for decision-making in agriculture, urban planning, and disaster management.</p>
 </div>
 </section>
-<section id="project-3-sen2cube" class="level2">
-<h2 class="anchored" data-anchor-id="project-3-sen2cube">Project 3: Sen2Cube</h2>
-<div class="card">
-<p>using sen2cube blah blah</p>
+<section id="project-3-leveraging-sen2cube-for-seasonal-water-monitoring" class="level2">
+<h2 class="anchored" data-anchor-id="project-3-leveraging-sen2cube-for-seasonal-water-monitoring"><strong>Project 3: Leveraging Sen2Cube for Seasonal Water Monitoring</strong></h2>
+<div class="scrollable" style="max-height: 700px; overflow-y: auto; background-color: #f9f9f9; padding: 10px; border-radius: 5px;">
+<p><strong>What Are DataCubes?</strong></p>
+<p>A DataCube is a multi-dimensional array of data, typically used for storing and analyzing large amounts of Earth Observation (EO) satellite imagery. DataCubes facilitate efficient access to spatiotemporal data by organizing satellite imagery into a structure that enables fast querying and analysis over time. These cubes allow users to ask complex questions about geographic areas, such as identifying cloud-free images, monitoring land use changes, or analyzing environmental trends across multiple time periods.<br>
+<br>
+<strong>Sen2Cube</strong></p>
+<p><a href="https://www.sen2cube.at/">Sen2Cube</a>, developed by the Department of Geoinformatics - Z_GIS at the University of Salzburg ,provides a unique and accessible approach to satellite data analysis. It allows users to generate actionable insights from satellite imagery with a higher semantic level providing users with an intuitive web-based platform to formulate queries and analyze satellite data.</p>
+<p><strong>The Simple Water Count Model</strong></p>
+<p>For this analysis, the Simple Water Count model was employed to assess the seasonality of water bodies across several Austrian lakes. This model was specifically chosen for its ability to detect water presence in satellite imagery over time, making it ideal for tracking fluctuations in water levels. The model was adapted not only to monitor water presence over time but also to visualize spatial variations of water bodies.</p>
+<p>By applying this model, users can calculate water counts across different seasons and identify temporal trends of water bodies. The model produces two main outputs: a graphical representation of water presence over time and a spatial map showing the distribution of water across defined periods.</p>
+<p><strong>Results: Seasonal Variations Across Austrian Lakes</strong></p>
+<p>The model was applied to four lakes in Austria: Neusiedler See, Ossiacher See, Plansee/Heiterwanger See, and Ottensteiner Stausee. The results, based on the analysis of Sentinel-2 imagery, provided valuable insights into the seasonal changes in water presence across these water bodies.</p>
+<p><strong>1. Neusiedler See</strong></p>
+<ul>
+<li><p><strong>Graphical Results</strong>: The graph revealed that Neusiedler See showed significant seasonal variation in water presence. Higher water counts were observed during the early months (February-March) and later months (November), suggesting an increase in water levels. Conversely, July-September saw a reduction in water levels, possibly due to seasonal evaporation or cloud cover interference.</p></li>
+<li><p><strong>Spatial Analysis</strong>: The spatial map showed a clear reduction in water coverage over time. Lighter hues indicated areas of water, while darker hues represented non-water areas.</p></li>
+</ul>
+<p><img src="images/clipboard-2276044050.png" class="img-fluid"></p>
+<p><strong>2. Ossiacher See</strong></p>
+<ul>
+<li><p><strong>Graphical Results</strong>: Ossiacher See displayed a consistent water presence over time, with a brief period showing a 0 water count, likely due to cloud cover obstructing satellite observations.</p></li>
+<li><p><strong>Spatial Analysis</strong>: The spatial map showed minimal changes in water coverage, confirming the stability of water levels at Ossiacher See.</p></li>
+</ul>
+<p><img src="images/clipboard-2917769283.png" class="img-fluid"></p>
+<p><strong>3. Plansee/Heiterwanger See</strong></p>
+<ul>
+<li><p><strong>Graphical Results</strong>: The graph for Plansee/Heiterwanger See indicated a decrease in water presence between May and June, likely due to seasonal drying. November to March showed 0 water count values, which may have been caused by high cloud cover.</p></li>
+<li><p><strong>Spatial Analysis</strong>: The spatial map corroborated the seasonal variation observed in the graph, with lighter values indicating water presence and darker shades showing reduced coverage.</p></li>
+</ul>
+<p><img src="images/clipboard-4147047079.png" class="img-fluid"></p>
+<p><strong>4. Ottensteiner Stausee</strong></p>
+<ul>
+<li><p><strong>Graphical Results</strong>: Ottensteiner Stausee exhibited seasonal fluctuations in water presence, particularly between March and July. The reduction in water levels during this period suggests it is a seasonal water body.</p></li>
+<li><p><strong>Spatial Analysis</strong>: Similar to the other lakes, the spatial map displayed a reduction in water coverage, confirming the seasonal nature of Ottensteiner Stausee.</p></li>
+</ul>
+<p><img src="images/clipboard-667607203.png" class="img-fluid"></p>
 </div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
