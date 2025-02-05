@@ -9,7 +9,7 @@ categories: [SDI, Geospatial standards]
 
 *Explore Austria’s gender employment trends through this interactive dashboard, powered by a robust Spatial Data Infrastructure (SDI). This platform integrates spatial and temporal data, uncovering employment disparities across regions and over time. Read on to learn how this SDI was designed.*
 
-{{< video images\DEFGA.mp4 >}}
+{{< video images/DEFGA.mp4 >}}
 
 ### **Introduction**
 
@@ -60,7 +60,7 @@ The architecture of this SDI was designed with flexibility, accessibility, and f
 
 -   By using open-source software, the SDI ensures adaptability for future applications, making it a sustainable solution for ongoing spatial data challenges.
 
-![](images/SDI%20workflow-Page-5.drawio.png)
+![](images/SDI%20architecture.png)
 
 ### **Results**
 
