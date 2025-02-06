@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Projects – Ethel Ogallo</title>
+<title>Database backend development for a WebGIS – Ethel Ogallo</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,26 +20,58 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -67,67 +99,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -137,7 +111,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Ethel Ogallo</span>
     </a>
   </div>
@@ -148,19 +122,19 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./projects.html" aria-current="page"> 
+    <a class="nav-link" href="../../projects.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./resume2.html"> 
+    <a class="nav-link" href="../../resume2.html"> 
 <span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./more.html"> 
+    <a class="nav-link" href="../../more.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
 </ul>
@@ -171,23 +145,39 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="Cloud computing">Cloud computing <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Copernicus">Copernicus <span class="quarto-category-count">(1)</span></div><div class="category" data-category="DataCubes">DataCubes <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Earth Observation">Earth Observation <span class="quarto-category-count">(3)</span></div><div class="category" data-category="GEE">GEE <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Geospatial Standards">Geospatial Standards <span class="quarto-category-count">(1)</span></div><div class="category" data-category="OBIA">OBIA <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Radar Analysis">Radar Analysis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SDI">SDI <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Spatial Databases">Spatial Databases <span class="quarto-category-count">(1)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#context" id="toc-context" class="nav-link active" data-scroll-target="#context"><strong>Context</strong></a>
+  <ul class="collapse">
+  <li><a href="#er-diagram" id="toc-er-diagram" class="nav-link" data-scroll-target="#er-diagram"><strong>ER Diagram</strong></a></li>
+  <li><a href="#ddldml-steps" id="toc-ddldml-steps" class="nav-link" data-scroll-target="#ddldml-steps"><strong>DDL,DML steps</strong></a></li>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results"><strong>Results</strong></a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Projects</h1>
-</div>
+<h1 class="title">Database backend development for a WebGIS</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Spatial Databases</div>
+    <div class="quarto-category">Geospatial Standards</div>
+    <div class="quarto-category">Postgresql</div>
+  </div>
+  </div>
 
 
 
-<div class="quarto-title-meta column-page-left">
+<div class="quarto-title-meta">
 
     
   
@@ -199,144 +189,35 @@ window.Quarto = {
 </header>
 
 
+<section id="context" class="level2">
+<h2 class="anchored" data-anchor-id="context"><strong>Context</strong></h2>
+<p>As part of a fictional project for Vudstork Entertainment Ltd, I was tasked with developing a WebGIS backend to support a mobile app for a city festival. The app provides festival visitors with real-time information and allows organizers to distribute notifications and streamline their workflows. My role involved leveraging my Geoinformatics expertise to design and implement a spatial database, which forms the core of the app’s functionality, integrating various methods and software techniques learned during the semester.</p>
+<p><strong>Requirements</strong></p>
+<ul>
+<li>Serve as database backend to organise the booths, roller coasters, tents etc. (Positions, opening times) as well as other facilities (garbage bins, toilets etc)</li>
+<li>User-specific, dynamic queries that return which events take place or facilities that are close to the current visitor’s position.</li>
+<li>User-specific and dynamic queries about the festival (digital maps, lists of events etc</li>
+</ul>
+<section id="er-diagram" class="level3">
+<h3 class="anchored" data-anchor-id="er-diagram"><strong>ER Diagram</strong></h3>
+<p>placeholder example</p>
+<p><img src="images/public_transport_model.png" class="img-fluid"></p>
+</section>
+<section id="ddldml-steps" class="level3">
+<h3 class="anchored" data-anchor-id="ddldml-steps"><strong>DDL,DML steps</strong></h3>
+<div class="scrollable" style="max-height: 300px; overflow-y: auto; background-color: #f9f9f9; color: #ffffff; padding: 10px; border-radius: 5px;">
+<div class="sourceCode" id="cb1"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">--- code will here for the specific steps</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="results" class="level3">
+<h3 class="anchored" data-anchor-id="results"><strong>Results</strong></h3>
+<p>database results/tasks go here + images</p>
 
 
+</section>
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="Earth Observation,GEE,DataCubes,Copernicus,Cloud computing" data-listing-file-modified-sort="1738834870852" data-listing-reading-time-sort="8" data-listing-word-count-sort="1576">
-<a href="./projects/Digital earth/DE_projects.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./projects/Digital earth/main_logo.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Big Data
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Earth Observation'); return false;">
-Earth Observation
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('GEE'); return false;">
-GEE
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('DataCubes'); return false;">
-DataCubes
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Copernicus'); return false;">
-Copernicus
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Cloud computing'); return false;">
-Cloud computing
-</div>
-</div>
-<div class="card-text listing-description">
-
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="SDI,Geospatial Standards,Spatial Databases" data-listing-file-modified-sort="1738847521749" data-listing-reading-time-sort="3" data-listing-word-count-sort="460">
-<a href="./projects/SDI/DEFGA.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./projects/SDI/images/sdi_logo.jpg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Development of Employment Figures by Gender in Austria
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('SDI'); return false;">
-SDI
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Geospatial Standards'); return false;">
-Geospatial Standards
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Spatial Databases'); return false;">
-Spatial Databases
-</div>
-</div>
-<div class="card-text listing-description">
-
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="2" data-categories="Earth Observation,OBIA" data-listing-file-modified-sort="1737675921619" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<a href="./projects/Spatial thinking/Change_detection_OBIA.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./projects/Spatial thinking/images/kakuma_camp.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-OBIA for estimating building density
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Earth Observation'); return false;">
-Earth Observation
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('OBIA'); return false;">
-OBIA
-</div>
-</div>
-<div class="card-text listing-description">
-
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="3" data-categories="Earth Observation,Radar Analysis">
-<a href="https://storymaps.arcgis.com/stories/8edbb90f9fa34a69babdfc5c53da9e77" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="images/img4.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-RADAR - Remote sensing
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Earth Observation'); return false;">
-Earth Observation
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Radar Analysis'); return false;">
-Radar Analysis
-</div>
-</div>
-<div class="card-text listing-description">
-
-</div>
-</div>
-</div>
-</a>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -765,7 +646,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>   
     <div class="nav-footer-center">
 <p style="display: flex; justify-content: center; align-items: center; gap: 10px;">
-<img src="./images/EMJM.jpg" alt="EMJM+" style="height:70px;"> <img src="./images/CDE.png" alt="CDE" style="height:80px;"> <img src="./images/PLUS.jpg" alt="PLUS" style="height:80px;"> <img src="./images/UBS.png" alt="UBS" style="height:90px;">
+<img src="../../images/EMJM.jpg" alt="EMJM+" style="height:70px;"> <img src="../../images/CDE.png" alt="CDE" style="height:80px;"> <img src="../../images/PLUS.jpg" alt="PLUS" style="height:80px;"> <img src="../../images/UBS.png" alt="UBS" style="height:90px;">
 </p>
 <p>
 Made with <a href="https://quarto.org/">Quarto</a>. Copyright 2024, Ethel Ogallo.

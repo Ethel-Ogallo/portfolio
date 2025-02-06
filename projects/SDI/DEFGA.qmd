@@ -4,7 +4,7 @@ title: "Development of Employment Figures by Gender in Austria"
 layout: default
 image: "images/sdi_logo.jpg"
 description: " "
-categories: [SDI, Geospatial standards]
+categories: [SDI, Geospatial Standards, Spatial Databases]
 ---
 
 *Explore Austria’s gender employment trends through this interactive dashboard, powered by a robust Spatial Data Infrastructure (SDI). This platform integrates spatial and temporal data, uncovering employment disparities across regions and over time. Read on to learn how this SDI was designed.*

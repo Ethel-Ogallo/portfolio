@@ -1,0 +1,38 @@
+---
+title: "Database backend development for a WebGIS"
+layout: default
+#image: "main_logo.png"
+draft: true
+description: " "
+categories: [Spatial Databases, Geospatial Standards, Postgresql]
+---
+
+## **Context**
+
+As part of a fictional project for Vudstork Entertainment Ltd, I was tasked with developing a WebGIS backend to support a mobile app for a city festival. The app provides festival visitors with real-time information and allows organizers to distribute notifications and streamline their workflows. My role involved leveraging my Geoinformatics expertise to design and implement a spatial database, which forms the core of the app’s functionality, integrating various methods and software techniques learned during the semester.
+
+**Requirements**
+
+-   Serve as database backend to organise the booths, roller coasters, tents etc. (Positions, opening times) as well as other facilities (garbage bins, toilets etc)
+-   User-specific, dynamic queries that return which events take place or facilities that are close to the current visitor’s position.
+-   User-specific and dynamic queries about the festival (digital maps, lists of events etc
+
+### **ER Diagram**
+
+placeholder example
+
+![](images/public_transport_model.png)
+
+### **DDL,DML steps**
+
+essentially the all the steps to set up the database, breakdown by tasks sudmanns has. I guess break it down to DDL, DML and DCL
+
+::: {.scrollable style="max-height: 300px; overflow-y: auto; background-color: #f9f9f9; color: #ffffff; padding: 10px; border-radius: 5px;"}
+``` sql
+--- code will here for the specific steps
+```
+:::
+
+### **Results**
+
+database results/tasks go here + images
