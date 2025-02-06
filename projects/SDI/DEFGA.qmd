@@ -40,7 +40,7 @@ The architecture of this SDI was designed with flexibility, accessibility, and f
 
 2.  **Open Geoservices**
 
--   The project prioritized interoperability by publishing OGC-compliant web services through GeoServer.
+-   The project prioritized interoperability by publishing OGC-compliant web services through GeoServer and ArcGIS Server.
 
     -   WMS (Web Map Services) were used to provide real-time access to geospatial data.
 
@@ -48,7 +48,7 @@ The architecture of this SDI was designed with flexibility, accessibility, and f
 
 3.  **Visualization Tools**
 
--   The interactive dashboard was developed using Streamlit, a Python-based framework for building data apps.
+-   The interactive dashboard was developed using Shiny apps an R-based framework for building data apps.
 
 -   It integrates spatial and temporal datasets, providing users with:
 
