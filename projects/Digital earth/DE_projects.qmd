@@ -1,5 +1,5 @@
 ---
-title: "Digital Earth"
+title: "Big Data"
 layout: default
 image: "main_logo.png"
 format:
@@ -8,10 +8,8 @@ format:
     css: DE_styles.css 
 draft: false
 description: " "
-categories: [Earth Observation, GEE, DataCubes, Copernicus]
+categories: [Earth Observation, GEE, DataCubes, Copernicus, Cloud computing]
 ---
-
-# **Digital Earth Projects**
 
 ## **Project 1: Temporal Analysis using GEE; Mau Forest**
 
