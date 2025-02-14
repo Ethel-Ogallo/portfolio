@@ -7,7 +7,7 @@ format:
     toc: true 
     css: DE_styles.css 
 draft: false
-description: " "
+description: "Exploring cloud-based platforms and big data analytics for EO, including temporal analysis in GEE, soil moisture monitoring, and seasonal water mapping using Sen2Cube."
 categories: [Earth Observation, GEE, DataCubes, Copernicus, Cloud computing]
 ---
 

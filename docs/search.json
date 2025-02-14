@@ -46,7 +46,7 @@
     "href": "projects.html",
     "title": "Projects",
     "section": "",
-    "text": "Big Data\n\n\n\nEarth Observation\n\n\nGEE\n\n\nDataCubes\n\n\nCopernicus\n\n\nCloud computing\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nImage segmentation and Classification\n\n\n\nRemote sensing\n\n\nOBIA\n\n\neCognition\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSpatial Data Infrastructure (SDI) for Gender Employment Trends in Austria\n\n\n\nSDI\n\n\nGeospatial Standards\n\n\nSpatial Databases\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDesign and Implementation of a Spatial Database\n\n\n\nSpatial Databases\n\n\nGeospatial Standards\n\n\nPostgresql\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOBIA for estimating building density\n\n\n\nEarth Observation\n\n\nOBIA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRADAR - Remote sensing\n\n\n\nEarth Observation\n\n\nRadar Analysis\n\n\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Big Data\n\n\nExploring cloud-based platforms and big data analytics for EO, including temporal analysis in GEE, soil moisture monitoring, and seasonal water mapping using Sen2Cube.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nImage segmentation and Classification\n\n\nApplying supervised and knowledge-based classification using eCognition to distinguish land cover types through object-based image analysis.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSpatial Data Infrastructure (SDI) for Gender Employment Trends in Austria\n\n\nDesigning an SDI framework to integrate and visualize gender employment data, enabling spatial analysis for policy insights.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDesign and Implementation of a Spatial Database\n\n\nDeveloping a structured spatial database for a fictional WebGIS application, optimizing geospatial data storage, querying, and interoperability using PostGIS.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOBIA for estimating building density\n\n\nUtilizing OBIA to assess building density patterns, presented in a scientific poster format for spatial analysis applications.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRADAR - Remote sensing\n\n\nAnalyzing Synthetic Aperture Radar (SAR) data to extract valuable geospatial insights, focusing on radar-based Earth observation techniques.\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "projects/Spatial thinking/Change_detection_OBIA.html",
@@ -229,5 +229,12 @@
     "title": "Image segmentation and Classification",
     "section": "Conclusion",
     "text": "Conclusion\nThis project applied a systematic process to land cover classification, combining supervised and knowledge-based methods to eCognition. The processing methodology emphasized segmentation, feature selection, and interactive optimization as a critical component to providing useful classification. Adding knowledge enhanced the following classification even further, with more accurate and insightful land cover for Kelleys Island. High-level segmentation with resulting maps provided the analysis with a macro level, with possibilities of larger regional analysis as well as ongoing spatial assessment."
+  },
+  {
+    "objectID": "projects/OBIA/OBIA.html",
+    "href": "projects/OBIA/OBIA.html",
+    "title": "Object Based Image Analysis",
+    "section": "",
+    "text": "xoaofsadsjföäösldkfä\nÖDJFMÖjdfö"
   }
 ]

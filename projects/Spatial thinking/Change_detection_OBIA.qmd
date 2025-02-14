@@ -4,7 +4,7 @@ title: "OBIA for estimating building density"
 layout: default
 image: "images/kakuma_camp.png"
 draft: false
-description: " "
+description: "Utilizing OBIA to assess building density patterns, presented in a scientific poster format for spatial analysis applications."
 categories: [Earth Observation, OBIA]
 ---
 

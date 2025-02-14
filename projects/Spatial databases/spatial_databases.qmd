@@ -3,8 +3,8 @@ title: "Design and Implementation of a Spatial Database"
 layout: default
 #image: "main_logo.png"
 #draft: true
-description: " "
-categories: [Spatial Databases, Geospatial Standards, Postgresql]
+description: "Developing a structured spatial database for a fictional WebGIS application, optimizing geospatial data storage, querying, and interoperability using PostGIS."
+categories: [Spatial Databases, Geospatial Standards, PostGIS]
 ---
 
 ## **Introduction**

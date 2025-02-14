@@ -7,12 +7,12 @@ listing:
       title: "RADAR - Remote sensing"
       image: "images/img4.png"
       layout: default 
-      description: " "
-      categories: [Earth Observation, Radar Analysis]
+      description: "Analyzing Synthetic Aperture Radar (SAR) data to extract valuable geospatial insights, focusing on radar-based Earth observation techniques."
+      categories: [Earth Observation, Radar Analysis, Remote Sensing]
       
-  sort: "date desc"
+  sort: "date"
   type: grid
-  categories: true
+  #categories: true
   sort-ui: false
   filter-ui: false
 page-layout: full

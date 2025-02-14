@@ -3,7 +3,7 @@ title: "Image segmentation and Classification"
 layout: default
 image: "images/knowledge based classification v3.png"
 #draft: true
-description: " "
+description: "Applying supervised and knowledge-based classification using eCognition to distinguish land cover types through object-based image analysis."
 categories: [Remote sensing, OBIA, eCognition]
 ---
 

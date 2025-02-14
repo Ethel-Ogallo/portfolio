@@ -1,0 +1,13 @@
+---
+title: "Object Based Image Analysis"
+layout: default
+#image: "images/"
+draft: true
+description: "Implementing OBIA techniques in Python for automated image segmentation and classification, enhancing geospatial analysis workflows."
+categories: [Remote sensing, OBIA, Python]
+---
+
+``` python
+xoaofsadsjföäösldkfä
+ÖDJFMÖjdfö
+```
