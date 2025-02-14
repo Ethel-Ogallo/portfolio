@@ -1,5 +1,5 @@
 ---
-title: "Database backend development for a WebGIS"
+title: "Design and Implementation of a Spatial Database"
 layout: default
 #image: "main_logo.png"
 #draft: true
