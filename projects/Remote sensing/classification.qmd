@@ -1,0 +1,88 @@
+---
+title: "Image segmentation and Classification"
+layout: default
+#image: "main_logo.png"
+draft: true
+description: " "
+categories: [Remote sensing, OBIA, eCognition]
+---
+
+## **Introduction**
+
+### **Objective**
+
+This project involves performing a supervised and knowledge based land cover classification of a satellite imagery to identify key land cover classes and further refine the classification using expert rules.
+
+### **Study Area and Data**
+
+-   Study Area: Kelleys Island, USA.
+
+-   Datasets Used:
+
+    ![](images/clipboard-1316435109.png)
+
+    -   Planet Dove satellite image subset (3m resolution, 4 bands: Blue, Green, Red, Near-Infrared).
+
+    -   Flood Zone Raster (3m resolution, binary values: 1 = potential flood zone, 0 = no flood zone).
+
+-   Software Used: eCognition Developer 10.3.
+
+### **Supervised Classification**
+
+#### Image segmentation
+
+Multiresolution Segmentation algorithm in eCognition was applied to create meaningful image objects. A Scale parameter of —- was chosen to balance fine-grained details with classification needs.\*\*
+
+-add more stuff here and image
+
+#### Image classification
+
+Sample Selection: Collected representative samples for the following land cover classes:
+
+-   Water
+
+-   Grassland
+
+-   Forest
+
+-   Bare Soil
+
+-   Impervious Surfaces (streets, buildings, etc.)
+
+-add image of sample and classes here
+
+Feature Selection: Used mean spectral values as classification features.
+
+Supervised Classification: Applied an SVM
+
+Iterative Refinement: Adjusted training samples and re-ran classification to improve accuracy.
+
+### **Knowledge-Based Classification**
+
+Adding Subclasses:
+
+New Classes:Forest_Flooded (flooded forest areas) and Lake (subset of the Water class).
+
+Rule-Based Classification:
+
+Used the "Assign Class" algorithm to classify "Forest_Flooded" where forest objects overlapped with flood zone pixels (value = 1).
+
+Identified "Lake" within the island using geometry-based conditions (e.g., "Find Enclosed by Class").
+
+Post-Processing:
+
+Merged water objects to ensure proper lake classification.
+
+Applied further refinement rules where necessary.
+
+Calculated Shape Index of the Lake Object
+
+### **High-Level Segmentation**
+
+New Segmentation Level: Created a coarse segmentation level for the island.
+
+Multiresolution Segmentation:
+
+Used only spectral bands for segmentation.
+
+Increased scale parameter to group the entire island as one object. Iterative Testing:Adjusted parameters to achieve desired segmentation.
