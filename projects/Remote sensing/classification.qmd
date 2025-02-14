@@ -1,88 +1,92 @@
 ---
 title: "Image segmentation and Classification"
 layout: default
-#image: "main_logo.png"
-draft: true
+image: "images/knowledge based classification v3.png"
+#draft: true
 description: " "
 categories: [Remote sensing, OBIA, eCognition]
 ---
 
 ## **Introduction**
 
-### **Objective**
+The project consists of conducting a supervised and knowledge-based land cover classification of a sample of satellite imagery. An object-based image analysis (OBIA) approach is used in the initial steps, applying spectral and spatial attributes to segment and classify the land cover using eCognition.
 
-This project involves performing a supervised and knowledge based land cover classification of a satellite imagery to identify key land cover classes and further refine the classification using expert rules.
+**Study Area and Data**
 
-### **Study Area and Data**
+Kelleys Island, located in the United States, serves as the study area for this analysis. The datasets used include:
 
--   Study Area: Kelleys Island, USA.
+-   **Planet Dove Satellite Image** (3m resolution, 4 bands: Blue, Green, Red, Near-Infrared), providing detailed spectral information for classification.
 
--   Datasets Used:
+-   **Flood Zone Raster** (3m resolution, binary values: 1 = potential flood zone, 0 = no flood zone), used for knowledge-based classification to refine land cover identification.
 
-    ![](images/clipboard-1316435109.png)
+![](images/clipboard-1316435109.png)
 
-    -   Planet Dove satellite image subset (3m resolution, 4 bands: Blue, Green, Red, Near-Infrared).
+## **Supervised Classification**
 
-    -   Flood Zone Raster (3m resolution, binary values: 1 = potential flood zone, 0 = no flood zone).
+### **Image segmentation**
 
--   Software Used: eCognition Developer 10.3.
+**Why Image Segmentation?** Segmentation is required for clustering pixels into significant objects in order to facilitate a more structured classification process. Segmentation considers spatial context, unlike pixel-based classification, and is therefore particularly useful for delineating complex land cover types.
 
-### **Supervised Classification**
+To produce meaningful image objects, a *Multiresolution Segmentation* algorithm within eCogniton was employed. A scale parameter of 150 was set such that resulting segments are not too small nor too large, finding a compromise between detail preservation and efficiency in classification. This segmentation was key in distinguishing between land cover classes, dividing the image/scene into objects based on their spectral value, shape and compactness.
 
-#### Image segmentation
+![multiresolution segmentation](images/image%20segemntation.PNG){width="560"}
 
-Multiresolution Segmentation algorithm in eCognition was applied to create meaningful image objects. A Scale parameter of —- was chosen to balance fine-grained details with classification needs.\*\*
+### **Sample-based Image classification**
 
--add more stuff here and image
+**Why Sample-Based Classification?** Supervised classification applies training data to develop a model that can generalize to unseen areas. By selecting representative samples, we ensure the classification model is able to separate land cover categories effectively.
 
-#### Image classification
+A supervised classification method was utilized, and a selection of representative samples for the major land cover categories were needed:Water, Grassland, Forest, Bare Soil, and Impervious Surfaces (streets, buildings, etc.)
 
-Sample Selection: Collected representative samples for the following land cover classes:
+The classification used mean spectral values from the image bands to separate classes. Training was done using a *Support Vector Machine (SVM)*, iteratively refining the classification by adjusting training samples and re-running the classification.
 
--   Water
+![supervised classification](images/image%20classification%20v2.png)
 
--   Grassland
+## **Knowledge-Based Classification**
 
--   Forest
+**Why Knowledge-Based Classification?** Supervised classification incorrectly classifies some regions and provides only a broad classification. Knowledge-based classification applies expert rules and other data sources to limit the results, hence improving overall accuracy.
 
--   Bare Soil
+Whereas the first classification provided a general class of land cover, expert knowledge was incorporated to provide more detail results. Two new classes were incorporated:
 
--   Impervious Surfaces (streets, buildings, etc.)
+-   Forest_Flooded: Areas classified as forest that overlap with flood-prone zones.
 
--add image of sample and classes here
+-   Lake: A subclass of water, distinguishing inland water bodies from surrounding waters.
 
-Feature Selection: Used mean spectral values as classification features.
+### **Applying Expert Rules**
 
-Supervised Classification: Applied an SVM
+The *Assign Class* algorithm was used to identify and classify Forest_Flooded areas. This rule-based classification ensured that any forest object intersecting flood-prone zones (value = 1 in the flood zone raster) was correctly labeled.
 
-Iterative Refinement: Adjusted training samples and re-ran classification to improve accuracy.
+![assign class algorithm](images/forest%20flooded%20class.PNG)
 
-### **Knowledge-Based Classification**
+Similarly, in order to classify Lake areas correctly, the *Find Enclosed by Class* algorithm was used. The algorithm could successfully find inland water bodies based on geometric properties, which ensured water bodies within the island were well classified.
 
-Adding Subclasses:
+![find enclosed by class algorihtm](images/lake%20class.PNG)
 
-New Classes:Forest_Flooded (flooded forest areas) and Lake (subset of the Water class).
+### **Post-Processing**
 
-Rule-Based Classification:
+To further improve results, the Merge Region algorithm was used to combine fragmented water objects into one object, ensuring precise representation of the lake class.
 
-Used the "Assign Class" algorithm to classify "Forest_Flooded" where forest objects overlapped with flood zone pixels (value = 1).
+![merge by region algorithm](images/merge%20algoritnm.PNG)
 
-Identified "Lake" within the island using geometry-based conditions (e.g., "Find Enclosed by Class").
+The final knowledge-based classification incorporated these enhancements, yielding a better land cover representation.
 
-Post-Processing:
+![knowledge based classification result](images/knowledge%20based%20classification%20v3.png)
 
-Merged water objects to ensure proper lake classification.
+## **High-Level Segmentation**
 
-Applied further refinement rules where necessary.
+**Why High-Level Segmentation?** High-level segmentation allows for analysis at a broader scale, grouping larger regions to gain insights into overall land cover patterns.
 
-Calculated Shape Index of the Lake Object
+To further analyze the island at a broader level, a new segmentation level was introduced. The goal was to segment the entire island as a single object, allowing for higher-level classification and analysis.
 
-### **High-Level Segmentation**
+**Coarse-Level Segmentation**
 
-New Segmentation Level: Created a coarse segmentation level for the island.
+A second segmentation was also performed using only the spectral bands, increasing the scale parameter significantly to encompass the entire island as a single object. Several iterations were performed to fine-tune the scale so that the island would be segmented as a single unit without fragmentation.
 
-Multiresolution Segmentation:
+![](images/hierachy%20segmentation.PNG)
 
-Used only spectral bands for segmentation.
+The result successfully separated the island as a single object, demonstrating how various scales of segmentation can be used for various analysis purposes.
 
-Increased scale parameter to group the entire island as one object. Iterative Testing:Adjusted parameters to achieve desired segmentation.
+![](images/hierachy%20v2.png)
+
+## **Conclusion**
+
+This project applied a systematic process to land cover classification, combining supervised and knowledge-based methods to eCognition. The processing methodology emphasized segmentation, feature selection, and interactive optimization as a critical component to providing useful classification. Adding knowledge enhanced the following classification even further, with more accurate and insightful land cover for Kelleys Island. High-level segmentation with resulting maps provided the analysis with a macro level, with possibilities of larger regional analysis as well as ongoing spatial assessment.

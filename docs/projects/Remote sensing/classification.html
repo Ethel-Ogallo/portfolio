@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Projects – Ethel Ogallo</title>
+<title>Image segmentation and Classification – Ethel Ogallo</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,23 +23,21 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -67,67 +65,9 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -137,7 +77,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Ethel Ogallo</span>
     </a>
   </div>
@@ -148,19 +88,19 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./projects.html" aria-current="page"> 
+    <a class="nav-link" href="../../projects.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./resume2.html"> 
+    <a class="nav-link" href="../../resume2.html"> 
 <span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./more.html"> 
+    <a class="nav-link" href="../../more.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
 </ul>
@@ -171,23 +111,46 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(6)</span></div><div class="category" data-category="Cloud computing">Cloud computing <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Copernicus">Copernicus <span class="quarto-category-count">(1)</span></div><div class="category" data-category="DataCubes">DataCubes <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Earth Observation">Earth Observation <span class="quarto-category-count">(3)</span></div><div class="category" data-category="GEE">GEE <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Geospatial Standards">Geospatial Standards <span class="quarto-category-count">(2)</span></div><div class="category" data-category="OBIA">OBIA <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Postgresql">Postgresql <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Radar Analysis">Radar Analysis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Remote sensing">Remote sensing <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SDI">SDI <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Spatial Databases">Spatial Databases <span class="quarto-category-count">(2)</span></div><div class="category" data-category="eCognition">eCognition <span class="quarto-category-count">(1)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><strong>Introduction</strong></a></li>
+  <li><a href="#supervised-classification" id="toc-supervised-classification" class="nav-link" data-scroll-target="#supervised-classification"><strong>Supervised Classification</strong></a>
+  <ul class="collapse">
+  <li><a href="#image-segmentation" id="toc-image-segmentation" class="nav-link" data-scroll-target="#image-segmentation"><strong>Image segmentation</strong></a></li>
+  <li><a href="#sample-based-image-classification" id="toc-sample-based-image-classification" class="nav-link" data-scroll-target="#sample-based-image-classification"><strong>Sample-based Image classification</strong></a></li>
+  </ul></li>
+  <li><a href="#knowledge-based-classification" id="toc-knowledge-based-classification" class="nav-link" data-scroll-target="#knowledge-based-classification"><strong>Knowledge-Based Classification</strong></a>
+  <ul class="collapse">
+  <li><a href="#applying-expert-rules" id="toc-applying-expert-rules" class="nav-link" data-scroll-target="#applying-expert-rules"><strong>Applying Expert Rules</strong></a></li>
+  <li><a href="#post-processing" id="toc-post-processing" class="nav-link" data-scroll-target="#post-processing"><strong>Post-Processing</strong></a></li>
+  </ul></li>
+  <li><a href="#high-level-segmentation" id="toc-high-level-segmentation" class="nav-link" data-scroll-target="#high-level-segmentation"><strong>High-Level Segmentation</strong></a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion"><strong>Conclusion</strong></a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Projects</h1>
-</div>
+<h1 class="title">Image segmentation and Classification</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Remote sensing</div>
+    <div class="quarto-category">OBIA</div>
+    <div class="quarto-category">eCognition</div>
+  </div>
+  </div>
 
 
 
-<div class="quarto-title-meta column-page-left">
+<div class="quarto-title-meta">
 
     
   
@@ -199,208 +162,104 @@ window.Quarto = {
 </header>
 
 
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction"><strong>Introduction</strong></h2>
+<p>The project consists of conducting a supervised and knowledge-based land cover classification of a sample of satellite imagery. An object-based image analysis (OBIA) approach is used in the initial steps, applying spectral and spatial attributes to segment and classify the land cover using eCognition.</p>
+<p><strong>Study Area and Data</strong></p>
+<p>Kelleys Island, located in the United States, serves as the study area for this analysis. The datasets used include:</p>
+<ul>
+<li><p><strong>Planet Dove Satellite Image</strong> (3m resolution, 4 bands: Blue, Green, Red, Near-Infrared), providing detailed spectral information for classification.</p></li>
+<li><p><strong>Flood Zone Raster</strong> (3m resolution, binary values: 1 = potential flood zone, 0 = no flood zone), used for knowledge-based classification to refine land cover identification.</p></li>
+</ul>
+<p><img src="images/clipboard-1316435109.png" class="img-fluid"></p>
+</section>
+<section id="supervised-classification" class="level2">
+<h2 class="anchored" data-anchor-id="supervised-classification"><strong>Supervised Classification</strong></h2>
+<section id="image-segmentation" class="level3">
+<h3 class="anchored" data-anchor-id="image-segmentation"><strong>Image segmentation</strong></h3>
+<p><strong>Why Image Segmentation?</strong> Segmentation is required for clustering pixels into significant objects in order to facilitate a more structured classification process. Segmentation considers spatial context, unlike pixel-based classification, and is therefore particularly useful for delineating complex land cover types.</p>
+<p>To produce meaningful image objects, a <em>Multiresolution Segmentation</em> algorithm within eCogniton was employed. A scale parameter of 150 was set such that resulting segments are not too small nor too large, finding a compromise between detail preservation and efficiency in classification. This segmentation was key in distinguishing between land cover classes, dividing the image/scene into objects based on their spectral value, shape and compactness.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/image segemntation.PNG" class="img-fluid figure-img" width="560"></p>
+<figcaption>multiresolution segmentation</figcaption>
+</figure>
+</div>
+</section>
+<section id="sample-based-image-classification" class="level3">
+<h3 class="anchored" data-anchor-id="sample-based-image-classification"><strong>Sample-based Image classification</strong></h3>
+<p><strong>Why Sample-Based Classification?</strong> Supervised classification applies training data to develop a model that can generalize to unseen areas. By selecting representative samples, we ensure the classification model is able to separate land cover categories effectively.</p>
+<p>A supervised classification method was utilized, and a selection of representative samples for the major land cover categories were needed:Water, Grassland, Forest, Bare Soil, and Impervious Surfaces (streets, buildings, etc.)</p>
+<p>The classification used mean spectral values from the image bands to separate classes. Training was done using a <em>Support Vector Machine (SVM)</em>, iteratively refining the classification by adjusting training samples and re-running the classification.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/image classification v2.png" class="img-fluid figure-img"></p>
+<figcaption>supervised classification</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="knowledge-based-classification" class="level2">
+<h2 class="anchored" data-anchor-id="knowledge-based-classification"><strong>Knowledge-Based Classification</strong></h2>
+<p><strong>Why Knowledge-Based Classification?</strong> Supervised classification incorrectly classifies some regions and provides only a broad classification. Knowledge-based classification applies expert rules and other data sources to limit the results, hence improving overall accuracy.</p>
+<p>Whereas the first classification provided a general class of land cover, expert knowledge was incorporated to provide more detail results. Two new classes were incorporated:</p>
+<ul>
+<li><p>Forest_Flooded: Areas classified as forest that overlap with flood-prone zones.</p></li>
+<li><p>Lake: A subclass of water, distinguishing inland water bodies from surrounding waters.</p></li>
+</ul>
+<section id="applying-expert-rules" class="level3">
+<h3 class="anchored" data-anchor-id="applying-expert-rules"><strong>Applying Expert Rules</strong></h3>
+<p>The <em>Assign Class</em> algorithm was used to identify and classify Forest_Flooded areas. This rule-based classification ensured that any forest object intersecting flood-prone zones (value = 1 in the flood zone raster) was correctly labeled.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/forest flooded class.PNG" class="img-fluid figure-img"></p>
+<figcaption>assign class algorithm</figcaption>
+</figure>
+</div>
+<p>Similarly, in order to classify Lake areas correctly, the <em>Find Enclosed by Class</em> algorithm was used. The algorithm could successfully find inland water bodies based on geometric properties, which ensured water bodies within the island were well classified.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/lake class.PNG" class="img-fluid figure-img"></p>
+<figcaption>find enclosed by class algorihtm</figcaption>
+</figure>
+</div>
+</section>
+<section id="post-processing" class="level3">
+<h3 class="anchored" data-anchor-id="post-processing"><strong>Post-Processing</strong></h3>
+<p>To further improve results, the Merge Region algorithm was used to combine fragmented water objects into one object, ensuring precise representation of the lake class.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/merge algoritnm.PNG" class="img-fluid figure-img"></p>
+<figcaption>merge by region algorithm</figcaption>
+</figure>
+</div>
+<p>The final knowledge-based classification incorporated these enhancements, yielding a better land cover representation.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/knowledge based classification v3.png" class="img-fluid figure-img"></p>
+<figcaption>knowledge based classification result</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="high-level-segmentation" class="level2">
+<h2 class="anchored" data-anchor-id="high-level-segmentation"><strong>High-Level Segmentation</strong></h2>
+<p><strong>Why High-Level Segmentation?</strong> High-level segmentation allows for analysis at a broader scale, grouping larger regions to gain insights into overall land cover patterns.</p>
+<p>To further analyze the island at a broader level, a new segmentation level was introduced. The goal was to segment the entire island as a single object, allowing for higher-level classification and analysis.</p>
+<p><strong>Coarse-Level Segmentation</strong></p>
+<p>A second segmentation was also performed using only the spectral bands, increasing the scale parameter significantly to encompass the entire island as a single object. Several iterations were performed to fine-tune the scale so that the island would be segmented as a single unit without fragmentation.</p>
+<p><img src="images/hierachy segmentation.PNG" class="img-fluid"></p>
+<p>The result successfully separated the island as a single object, demonstrating how various scales of segmentation can be used for various analysis purposes.</p>
+<p><img src="images/hierachy v2.png" class="img-fluid"></p>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion"><strong>Conclusion</strong></h2>
+<p>This project applied a systematic process to land cover classification, combining supervised and knowledge-based methods to eCognition. The processing methodology emphasized segmentation, feature selection, and interactive optimization as a critical component to providing useful classification. Adding knowledge enhanced the following classification even further, with more accurate and insightful land cover for Kelleys Island. High-level segmentation with resulting maps provided the analysis with a macro level, with possibilities of larger regional analysis as well as ongoing spatial assessment.</p>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="Earth Observation,GEE,DataCubes,Copernicus,Cloud computing" data-listing-file-modified-sort="1738834870852" data-listing-reading-time-sort="8" data-listing-word-count-sort="1576">
-<a href="./projects/Digital earth/DE_projects.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./projects/Digital earth/main_logo.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Big Data
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Earth Observation'); return false;">
-Earth Observation
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('GEE'); return false;">
-GEE
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('DataCubes'); return false;">
-DataCubes
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Copernicus'); return false;">
-Copernicus
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Cloud computing'); return false;">
-Cloud computing
-</div>
-</div>
-<div class="card-text listing-description">
-
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="Remote sensing,OBIA,eCognition" data-listing-file-modified-sort="1739564373864" data-listing-reading-time-sort="4" data-listing-word-count-sort="725">
-<a href="./projects/Remote sensing/classification.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./projects/Remote sensing/images/knowledge based classification v3.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Image segmentation and Classification
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Remote sensing'); return false;">
-Remote sensing
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('OBIA'); return false;">
-OBIA
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('eCognition'); return false;">
-eCognition
-</div>
-</div>
-<div class="card-text listing-description">
-
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="2" data-categories="SDI,Geospatial Standards,Spatial Databases" data-listing-file-modified-sort="1739539031077" data-listing-reading-time-sort="3" data-listing-word-count-sort="461">
-<a href="./projects/SDI/DEFGA.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./projects/SDI/images/sdi_logo.jpg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Spatial Data Infrastructure (SDI) for Gender Employment Trends in Austria
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('SDI'); return false;">
-SDI
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Geospatial Standards'); return false;">
-Geospatial Standards
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Spatial Databases'); return false;">
-Spatial Databases
-</div>
-</div>
-<div class="card-text listing-description">
-
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="3" data-categories="Spatial Databases,Geospatial Standards,Postgresql" data-listing-file-modified-sort="1739540738819" data-listing-reading-time-sort="11" data-listing-word-count-sort="2047">
-<a href="./projects/Spatial databases/spatial_databases.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top"><img src="projects\Spatial databases\images\ER_model-02.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Design and Implementation of a Spatial Database
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Spatial Databases'); return false;">
-Spatial Databases
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Geospatial Standards'); return false;">
-Geospatial Standards
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Postgresql'); return false;">
-Postgresql
-</div>
-</div>
-<div class="card-text listing-description">
-
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="4" data-categories="Earth Observation,OBIA" data-listing-file-modified-sort="1737675921619" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<a href="./projects/Spatial thinking/Change_detection_OBIA.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./projects/Spatial thinking/images/kakuma_camp.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-OBIA for estimating building density
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Earth Observation'); return false;">
-Earth Observation
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('OBIA'); return false;">
-OBIA
-</div>
-</div>
-<div class="card-text listing-description">
-
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="5" data-categories="Earth Observation,Radar Analysis">
-<a href="https://storymaps.arcgis.com/stories/8edbb90f9fa34a69babdfc5c53da9e77" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="images/img4.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-RADAR - Remote sensing
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Earth Observation'); return false;">
-Earth Observation
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Radar Analysis'); return false;">
-Radar Analysis
-</div>
-</div>
-<div class="card-text listing-description">
-
-</div>
-</div>
-</div>
-</a>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -829,7 +688,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>   
     <div class="nav-footer-center">
 <p style="display: flex; justify-content: center; align-items: center; gap: 10px;">
-<img src="./images/EMJM.jpg" alt="EMJM+" style="height:70px;"> <img src="./images/CDE.png" alt="CDE" style="height:80px;"> <img src="./images/PLUS.jpg" alt="PLUS" style="height:80px;"> <img src="./images/UBS.png" alt="UBS" style="height:90px;">
+<img src="../../images/EMJM.jpg" alt="EMJM+" style="height:70px;"> <img src="../../images/CDE.png" alt="CDE" style="height:80px;"> <img src="../../images/PLUS.jpg" alt="PLUS" style="height:80px;"> <img src="../../images/UBS.png" alt="UBS" style="height:90px;">
 </p>
 <p>
 Made with <a href="https://quarto.org/">Quarto</a>. Copyright 2024, Ethel Ogallo.

@@ -3,6 +3,7 @@
     "listing": "/projects.html",
     "items": [
       "/projects/Digital earth/DE_projects.html",
+      "/projects/Remote sensing/classification.html",
       "/projects/SDI/DEFGA.html",
       "/projects/Spatial databases/spatial_databases.html",
       "/projects/Spatial thinking/Change_detection_OBIA.html"
