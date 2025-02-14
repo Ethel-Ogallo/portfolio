@@ -153,11 +153,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#context" id="toc-context" class="nav-link active" data-scroll-target="#context"><strong>Context</strong></a>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><strong>Introduction</strong></a>
   <ul class="collapse">
   <li><a href="#er-diagram" id="toc-er-diagram" class="nav-link" data-scroll-target="#er-diagram"><strong>ER Diagram</strong></a></li>
-  <li><a href="#ddldml-steps" id="toc-ddldml-steps" class="nav-link" data-scroll-target="#ddldml-steps"><strong>DDL,DML steps</strong></a></li>
-  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results"><strong>Results</strong></a></li>
+  <li><a href="#database-definition" id="toc-database-definition" class="nav-link" data-scroll-target="#database-definition"><strong>Database definition</strong></a></li>
+  <li><a href="#database-access-and-control" id="toc-database-access-and-control" class="nav-link" data-scroll-target="#database-access-and-control"><strong>Database Access and control</strong></a></li>
+  <li><a href="#database-manipulation" id="toc-database-manipulation" class="nav-link" data-scroll-target="#database-manipulation"><strong>Database Manipulation</strong></a></li>
   </ul></li>
   </ul>
 </nav>
@@ -189,9 +190,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="context" class="level2">
-<h2 class="anchored" data-anchor-id="context"><strong>Context</strong></h2>
-<p>As part of a fictional project for Vudstork Entertainment Ltd, I was tasked with developing a WebGIS backend to support a mobile app for a city festival. The app provides festival visitors with real-time information and allows organizers to distribute notifications and streamline their workflows. My role involved leveraging my Geoinformatics expertise to design and implement a spatial database, which forms the core of the app’s functionality, integrating various methods and software techniques learned during the semester.</p>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction"><strong>Introduction</strong></h2>
+<p>As part of a fictional project for Vudstork Entertainment Ltd, the task was to develop a WebGIS backend to support a mobile app for a city festival. The app provides festival visitors with real-time information and allows organizers to distribute notifications and streamline their workflows. My role involved leveraging my Geoinformatics expertise to design and implement a spatial database, which forms the core of the app’s functionality, integrating various methods and software techniques learned during the semester.</p>
 <p><strong>Requirements</strong></p>
 <ul>
 <li>Serve as database backend to organise the booths, roller coasters, tents etc. (Positions, opening times) as well as other facilities (garbage bins, toilets etc)</li>
@@ -200,18 +201,332 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <section id="er-diagram" class="level3">
 <h3 class="anchored" data-anchor-id="er-diagram"><strong>ER Diagram</strong></h3>
-<p>placeholder example</p>
-<p><img src="images/public_transport_model.png" class="img-fluid"></p>
+<p>The ER diagram illustrates the main entities in the database design and their relationships.</p>
+<p><img src="images/ER_model-02.png" class="img-fluid" width="685"></p>
+<p>Below is a summary of all tables</p>
+<ul>
+<li><p>Festival – Central entity that links all other tables, storing details about the festival’s name, location, and dates.</p></li>
+<li><p>Event Zones – Defines areas within the festival (e.g., food, medical, event zones), linking to stages, booths, and utilities.</p></li>
+<li><p>Stage – Stores details of festival stages, defining location, access level, and zone affiliation.</p></li>
+<li><p>Event – Links artists to stages, recording performance time slots and locations.</p></li>
+<li><p>Artist – Stores artist details, linked to events and stages.</p></li>
+<li><p>Booth – Represents vendor booths, specifying type, location, and zone.</p></li>
+<li><p>Vendor – Links vendors to booths.</p></li>
+<li><p>Utility – Stores details about facilities (e.g., toilets, medical points, garbage bins), linked to zones and festival areas.</p></li>
+<li><p>Employees – Stores festival staff information, linking them to stages and assigned roles.</p></li>
+<li><p>Visitor – Tracks festival attendees, linking them to ticket types.</p></li>
+<li><p>Visitor Balance – Monitors a visitor’s remaining balance on their digital festival band.</p></li>
+<li><p>Ticket – Stores ticket types (VIP, General Admission), defining visitor access levels.</p></li>
+<li><p>Purchase – Tracks visitor purchases at booths, recording transaction amounts.</p></li>
+</ul>
 </section>
-<section id="ddldml-steps" class="level3">
-<h3 class="anchored" data-anchor-id="ddldml-steps"><strong>DDL,DML steps</strong></h3>
+<section id="database-definition" class="level3">
+<h3 class="anchored" data-anchor-id="database-definition"><strong>Database definition</strong></h3>
+<p>Spatial tables including utilities, booths, stages, zones and the festival grounds, were created using QGIS and the shapefiles were then imported into a PostGIS database.</p>
+<p><img src="images/clipboard-170310492.png" class="img-fluid"></p>
+<p>Non-spatial tables were defined in Postgres including events, artists, visitors employees , tickets etc .</p>
 <div class="scrollable" style="max-height: 300px; overflow-y: auto; background-color: #f9f9f9; color: #ffffff; padding: 10px; border-radius: 5px;">
-<div class="sourceCode" id="cb1"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">--- code will here for the specific steps</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">--- non spatial tables</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">--- event table</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> <span class="kw">events</span> (</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    event_id <span class="dt">INTEGER</span> <span class="kw">PRIMARY</span> <span class="kw">KEY</span>,</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    stage_id <span class="dt">INTEGER</span> ,</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    artist_id <span class="dt">INTEGER</span> ,</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">date</span> <span class="dt">DATE</span>,</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    start_time <span class="dt">TIME</span> <span class="kw">WITHOUT</span> <span class="dt">TIME</span> <span class="dt">ZONE</span>,</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    end_time <span class="dt">TIME</span> <span class="kw">WITHOUT</span> <span class="dt">TIME</span> <span class="dt">ZONE</span>,</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">FOREIGN</span> <span class="kw">KEY</span> (stage_id) <span class="kw">REFERENCES</span> stage(stage_id),</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">FOREIGN</span> <span class="kw">KEY</span> (artist_id) <span class="kw">REFERENCES</span> artist(artist_id)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>);</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">--- vendor table</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> vendor (</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    vendor_id <span class="dt">INTEGER</span> <span class="kw">PRIMARY</span> <span class="kw">KEY</span>,</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    booth_id <span class="dt">INTEGER</span>,</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    licence <span class="dt">CHARACTER</span> <span class="dt">VARYING</span>,</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    <span class="kw">FOREIGN</span> <span class="kw">KEY</span> (booth_id) <span class="kw">REFERENCES</span> booth(booth_id)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>);</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co">--- artist table</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> artist (</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    artist_id <span class="dt">INTEGER</span> <span class="kw">PRIMARY</span> <span class="kw">KEY</span>,</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    name <span class="dt">CHARACTER</span> <span class="dt">VARYING</span>,</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    genre <span class="dt">CHARACTER</span> <span class="dt">VARYING</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>);</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="co">--- employees table</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> employee (</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    employee_id <span class="dt">INTEGER</span> <span class="kw">PRIMARY</span> <span class="kw">KEY</span>,</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    stage_id <span class="dt">INTEGER</span>,</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>    name <span class="dt">CHARACTER</span> <span class="dt">VARYING</span>,</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>    job_type <span class="dt">CHARACTER</span> <span class="dt">VARYING</span>,</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>    <span class="kw">FOREIGN</span> <span class="kw">KEY</span> (stage_id) <span class="kw">REFERENCES</span> stage(stage_id)</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>);</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a><span class="co">--- visitor table</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> visitor (</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>    visitor_id <span class="dt">INTEGER</span> <span class="kw">PRIMARY</span> <span class="kw">KEY</span>,</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>    ticket_id <span class="dt">INTEGER</span>,</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>    name <span class="dt">CHARACTER</span> <span class="dt">VARYING</span>,</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>    <span class="kw">FOREIGN</span> <span class="kw">KEY</span> (ticket_id) <span class="kw">REFERENCES</span> ticket(ticket_id)</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>);</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="co">--- vistor balance table</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> balance (</span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>    balance_id <span class="dt">INTEGER</span> <span class="kw">PRIMARY</span> <span class="kw">KEY</span>,</span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>    visitor_id <span class="dt">INTEGER</span> ,</span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>    balance <span class="dt">FLOAT</span>,</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>    <span class="kw">FOREIGN</span> <span class="kw">KEY</span> (visitor_id) <span class="kw">REFERENCES</span> visitor(visitor_id)</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>);</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="co">--- ticket table</span></span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> ticket (</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>    ticket_id <span class="dt">INTEGER</span> <span class="kw">PRIMARY</span> <span class="kw">KEY</span>,</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a>    <span class="kw">type</span> <span class="dt">CHARACTER</span> <span class="dt">VARYING</span> <span class="kw">CHECK</span> (<span class="kw">type</span> <span class="kw">IN</span> (<span class="st">'VIP'</span>,<span class="st">'General'</span>))</span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a>);</span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-60"><a href="#cb1-60" aria-hidden="true" tabindex="-1"></a><span class="co">--- purchase table</span></span>
+<span id="cb1-61"><a href="#cb1-61" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> purchase (</span>
+<span id="cb1-62"><a href="#cb1-62" aria-hidden="true" tabindex="-1"></a>    purchase_id <span class="dt">INTEGER</span> <span class="kw">PRIMARY</span> <span class="kw">KEY</span>,</span>
+<span id="cb1-63"><a href="#cb1-63" aria-hidden="true" tabindex="-1"></a>    visitor_id <span class="dt">INTEGER</span> ,</span>
+<span id="cb1-64"><a href="#cb1-64" aria-hidden="true" tabindex="-1"></a>    booth_id <span class="dt">INTEGER</span> ,</span>
+<span id="cb1-65"><a href="#cb1-65" aria-hidden="true" tabindex="-1"></a>    amount <span class="dt">FLOAT</span>,</span>
+<span id="cb1-66"><a href="#cb1-66" aria-hidden="true" tabindex="-1"></a>    <span class="kw">FOREIGN</span> <span class="kw">KEY</span> (visitor_id) <span class="kw">REFERENCES</span> visitor(visitor_id),</span>
+<span id="cb1-67"><a href="#cb1-67" aria-hidden="true" tabindex="-1"></a>    <span class="kw">FOREIGN</span> <span class="kw">KEY</span> (booth_id) <span class="kw">REFERENCES</span> booth(booth_id)</span>
+<span id="cb1-68"><a href="#cb1-68" aria-hidden="true" tabindex="-1"></a>);</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The database is normalized to Third Normal Form (3NF) to eliminate redundancy by having each table has a primary key that uniquely identifies records and all other attributes dependent on the full primary key and not the other non-primary keys.</p>
+<p>Pseudo sample data was then inserted into the database for the corresponding tables.</p>
+<div class="scrollable" style="max-height: 300px; overflow-y: auto; background-color: #f9f9f9; color: #ffffff; padding: 10px; border-radius: 5px;">
+<div class="sourceCode" id="cb2"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">--- Adding sample data to the table</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co">--- 1. event table</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="kw">INSERT</span> <span class="kw">INTO</span> <span class="kw">events</span> (event_id, stage_id, artist_id, <span class="dt">date</span>, start_time, end_time) </span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="kw">VALUES</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="st">'2025-07-09'</span>, <span class="st">'18:00'</span>, <span class="st">'19:30'</span>), </span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">2</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="st">'2025-07-10'</span>, <span class="st">'20:00'</span>, <span class="st">'21:30'</span>),  </span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="st">'2025-07-09'</span>, <span class="st">'17:00'</span>, <span class="st">'18:30'</span>),  </span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="st">'2025-07-10'</span>, <span class="st">'19:00'</span>, <span class="st">'20:30'</span>),  </span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">5</span>, <span class="dv">3</span>, <span class="dv">5</span>, <span class="st">'2025-07-09'</span>, <span class="st">'18:00'</span>, <span class="st">'19:30'</span>),  </span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">6</span>, <span class="dv">3</span>, <span class="dv">6</span>, <span class="st">'2025-07-10'</span>, <span class="st">'20:00'</span>, <span class="st">'21:30'</span>), </span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">7</span>, <span class="dv">4</span>, <span class="dv">7</span>, <span class="st">'2025-07-09'</span>, <span class="st">'17:00'</span>, <span class="st">'18:30'</span>),  </span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">8</span>, <span class="dv">4</span>, <span class="dv">8</span>, <span class="st">'2025-07-10'</span>, <span class="st">'19:00'</span>, <span class="st">'20:30'</span>),  </span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">9</span>, <span class="dv">5</span>, <span class="dv">9</span>, <span class="st">'2025-07-09'</span>, <span class="st">'18:00'</span>, <span class="st">'19:30'</span>),  </span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">10</span>, <span class="dv">5</span>, <span class="dv">10</span>, <span class="st">'2025-07-10'</span>, <span class="st">'20:00'</span>, <span class="st">'21:30'</span>);</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="co">--- 2. vendor table</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="kw">INSERT</span> <span class="kw">INTO</span> vendor (vendor_id, booth_id, licence) </span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="kw">VALUES</span> </span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">10001</span>, <span class="dv">1</span>, <span class="st">'FOOD-2025-001'</span>),  </span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">10002</span>, <span class="dv">2</span>, <span class="st">'MERCH-2025-002'</span>),  </span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">10003</span>, <span class="dv">10</span>, <span class="st">'GAMES-2025-003'</span>),  </span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">10004</span>, <span class="dv">6</span>, <span class="st">'FOOD-2025-004'</span>),  </span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">10005</span>, <span class="dv">3</span>, <span class="st">'MERCH-2025-005'</span>),</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">10006</span>, <span class="dv">11</span>, <span class="st">'GAMES-2025-005'</span>),</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">10007</span>, <span class="dv">7</span>, <span class="st">'FOOD-2025-005'</span>),</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">10008</span>, <span class="dv">4</span>, <span class="st">'MERCH-2025-005'</span>),</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">10009</span>, <span class="dv">9</span>, <span class="st">'FOOD-2025-005'</span>),</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">10010</span>, <span class="dv">12</span>, <span class="st">'FOOD-2025-005'</span>);</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="co">--- 3. artist table</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a><span class="kw">INSERT</span> <span class="kw">INTO</span> artist (artist_id, name, genre) </span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="kw">VALUES</span> </span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">1</span>, <span class="st">'Burna Boy'</span>, <span class="st">'afrobeat'</span>),</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">2</span>, <span class="st">'Tems'</span>, <span class="st">'afropop'</span>),</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">3</span>, <span class="st">'Amaarae'</span>, <span class="st">'afropop'</span>),</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">4</span>, <span class="st">'Dexta Daps'</span>, <span class="st">'reggae'</span>),</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">5</span>, <span class="st">'Uncle Waffles'</span>, <span class="st">'amapiano'</span>),</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">6</span>, <span class="st">'Scorpion kings'</span>, <span class="st">'amapiano'</span>),</span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">7</span>, <span class="st">'Felo le tee'</span>, <span class="st">'francophone'</span>),</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">8</span>, <span class="st">'The therapist'</span>, <span class="st">'afrojazz'</span>),</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">9</span>, <span class="st">'Dj maphorisa'</span>, <span class="st">'amapiano'</span>),</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">10</span>, <span class="st">'Dj grauchi'</span>, <span class="st">'afrohouse'</span>);</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a><span class="co">--- 4. employees table</span></span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a><span class="kw">INSERT</span> <span class="kw">INTO</span> employee (employee_id, stage_id, name, job_type) </span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a><span class="kw">VALUES</span>  </span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">1</span>, <span class="dv">1</span>, <span class="st">'Lida Scay'</span>, <span class="st">'Stage Manager'</span>),  </span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">2</span>, <span class="dv">2</span>, <span class="st">'Benjy Scuttel'</span>, <span class="st">'Vendor coordinator'</span>),  </span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">3</span>, <span class="dv">3</span>, <span class="st">'Sofie Itshack'</span>, <span class="st">'Medical'</span>),    </span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">4</span>, <span class="dv">4</span>, <span class="st">'Brian Peckam'</span>, <span class="st">'Ticketing'</span>),     </span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">5</span>, <span class="dv">5</span>, <span class="st">'Hilary Cuttel'</span>, <span class="st">'Security'</span>),</span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">6</span>, <span class="dv">1</span>, <span class="st">'Page Waterworth'</span>, <span class="st">'Information desk'</span>),</span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">7</span>, <span class="dv">2</span>, <span class="st">'Alehandro Gustavo'</span>, <span class="st">'Medical'</span>),</span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">8</span>, <span class="dv">3</span>, <span class="st">'Fidel Castro'</span>, <span class="st">'Security'</span>),</span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">9</span>, <span class="dv">4</span>, <span class="st">'Bruno Patrice'</span>, <span class="st">'Stage manager'</span>),</span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">10</span>, <span class="dv">5</span>, <span class="st">'Anitta Maxwin'</span>, <span class="st">'Ticketing'</span>);</span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a><span class="co">--- 5. ticket table</span></span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a><span class="kw">INSERT</span> <span class="kw">INTO</span> ticket (ticket_id, <span class="kw">type</span>) </span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a><span class="kw">VALUES</span> </span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">101</span>, <span class="st">'VIP'</span>),</span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">102</span>,  <span class="st">'General'</span>);</span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a><span class="co">--- 6. visitor table</span></span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a><span class="kw">INSERT</span> <span class="kw">INTO</span> visitor (visitor_id, ticket_id, name) </span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a><span class="kw">VALUES</span> </span>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">1001</span>, <span class="dv">101</span>, <span class="st">'Gauthier Janko'</span>),</span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">1002</span>, <span class="dv">102</span>,  <span class="st">'Seamus Ashford'</span>),</span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">1003</span>, <span class="dv">101</span>,  <span class="st">'Gale Carsey'</span>),</span>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">1004</span>, <span class="dv">102</span>,  <span class="st">'Lynette Fahy'</span>),</span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">1005</span>, <span class="dv">101</span>,  <span class="st">'Jamie Knudsen'</span>),</span>
+<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">1006</span>, <span class="dv">102</span>,  <span class="st">'Sada Brittin'</span>),</span>
+<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">1007</span>, <span class="dv">101</span>,  <span class="st">'Lucianno Epp'</span>),</span>
+<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">1008</span>, <span class="dv">102</span>,  <span class="st">'Kiah Krishna'</span>),</span>
+<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">1009</span>, <span class="dv">101</span>,  <span class="st">'Theo Olatunji'</span>),</span>
+<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">1010</span>, <span class="dv">102</span>,  <span class="st">'Barry Allen'</span>);</span>
+<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a><span class="co">--- 7. vistor balance table</span></span>
+<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a><span class="kw">INSERT</span> <span class="kw">INTO</span> balance (balance_id, visitor_id, balance) </span>
+<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a><span class="kw">VALUES</span> </span>
+<span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">1</span>, <span class="dv">1001</span>, <span class="fl">99.14</span>),  </span>
+<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">2</span>, <span class="dv">1002</span>, <span class="fl">85.55</span>),  </span>
+<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">3</span>, <span class="dv">1003</span>, <span class="fl">28.41</span>),  </span>
+<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">4</span>, <span class="dv">1004</span>, <span class="fl">50.59</span>),  </span>
+<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">5</span>, <span class="dv">1005</span>, <span class="fl">11.60</span>),</span>
+<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">6</span>, <span class="dv">1006</span>, <span class="fl">5.69</span>),</span>
+<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">7</span>, <span class="dv">1007</span>, <span class="fl">105.42</span>),</span>
+<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">8</span>, <span class="dv">1008</span>, <span class="fl">68.65</span>),</span>
+<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">9</span>, <span class="dv">1009</span>, <span class="fl">70.36</span>),</span>
+<span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">10</span>, <span class="dv">1010</span>, <span class="fl">1.38</span>);</span>
+<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a><span class="co">--- 8. purchase table</span></span>
+<span id="cb2-93"><a href="#cb2-93" aria-hidden="true" tabindex="-1"></a><span class="kw">INSERT</span> <span class="kw">INTO</span> purchase (purchase_id, visitor_id, booth_id, amount) </span>
+<span id="cb2-94"><a href="#cb2-94" aria-hidden="true" tabindex="-1"></a><span class="kw">VALUES</span>  </span>
+<span id="cb2-95"><a href="#cb2-95" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">1101</span>, <span class="dv">1001</span>, <span class="dv">1</span>, <span class="fl">65.00</span>),  </span>
+<span id="cb2-96"><a href="#cb2-96" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">1102</span>, <span class="dv">1002</span>, <span class="dv">2</span>, <span class="fl">7.50</span>),  </span>
+<span id="cb2-97"><a href="#cb2-97" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">1103</span>, <span class="dv">1003</span>, <span class="dv">3</span>, <span class="fl">20.00</span>),    </span>
+<span id="cb2-98"><a href="#cb2-98" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">1104</span>, <span class="dv">1004</span>, <span class="dv">4</span>, <span class="fl">5.25</span>),     </span>
+<span id="cb2-99"><a href="#cb2-99" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">1105</span>, <span class="dv">1005</span>, <span class="dv">5</span>, <span class="fl">83.25</span>),</span>
+<span id="cb2-100"><a href="#cb2-100" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">1106</span>, <span class="dv">1006</span>, <span class="dv">6</span>, <span class="fl">64.67</span>),</span>
+<span id="cb2-101"><a href="#cb2-101" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">1107</span>, <span class="dv">1007</span>, <span class="dv">7</span>, <span class="fl">9.88</span>),</span>
+<span id="cb2-102"><a href="#cb2-102" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">1108</span>, <span class="dv">1008</span>, <span class="dv">8</span>, <span class="fl">89.11</span>),</span>
+<span id="cb2-103"><a href="#cb2-103" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">1109</span>, <span class="dv">1009</span>, <span class="dv">9</span>, <span class="fl">56.79</span>),</span>
+<span id="cb2-104"><a href="#cb2-104" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">11010</span>, <span class="dv">1005</span>, <span class="dv">10</span>, <span class="fl">15.00</span>); </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="results" class="level3">
-<h3 class="anchored" data-anchor-id="results"><strong>Results</strong></h3>
-<p>database results/tasks go here + images</p>
+<section id="database-access-and-control" class="level3">
+<h3 class="anchored" data-anchor-id="database-access-and-control"><strong>Database Access and control</strong></h3>
+<p><strong>Role-based access was implemented</strong></p>
+<p>For database security, different roles were created for festival employees and visitors providing different levels of access. Each role has specific permissions granted based on their responsibilities. The roles included:</p>
+<ol type="1">
+<li><p>Visitor: Limited access to personal data and location tables only to view.</p></li>
+<li><p>Stage Manager: full access to events table and limited access to stage and artist.</p></li>
+<li><p>Vendor Coordinator: full access to vendor table and limited access to purchase and booth data.</p></li>
+<li><p>Ticketing staff: limited access to ticket and visitor table</p></li>
+<li><p>Security staff: limited access to stage, artist and events tables</p></li>
+</ol>
+<div class="scrollable" style="max-height: 300px; overflow-y: auto; background-color: #f9f9f9; color: #ffffff; padding: 10px; border-radius: 5px;">
+<div class="sourceCode" id="cb3"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">--- Access control</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">--- create roles for individuals to access database </span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">ROLE</span> visitor <span class="kw">WITH</span> LOGIN <span class="kw">PASSWORD</span> <span class="st">'ticket_id'</span> VALID <span class="kw">UNTIL</span> <span class="st">'2025-07-11'</span>;</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">ROLE</span> stage_manager <span class="kw">WITH</span> LOGIN <span class="kw">PASSWORD</span> <span class="st">'M4u=ct)HB8Em'</span>;</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">ROLE</span> vendor_coordinator <span class="kw">WITH</span> LOGIN <span class="kw">PASSWORD</span> <span class="st">'u+}zmEn-P8`?sb'</span>;</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">ROLE</span> ticketing_staff <span class="kw">WITH</span> LOGIN <span class="kw">PASSWORD</span> <span class="st">'e2H-mtS+Fs(q'</span> VALID <span class="kw">UNTIL</span> <span class="st">'2025-07-11'</span>;</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">ROLE</span> security_staff <span class="kw">WITH</span> LOGIN <span class="kw">PASSWORD</span> <span class="st">'ZL~hB+.E5GJ9/'</span> VALID <span class="kw">UNTIL</span> <span class="st">'2025-07-11'</span>;</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co">---  visitor access  </span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="kw">GRANT</span> <span class="kw">SELECT</span> <span class="kw">ON</span> </span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    festival, zones, stage,<span class="kw">events</span>, artist, vendor, booth, utility </span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="kw">TO</span> visitor;</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="co">--- stage manager access</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="kw">GRANT</span> <span class="kw">SELECT</span>, <span class="kw">INSERT</span>, <span class="kw">UPDATE</span>, <span class="kw">DELETE</span> <span class="kw">ON</span> <span class="kw">events</span> <span class="kw">TO</span> stage_manager;</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="kw">GRANT</span> <span class="kw">SELECT</span> <span class="kw">ON</span> artist, stage <span class="kw">TO</span> stage_manager;</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="co">--- vendor coordinator</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="kw">GRANT</span> <span class="kw">SELECT</span>, <span class="kw">INSERT</span>, <span class="kw">UPDATE</span>, <span class="kw">DELETE</span> <span class="kw">ON</span> vendor <span class="kw">TO</span> vendor_coordinator;</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="kw">GRANT</span> <span class="kw">SELECT</span> <span class="kw">ON</span> </span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>    purchase, balance </span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="kw">TO</span> vendor_coordinator;</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="co">--- ticketing staff access</span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="kw">GRANT</span> <span class="kw">SELECT</span> <span class="kw">ON</span> </span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>    visitor, ticket </span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="kw">TO</span> ticketing_staff;</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a><span class="co">--- security staff access</span></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a><span class="kw">GRANT</span> <span class="kw">SELECT</span> <span class="kw">ON</span> </span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>    <span class="kw">events</span>, artist , stage </span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a><span class="kw">TO</span> security_staff;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="database-manipulation" class="level3">
+<h3 class="anchored" data-anchor-id="database-manipulation"><strong>Database Manipulation</strong></h3>
+<p>Database Query examples:</p>
+<ol type="1">
+<li><p>List of events on the second day of festival. What are the events that are taking place on the second day of the festival including which stage and artists will perform?</p></li>
+<li><p>What are the utilities near a festival goer? <em>Assumption for this query is that the location if the festival goer is from a specific zone, ideally it should be real time location of visitor.</em></p></li>
+<li><p>Identify access level visitor has based on ticket type.Which stages / events does a festival have access to? <em>Example below is with one festival goer</em></p></li>
+</ol>
+<div class="scrollable" style="max-height: 300px; overflow-y: auto; background-color: #f9f9f9; color: #ffffff; padding: 10px; border-radius: 5px;">
+<div class="sourceCode" id="cb4"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">--- Database Manipulation </span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co">--- 1. list of events plus artist and stage they perform at on a specific date i.e.  2nd day of the festival</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span>  </span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    e.<span class="dt">date</span>, </span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    e.start_time, </span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    e.end_time, </span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    s.name <span class="kw">AS</span> stage_name, </span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    a.name <span class="kw">AS</span> artist_name</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> <span class="kw">events</span> e</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="kw">JOIN</span> stage s <span class="kw">ON</span> e.stage_id <span class="op">=</span> s.stage_id</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="kw">JOIN</span> artist a <span class="kw">ON</span> e.artist_id <span class="op">=</span> a.artist_id</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> e.<span class="dt">date</span> <span class="op">=</span> <span class="st">'2025-07-10'</span>;</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="co">--- 2. utilities near visitor location</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span>  </span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>    u.<span class="kw">type</span> <span class="kw">AS</span> utility_type, </span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>    u.status <span class="kw">AS</span> status,</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>    u.<span class="dt">number</span> <span class="kw">AS</span> num_utility,</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>    ST_Distance(</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>        (<span class="kw">SELECT</span> ST_Centroid(z.geom) <span class="kw">FROM</span> zones z <span class="kw">WHERE</span> z.zone_id <span class="op">=</span> <span class="dv">12</span>),  </span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>        u.geom</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>    ) <span class="kw">AS</span> distance_m,</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>    u.geom</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> utility u</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> ST_DWithin(</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>    (<span class="kw">SELECT</span> ST_Centroid(z.geom) <span class="kw">FROM</span> zones z <span class="kw">WHERE</span> z.zone_id <span class="op">=</span> <span class="dv">12</span>),  </span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>    u.geom, <span class="dv">100</span>  <span class="co">-- Distance within 100 meters</span></span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>);</span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a><span class="co">--- 3. Identifying user access in specific stages and events</span></span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span>   </span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>    a.name <span class="kw">AS</span> artist_name,</span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>    e.<span class="dt">date</span>, </span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>    e.start_time, </span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>    e.end_time, </span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>    s.name <span class="kw">AS</span> stage_name</span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> <span class="kw">events</span> e</span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a><span class="kw">JOIN</span> stage s <span class="kw">ON</span> e.stage_id <span class="op">=</span> s.stage_id</span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a><span class="kw">JOIN</span> artist a <span class="kw">ON</span> e.artist_id <span class="op">=</span> a.artist_id</span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a><span class="kw">JOIN</span> visitor v <span class="kw">ON</span> v.visitor_id <span class="op">=</span> <span class="dv">1002</span>  </span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> s.access_level <span class="op">=</span> (<span class="kw">SELECT</span> <span class="kw">type</span> <span class="kw">FROM</span> ticket <span class="kw">WHERE</span> ticket_id <span class="op">=</span> v.ticket_id)  </span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>Results:</strong></p>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-3246183922.png" class="img-fluid figure-img"></p>
+<figcaption>Query 1 result</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/clipboard-3035202895.png" class="img-fluid figure-img"></p>
+<figcaption>Query 2 result</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-3729097040.png" class="img-fluid figure-img"></p>
+<figcaption>Query 3 result for general admission ticket holder</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-left">
+<figure class="figure">
+<p><img src="images/clipboard-2588650909.png" class="img-fluid figure-img"></p>
+<figcaption>Query 3 result for a VIP ticket holder</figcaption>
+</figure>
+</div>
 
 
 </section>
