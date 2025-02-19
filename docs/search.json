@@ -46,7 +46,7 @@
     "href": "projects.html",
     "title": "Projects",
     "section": "",
-    "text": "Big Data\n\n\nExploring cloud-based platforms and big data analytics for EO, including temporal analysis in GEE, soil moisture monitoring, and seasonal water mapping using Sen2Cube.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nImage segmentation and Classification\n\n\nApplying supervised and knowledge-based classification using eCognition to distinguish land cover types through object-based image analysis.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSpatial Data Infrastructure (SDI) for Gender Employment Trends in Austria\n\n\nDesigning an SDI framework to integrate and visualize gender employment data, enabling spatial analysis for policy insights.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDesign and Implementation of a Spatial Database\n\n\nDeveloping a structured spatial database for a fictional WebGIS application, optimizing geospatial data storage, querying, and interoperability using PostGIS.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOBIA for estimating building density\n\n\nUtilizing OBIA to assess building density patterns, presented in a scientific poster format for spatial analysis applications.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRADAR - Remote sensing\n\n\nAnalyzing Synthetic Aperture Radar (SAR) data to extract valuable geospatial insights, focusing on radar-based Earth observation techniques.\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Big Data\n\n\nExploring cloud-based platforms and big data analytics for EO, including temporal analysis in GEE, soil moisture monitoring, and seasonal water mapping using Sen2Cube.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nObject Features For Classification in Remote Sensing\n\n\nObject-based classification using eCognition, making use of advanced segmentation, feature selection, and hierarchical segmentation.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSpatial Data Infrastructure (SDI) for Gender Employment Trends in Austria\n\n\nDesigning an SDI framework to integrate and visualize gender employment data, enabling spatial analysis for policy insights.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDesign and Implementation of a Spatial Database\n\n\nDeveloping a structured spatial database for a fictional WebGIS application, optimizing geospatial data storage, querying, and interoperability using PostGIS.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOBIA for estimating building density\n\n\nUtilizing OBIA to assess building density patterns, presented in a scientific poster format for spatial analysis applications.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRADAR - Remote sensing\n\n\nAnalyzing Synthetic Aperture Radar (SAR) data to extract valuable geospatial insights, focusing on radar-based Earth observation techniques.\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "projects/Spatial thinking/Change_detection_OBIA.html",
@@ -191,16 +191,16 @@
   {
     "objectID": "projects/Remote sensing/classification.html",
     "href": "projects/Remote sensing/classification.html",
-    "title": "Image segmentation and Classification",
+    "title": "Object Features For Classification in Remote Sensing",
     "section": "",
-    "text": "The project consists of conducting a supervised and knowledge-based land cover classification of a sample of satellite imagery. An object-based image analysis (OBIA) approach is used in the initial steps, applying spectral and spatial attributes to segment and classify the land cover using eCognition.\nStudy Area and Data\nKelleys Island, located in the United States, serves as the study area for this analysis. The datasets used include:\n\nPlanet Dove Satellite Image (3m resolution, 4 bands: Blue, Green, Red, Near-Infrared), providing detailed spectral information for classification.\nFlood Zone Raster (3m resolution, binary values: 1 = potential flood zone, 0 = no flood zone), used for knowledge-based classification to refine land cover identification."
+    "text": "The classification of remote sensing imagery has traditionally relied on pixel-based analysis, which considers spectral values . However, object-based classification provides a more advanced approach by incorporating shape, texture, and contextual relationships.\nThis study explores the segmentation and classification process applied to a Quickbird image of Salzburg and pseudo airquality image, using eCognition software to extract meaningful features for classification."
   },
   {
     "objectID": "projects/Remote sensing/classification.html#introduction",
     "href": "projects/Remote sensing/classification.html#introduction",
-    "title": "Image segmentation and Classification",
+    "title": "Object Features For Classification in Remote Sensing",
     "section": "",
-    "text": "The project consists of conducting a supervised and knowledge-based land cover classification of a sample of satellite imagery. An object-based image analysis (OBIA) approach is used in the initial steps, applying spectral and spatial attributes to segment and classify the land cover using eCognition.\nStudy Area and Data\nKelleys Island, located in the United States, serves as the study area for this analysis. The datasets used include:\n\nPlanet Dove Satellite Image (3m resolution, 4 bands: Blue, Green, Red, Near-Infrared), providing detailed spectral information for classification.\nFlood Zone Raster (3m resolution, binary values: 1 = potential flood zone, 0 = no flood zone), used for knowledge-based classification to refine land cover identification."
+    "text": "The classification of remote sensing imagery has traditionally relied on pixel-based analysis, which considers spectral values . However, object-based classification provides a more advanced approach by incorporating shape, texture, and contextual relationships.\nThis study explores the segmentation and classification process applied to a Quickbird image of Salzburg and pseudo airquality image, using eCognition software to extract meaningful features for classification."
   },
   {
     "objectID": "projects/Remote sensing/classification.html#supervised-classification",
@@ -226,9 +226,9 @@
   {
     "objectID": "projects/Remote sensing/classification.html#conclusion",
     "href": "projects/Remote sensing/classification.html#conclusion",
-    "title": "Image segmentation and Classification",
+    "title": "Object Features For Classification in Remote Sensing",
     "section": "Conclusion",
-    "text": "Conclusion\nThis project applied a systematic process to land cover classification, combining supervised and knowledge-based methods to eCognition. The processing methodology emphasized segmentation, feature selection, and interactive optimization as a critical component to providing useful classification. Adding knowledge enhanced the following classification even further, with more accurate and insightful land cover for Kelleys Island. High-level segmentation with resulting maps provided the analysis with a macro level, with possibilities of larger regional analysis as well as ongoing spatial assessment."
+    "text": "Conclusion\nThe object-based approach provided improved classification accuracy compared to pixel-based methods.\n\nThe multiresolution segmentation effectively delineated meaningful objects, making the classification more representative of real-world features.\nFeature-based classification allowed for the differentiation of vegetation, water, and built-up areas, enhancing thematic mapping.\nThe use of multiple scale parameters enabled hierarchical classification, ensuring different levels of detail could be incorporated into the analysis.\nThe integration of air quality data demonstrated how multi-source information can refine classifications, making results more applicable to environmental studies."
   },
   {
     "objectID": "projects/OBIA/OBIA.html",
@@ -236,5 +236,33 @@
     "title": "Object Based Image Analysis",
     "section": "",
     "text": "xoaofsadsjföäösldkfä\nÖDJFMÖjdfö"
+  },
+  {
+    "objectID": "projects/Remote sensing/classification.html#segmentation",
+    "href": "projects/Remote sensing/classification.html#segmentation",
+    "title": "Object Features For Classification in Remote Sensing",
+    "section": "Segmentation",
+    "text": "Segmentation\nSegmentation is a fundamental step in object-based image analysis. Two segmentation approaches were used:\n\nChessboard Segmentation: This method creates uniform grid-based objects, which is useful for initial feature assessment. This method is not suitable for distinguishing meaningful land cover features. A comparison of segmented objects, such as a ship and water for example, revealed:\n\nThe NDVI for water is negative due to its low near-infrared (NIR) reflectance and high visible reflectance and the ship exhibits higher reflectance across all bands, likely due to its surface color.\nHowever, because all segments are of equal size, the segmentation does not align well with natural object boundaries, making it unsuitable for this classification task.\n\n\n\n\nMultiresolution Segmentation: This technique groups pixels into meaningful objects based on spectral and spatial properties. It is more suited for real-world classification as it captures object boundaries more accurately."
+  },
+  {
+    "objectID": "projects/Remote sensing/classification.html#feature-selection-and-object-analysis",
+    "href": "projects/Remote sensing/classification.html#feature-selection-and-object-analysis",
+    "title": "Object Features For Classification in Remote Sensing",
+    "section": "Feature Selection and Object Analysis",
+    "text": "Feature Selection and Object Analysis\nObject features play a crucial role in classification. The key categories of features examined in this study include:\n\nSpectral Features: Mean and maximum pixel values per band.\nGeometrical Features: Shape index and object area.\nTextural Features: Haralick-based texture measures.\nHierarchical Features: Relationships between super-objects and sub-objects.\nClass-Related Features: Proximity to specific classified objects\n\n\nClassification\nStep 1: NDVI Calculation\nTo classify vegetation, the Normalized Difference Vegetation Index (NDVI) was computed using:\nNDVI = (NIR-Red)/(NIR+Red)\nObjects with NDVI values above 0.25 were classified as vegetation, while those below -0.15 were classified as water bodies.\nStep 2: Assigning Object Classes\nUsing the “Assign Class” algorithm:\n\nVegetation was classified using the NDVI threshold.\nWater bodies were extracted based on low NDVI values.\nA “Boat” class was assigned using the “Relative Border to Water” feature, identifying objects completely surrounded by water.\n\n\nStep 3: Integrating Air Quality Data\nThe air quality raster layer was used to refine the vegetation class:\n\nVegetation was split into high-air-quality (in the image light blue color) and low-air-quality (in the image below green color) areas based on pixel values from the air quality dataset.\nThis created subclasses, allowing for a more detailed environmental analysis."
+  },
+  {
+    "objectID": "projects/Remote sensing/classification.html#hierarchical-classification",
+    "href": "projects/Remote sensing/classification.html#hierarchical-classification",
+    "title": "Object Features For Classification in Remote Sensing",
+    "section": "Hierarchical classification",
+    "text": "Hierarchical classification\nTo refine object classification, hierarchical segmentation was applied by creating a lower-level segmentation from an existing level using multiresolution segmentation with a smaller scale parameter. This approach enhances detail by generating smaller objects, capturing fine structures such as individual trees, buildings, or narrow water bodies. The multi-level segmentation enables a hierarchical classification process, allowing for the refinement of class boundaries and improving overall classification accuracy."
+  },
+  {
+    "objectID": "projects/Remote sensing/classification.html#results-and-discussion",
+    "href": "projects/Remote sensing/classification.html#results-and-discussion",
+    "title": "Object Features for Classification in Remote Sensing",
+    "section": "Results and Discussion",
+    "text": "Results and Discussion\nThe object-based approach provided improved classification accuracy compared to pixel-based methods.\n\nThe multiresolution segmentation effectively delineated meaningful objects, making the classification more representative of real-world features.\nFeature-based classification allowed for the differentiation of vegetation, water, and built-up areas, enhancing thematic mapping.\nThe use of multiple scale parameters enabled hierarchical classification, ensuring different levels of detail could be incorporated into the analysis.\nThe integration of air quality data demonstrated how multi-source information can refine classifications, making results more applicable to environmental studies."
   }
 ]

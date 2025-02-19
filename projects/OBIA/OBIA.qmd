@@ -4,10 +4,11 @@ layout: default
 #image: "images/"
 draft: true
 description: "Implementing OBIA techniques in Python for automated image segmentation and classification, enhancing geospatial analysis workflows."
-categories: [Remote sensing, OBIA, Python]
+categories: [OBIA, Python]
+jupyter: python3
+format: html
 ---
 
-``` python
-xoaofsadsjföäösldkfä
-ÖDJFMÖjdfö
-```
+add the notebooks in the folder and then link it Option 1: Embed the Notebook in a Quarto Page
+
+

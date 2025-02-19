@@ -1,0 +1,37 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: \"Object Based Image Analysis\"\n",
+        "layout: default\n",
+        "#image: \"images/\"\n",
+        "draft: true\n",
+        "description: \"Implementing OBIA techniques in Python for automated image segmentation and classification, enhancing geospatial analysis workflows.\"\n",
+        "categories: [OBIA, Python]\n",
+        "jupyter: python3\n",
+        "format: html\n",
+        "---\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "add the notebooks in the folder and then link it Option 1: Embed the Notebook in a Quarto Page\n"
+      ],
+      "id": "556fe654"
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "name": "python3",
+      "language": "python",
+      "display_name": "Python 3 (ipykernel)",
+      "path": "C:\\Users\\Ethel Ogallo\\AppData\\Roaming\\Python\\share\\jupyter\\kernels\\python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}
