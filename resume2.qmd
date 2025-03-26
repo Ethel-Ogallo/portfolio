@@ -10,58 +10,52 @@ format:
 
 ### Education
 
-</div>
-
 ::: card
 ##### **Paris-Lodron Universität Salzburg** *(Oct 2024 - Present)*
 
 Copernicus Master in Digital Earth
-:::
 
-::: card
 ##### **The Technical University of Kenya** *(2019)*
 
 Bachelor of Applied Science in Geoinformatics
 :::
 
+</div>
+
 <div>
 
 ### Professional Experience
 
-</div>
-
 ::: card
 ##### **CEMA-Africa**
 
-##### **Data Science Research Assistant** *(Feb 2024 - Sept 2024)*
+##### *Data Science Research Assistant* *(Feb 2024 - Sept 2024)*
 
 -   Estimated catchment areas and travel time to health facilities, providing insights to support better health service delivery using statistical and spatial modeling techniques in R.
 -   Developed a comprehensive dashboard visualizing health facility accessibility in Kenya.\
     [View Dashboard](https://cema.shinyapps.io/accessibility/)
 
-##### **Data Science Intern** *(Aug 2023 - Jan 2024)*
+##### *Data Science Intern* *(Aug 2023 - Jan 2024)*
 
 -   Leveraged statistical and spatial models to examine cholera outbreak patterns over time and space, focusing on socio-demographic and environmental factors.
 -   Mapped cholera hotspots at the ward level, offering actionable insights for targeted interventions and improved disease control strategies.
-:::
 
-::: card
 ##### **Centunion East Africa**
 
-##### **Environmental Engineer** *(Jun 2021 - Dec 2022)*
+##### *Environmental Engineer* *(Jun 2021 - Dec 2022)*
 
 -   Developed, implemented, and maintained a robust environmental management system (EMS), conducting 4 internal audits to ensure compliance with ISO standards and local regulations.
 -   Proactively monitored operations and implemented corrective actions, minimizing risks and demonstrating a strong commitment to environmental sustainability.
 
-##### **Junior Draughtsman** *(Nov 2020 - May 2021)*
+##### *Junior Draughtsman* *(Nov 2020 - May 2021)*
 
 -   Assisted in creating technical and shop drawings for road construction projects, ensuring precision in specifications and measurements.
-:::
 
-::: card
 ##### **Oakar**
 
-##### **GIS Research Assistant** *(Mar 2020 - Aug 2020)*
+##### *GIS Research Assistant* *(Mar 2020 - Aug 2020)*
 
 -   Collected and managed spatial and non-spatial data for a farmer registration project in Kiambu County, using mobile client configuration tools.
 :::
+
+</div>

@@ -16,7 +16,7 @@ about:
       href: mailto:ogalloethel@gmail.com      
 ---
 
-Hi there, I’m Ethel!
+Hi there!
 
 I’m a geospatial and data science enthusiast from Kenya with a background in Geoinformatics. I’m interested in using AI and Earth Observation to tackle real-world challenges. Currently I am pursuing the Copernicus Master in Digital Earth ([CDE](https://master-cde.eu/)), specializing in GeoDataScience, at both the University of Salzburg in Austria and University of South Brittany in France. This master's degree is funded by the Erasmus Mundus Joint Masters Programme.
 
