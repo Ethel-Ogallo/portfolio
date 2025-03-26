@@ -16,6 +16,10 @@ about:
       href: mailto:ogalloethel@gmail.com      
 ---
 
-Hi! I’m Ethel, a geospatial and data science enthusiast with a background in Geoinformatics and an interest in leveraging AI in Earth Observation to solve real-world challenges. I am currently undertaking the Copernicus Master in Digital Earth ([CDE](https://master-cde.eu/)), specializing in GeoDataScience, at both the University of Salzburg and University of South Brittany in Vannes . This master's degree is funded by the Erasmus Mundus Joint Masters Programme.
+Hi there, I’m Ethel!
 
-In this portfolio, you will find a collection of my academic projects and other relevant work and research that showcase my journey and growth in Earth Observation and GeoDataScience.
+I’m a geospatial and data science enthusiast from Kenya with a background in Geoinformatics. I’m interested in using AI and Earth Observation to tackle real-world challenges. Currently I am pursuing the Copernicus Master in Digital Earth ([CDE](https://master-cde.eu/)), specializing in GeoDataScience, at both the University of Salzburg in Austria and University of South Brittany in France. This master's degree is funded by the Erasmus Mundus Joint Masters Programme.
+
+This portfolio is a collection of my academic projects, research, and other relevant work during my master’s journey. It will be continuously updated as I take on new projects and dive deeper into the world of Earth Observation and GeoDataScience.
+
+Feel free to explore!
