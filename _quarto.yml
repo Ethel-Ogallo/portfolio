@@ -25,7 +25,7 @@ website:
         <img src="/images/PLUS.jpg" alt="PLUS" style="height:80px;">
         <img src="/images/UBS.png" alt="UBS" style="height:90px;">
       </p>
-      <p>Made with <a href="https://quarto.org/">Quarto</a>. Copyright 2024, Ethel Ogallo.</p>
+      <p>Made with <a href="https://quarto.org/">Quarto</a>. Copyright 2025, Ethel Ogallo.</p>
     background: "#EEEEEE"
     
   page-navigation: true

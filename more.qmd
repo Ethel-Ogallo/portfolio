@@ -1,8 +1,18 @@
 ---
 title: "Experience beyond the classroom"
+listing:
+  contents:
+    - path: https://storymaps.arcgis.com/stories/da2b859e2c8a47f48997b73c967159eb 
+      title: "Blended Intensive Programme (BIP)"
+      image: "images/img5.jpg"
+      description: "Quantifying Vulnerability to Natural Hazards
+A digital narrative developed during the BIP 2025 field programme in Romania"
+  sort: "date"
+  type: grid
+  categories: false
+  sort-ui: false
+  filter-ui: false
+page-layout: full
+title-block-banner: false
 layout: default
 ---
-
-+----------------+
-| # Coming Soon! |
-+----------------+
