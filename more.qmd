@@ -16,3 +16,5 @@ page-layout: full
 title-block-banner: false
 layout: default
 ---
+
+This section highlights the projects and programs undertaken alongside my coursework.
