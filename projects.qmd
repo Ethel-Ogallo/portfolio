@@ -3,7 +3,7 @@ title: "Projects"
 listing:
   contents:
     - projects
-  #sort: "date"
+  sort: false
   type: grid
   categories: false
   sort-ui: false
