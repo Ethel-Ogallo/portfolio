@@ -1,0 +1,8 @@
+---
+title: "Springy : A tool for nature based solution implementation"
+layout: default
+#image: "main_logo.png"
+draft: true
+description: "A research proposal"
+categories: [Machine Learning, Earth Observation, Remote Sensing]
+---

@@ -1,0 +1,8 @@
+---
+title: "NextCity Project"
+layout: default
+#image: "main_logo.png"
+draft: true
+description: "Summer School & Thematic Workshop exploring advanced technologies for building and visualizing Digital Twins"
+categories: [Machine Learning, Earth Observation, AI]
+---

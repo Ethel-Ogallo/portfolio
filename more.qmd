@@ -2,6 +2,7 @@
 title: "Experience beyond the classroom"
 listing:
   contents:
+    - more
     - path: https://storymaps.arcgis.com/stories/da2b859e2c8a47f48997b73c967159eb 
       title: "Blended Intensive Programme (BIP)"
       image: "images/img5.jpg"

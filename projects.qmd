@@ -3,14 +3,7 @@ title: "Projects"
 listing:
   contents:
     - projects
-    - path : https://storymaps.arcgis.com/stories/8edbb90f9fa34a69babdfc5c53da9e77
-      title: "RADAR - Remote sensing"
-      image: "images/img4.png"
-      layout: default 
-      description: "Analyzing Synthetic Aperture Radar (SAR) data to extract valuable geospatial insights, focusing on radar-based Earth observation techniques."
-      categories: [Earth Observation, Radar Analysis, Remote Sensing]
-      
-  sort: "date"
+  #sort: "date"
   type: grid
   categories: false
   sort-ui: false

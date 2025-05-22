@@ -1,0 +1,8 @@
+---
+title: "Copernicus Hubs Report"
+layout: default
+#image: "main_logo.png"
+draft: true
+description: "Vienna, Austria"
+#categories: [Machine Learning, Earth Observation, Remote Sensing]
+---

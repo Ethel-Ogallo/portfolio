@@ -1,0 +1,8 @@
+---
+title: "Machine Learning for Earth System Modelling"
+layout: default
+#image: "main_logo.png"
+draft: true
+description: "Hackathon Bonn, Germany"
+categories: [Machine Learning, Earth Observation, AI]
+---

@@ -1,0 +1,8 @@
+---
+title: "Final project # change to project title"
+layout: default
+#image: "main_logo.png"
+draft: true
+description: "Application development (EO) #replace with description of project"
+categories: [Machine Learning, Earth Observation, Remote Sensing]
+---

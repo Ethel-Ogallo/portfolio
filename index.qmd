@@ -1,8 +1,8 @@
 ---
 title: "Ethel Ogallo"
-image: images/profile_pic3.jpg
+image: images/profile_pic5.jpg
 about:
-  template: jolla
+  template: trestles
   image-width: 20em
   links:
     - icon: linkedin
@@ -18,7 +18,9 @@ about:
 
 Hi there!
 
-I’m a geospatial and data science enthusiast from Kenya with a background in Geoinformatics. I’m interested in using AI and Earth Observation to tackle real-world challenges. Currently I am pursuing the Copernicus Master in Digital Earth ([CDE](https://master-cde.eu/)), specializing in GeoDataScience, at both the University of Salzburg in Austria and University of South Brittany in France. This master's degree is funded by the Erasmus Mundus Joint Masters Programme.
+I’m a geospatial and data science enthusiast from Kenya with a background in Geoinformatics. I’m interested in using AI and Earth Observation to tackle real-world challenges.
+
+Currently I am pursuing the Copernicus Master in Digital Earth ([CDE](https://master-cde.eu/)), specializing in GeoDataScience, at both the University of Salzburg in Austria and University of South Brittany in France. This master's degree is funded by the Erasmus Mundus Joint Masters Programme.
 
 This portfolio is a collection of my academic projects, research, and other relevant work during my master’s journey. It will be continuously updated as I take on new projects and dive deeper into the world of Earth Observation and GeoDataScience.
 
