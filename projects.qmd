@@ -2,7 +2,23 @@
 title: "Projects"
 listing:
   contents:
-    - projects
+    - projects/Digital earth
+    - projects/Remote sensing
+    - projects/SDI
+    - projects/Spatial databases
+    - projects/Spatial thinking
+    #- path: https://github.com/Ethel-Ogallo/Wetland_Inundation_DE-Africa 
+      #title: "Analysis and Modelling: Wetland Inundation"
+      #image: "images/img6.jpg" 
+      #description: "Cloud computing, Data Cubes: Utilizing Digital Earth Africa to assess wetland dynamics in the Zambezi Delta, Mozambique"
+    #- path: https://github.com/rabinatwayana/pysarflow 
+      #title: "PySARFlow: An open-source python library for SAR data processing"
+      #image: "images/img7.jpg"
+      #description: "Developed an open-source package for preprocessing SAR data both SLC and GRD formats with example noteboooks."
+    #- projects/application_dev(EO)
+    #- projects/project_management
+    #- projects/scientific writing
+
   sort: false
   type: grid
   categories: false
@@ -10,4 +26,7 @@ listing:
   filter-ui: false
 page-layout: full
 title-block-banner: false
+format:
+  html:
+    link-external-newwindow: true
 ---

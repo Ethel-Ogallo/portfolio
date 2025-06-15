@@ -11,10 +11,10 @@ website:
         text: Home
       - href: projects.qmd
         text: Projects
+      - href: more.qmd
+        text: More
       - href: resume2.qmd
         text: CV
-      - href: more.qmd
-        text: Blog
     pinned: true
 
   page-footer: 
