@@ -4,7 +4,7 @@ title: "Spatial Data Infrastructure (SDI) for Gender Employment Trends in Austri
 layout: default
 image: "images/sdi_logo.jpg"
 description: "Designing an SDI framework to integrate and visualize gender employment data, enabling spatial analysis for policy insights."
-categories: [SDI, Geospatial Standards, Spatial Databases]
+categories: [SDI]
 ---
 
 ### **Development of Employment Figures by Gender In Autsria**

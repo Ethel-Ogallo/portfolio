@@ -7,10 +7,11 @@ listing:
     - projects/SDI
     - projects/Spatial databases
     - projects/Spatial thinking
-    #- path: https://github.com/Ethel-Ogallo/Wetland_Inundation_DE-Africa 
-      #title: "Analysis and Modelling: Wetland Inundation"
-      #image: "images/img6.jpg" 
-      #description: "Cloud computing, Data Cubes: Utilizing Digital Earth Africa to assess wetland dynamics in the Zambezi Delta, Mozambique"
+    - path: https://github.com/Ethel-Ogallo/Wetland_Inundation_DE-Africa 
+      title: "Wetland Inundation"
+      image: "images/img8.jpg" 
+      description: "Utilizing Digital Earth Africa to assess wetland dynamics in the Zambezi Delta, Mozambique"
+      categories: [Analysis and Modelling (RS)]
     #- path: https://github.com/rabinatwayana/pysarflow 
       #title: "PySARFlow: An open-source python library for SAR data processing"
       #image: "images/img7.jpg"
@@ -21,9 +22,10 @@ listing:
 
   sort: false
   type: grid
-  categories: false
+  #categories: true
   sort-ui: false
   filter-ui: false
+  fields: [image, title, description, categories]
 page-layout: full
 title-block-banner: false
 format:

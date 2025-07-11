@@ -4,7 +4,7 @@ layout: default
 image: "images/afro_nation.jpg"
 #draft: true
 description: "Developing a structured spatial database for a fictional WebGIS application, optimizing geospatial data storage, querying, and interoperability using PostGIS."
-categories: [Spatial Databases, Geospatial Standards, PostGIS]
+categories: [Spatial Databases]
 ---
 
 ## **Introduction**

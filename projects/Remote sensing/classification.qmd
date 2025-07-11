@@ -3,7 +3,7 @@ title: "Object Features For Classification in Remote Sensing"
 layout: default
 image: "images/logo.JPG"
 description: "Object-based classification using eCognition, making use of advanced segmentation, feature selection, and hierarchical segmentation."
-categories: [Remote sensing, OBIA, eCognition]
+categories: [Advanced Remote sensing]
 ---
 
 ## **Introduction**

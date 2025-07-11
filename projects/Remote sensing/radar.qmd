@@ -3,7 +3,7 @@ title: "Radar Analysis of Ground Deformation Using Sentinel-1 SAR Data"
 layout: default
 image: "images/lava_lake.jpg"
 description: "Monitoring Displacement: Mt. Nyiragongo Volcanic Eruption"
-categories: [Earth Observation, Radar Analysis, Remote Sensing]
+categories: [Advanced Remote Sensing]
 ---
 
 ## Background
