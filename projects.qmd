@@ -14,7 +14,7 @@ listing:
       categories: [Analysis and Modelling (RS)]
     - path: https://github.com/rabinatwayana/pysarflow 
       title: "PySARFlow: An open-source python library for SAR data processing"
-      image: "images/img7.jpg"
+      image: "images/img7.png"
       description: "Developed an open-source package for preprocessing SAR data both SLC and GRD formats with example noteboooks."
       categories: [Practice Software development(Python)]
     #- projects/application_dev(EO)
