@@ -115,18 +115,8 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#the-challenge" id="toc-the-challenge" class="nav-link" data-scroll-target="#the-challenge">The Challenge</a></li>
-  <li><a href="#our-approach" id="toc-our-approach" class="nav-link" data-scroll-target="#our-approach">Our Approach</a></li>
-  <li><a href="#results-achievements" id="toc-results-achievements" class="nav-link" data-scroll-target="#results-achievements">Results &amp; Achievements</a></li>
-  <li><a href="#reflections-learnings" id="toc-reflections-learnings" class="nav-link" data-scroll-target="#reflections-learnings">Reflections &amp; Learnings</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -160,72 +150,28 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="introduction" class="level3">
-<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
-<p>From <strong>27–29 August 2025</strong>, I had the incredible opportunity to participate in the <a href="https://cesoc.net/hackathon-on-machine-learning-for-the-earth-system/">CESOC Hackathon on Machine Learning for the Earth System</a> in Bonn, Germany.This event brought together teams interested in applying machine learning and AI techniques to solve Earth system challenges.</p>
-<p>I was part of the <strong>Observation / Satellite Data Challenge (Challenge 3)</strong>, where our task was to train and finetune the AIFS model on observational precipitation data (IMERG) to improve global total precipitation forecasts.</p>
-</section>
-<section id="the-challenge" class="level3">
-<h3 class="anchored" data-anchor-id="the-challenge">The Challenge</h3>
-<p>Challenge 3 required us to:</p>
-<ul>
-<li>Work with the Anemoi framework, which provides state-of-the-art weather and climate ML models (AIFS).</li>
-<li>Train and finetune AIFS model on satellite-based precipitation data (IMERG).</li>
-<li>Use HPC clusters with GPU reservations to efficiently train models and run inferences for forecasting.</li>
-</ul>
-</section>
-<section id="our-approach" class="level3">
-<h3 class="anchored" data-anchor-id="our-approach">Our Approach</h3>
-<p>We structured our work in three main phases:</p>
-<ol type="1">
-<li><strong>HPC setup &amp; baseline model testing</strong>
-<ul>
-<li>Reserved GPUs on HPC systems to handle computationally demanding training runs.</li>
-<li>Used the Anemoi framework to run baseline experiments with the AIFS model.</li>
-<li>Validated the model’s performance against IMERG precipitation data.</li>
-</ul></li>
-<li><strong>Fine-tuning with IMERG data</strong>
-<ul>
-<li>Integrated IMERG global precipitation datasets to improve AIFS accuracy.</li>
-<li>Conducted multiple experiments adjusting hyperparameters and loss functions.</li>
-<li>Compared global fine-tuning vs.&nbsp;regional fine-tuning to test adaptability.</li>
-</ul></li>
-<li><strong>Visualization &amp; presentation</strong>
-<ul>
-<li>Developed maps and plots comparing baseline vs.&nbsp;finetuned outputs.</li>
-<li>Highlighted case studies of extreme precipitation events to show improvements.</li>
-<li>Packaged results into a clear, engaging presentation for the hackathon jury.</li>
-</ul></li>
-</ol>
-</section>
-<section id="results-achievements" class="level3">
-<h3 class="anchored" data-anchor-id="results-achievements">Results &amp; Achievements</h3>
-<p>Here’s our full presentation:</p>
-<iframe src="AIFS-Indra.pdf" width="100%" height="800px" style="border: none;">
+<p><strong>Introduction</strong></p>
+<p>From <strong>27–29 August 2025</strong>, I had the opportunity to participate in the <a href="https://cesoc.net/hackathon-on-machine-learning-for-the-earth-system/">CESOC Hackathon on Machine Learning for the Earth System</a> in Bonn, Germany.This event brought together teams interested in applying machine learning and AI techniques to solve Earth system challenges.</p>
+<p>I was part of the <strong>Observation / Satellite Data Challenge (Challenge 3)</strong>, where our task was to improve precipitation predictions by working with satellite data. The original AIFS model, trained on ERA5 reanalysis data, struggled to capture realistic precipitation features. Our goal was to enhance its performance.</p>
+<p><strong>Our Approach: Fine-Tuning with IMERG Data</strong><br>
+Our solution involved fine-tuning the AIFS model using IMERG (Integrated Multi-satellitE Retrievals for GPM), a high-quality satellite-based observational dataset. Unlike ERA5, IMERG is known for capturing more realistic precipitation patterns and better handling extreme events.</p>
+<p>This creative approach led to the development of our model, AIFS-Indra.</p>
+<p><strong>Implementation and Results</strong><br>
+To fine-tune the model, we made some changes: we decreased the learning rate and added warm-up steps to escape local minima. After just ten epochs of training (due to GPU limitations), we observed significant improvements.</p>
+<p>Our results demonstrated that AIFS-Indra’s precipitation distribution began to align closely with the IMERG data. We also showed a notable decrease in the global RMSE when compared against an independent year of IMERG data.</p>
+<p>While there were limitations to our work, such as resolution and compute constraints, our project successfully showcased the power of integrating observational data into large-scale climate models.</p>
+<p>Here’s our full presentation for more insights on the challenge:</p>
+<iframe src="AIFS-Indra.pdf" width="100%" height="500px" style="border: none;">
 <p>This browser does not support PDFs. Please download the PDF to view it: <a href="files/AIFS-Indra.pdf">Download PDF</a></p>
 </iframe>
-<p>Our efforts paid off!! We won 1st place for Challenge 3.</p>
+<p>The creativity of our approach was recognized by the judges, and our team was honored to be named the winner of the challenge!</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="dreamteampic.jpeg" class="img-fluid quarto-figure quarto-figure-center figure-img" width="501"></p>
 </figure>
 </div>
-<p><strong>Key outcomes:</strong><br>
-- Improved global precipitation forecasts by fine-tuning AIFS with IMERG.<br>
-- Better detection of extreme rainfall events compared to the baseline model.</p>
-</section>
-<section id="reflections-learnings" class="level3">
-<h3 class="anchored" data-anchor-id="reflections-learnings">Reflections &amp; Learnings</h3>
-<p>Participating in this hackathon was an intense but rewarding experience. I learned to:</p>
-<ul>
-<li>Efficiently use GPUs on HPC systems for ML training and inference.</li>
-<li>Work with the Anemoi framework for weather and climate modeling.</li>
-<li>Balance technical accuracy with clear communication of results.</li>
-<li>Collaborate effectively in a high pressure environment.</li>
-</ul>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

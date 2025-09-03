@@ -6,60 +6,32 @@ description: "A Hackathon hosted at the University of Bonn, Germany"
 categories: [Machine Learning, HPCs, AI]
 ---
 
-### Introduction
+**Introduction**
 
-From **27–29 August 2025**, I had the incredible opportunity to participate in the [CESOC Hackathon on Machine Learning for the Earth System](https://cesoc.net/hackathon-on-machine-learning-for-the-earth-system/) in Bonn, Germany.This event brought together teams interested in applying machine learning and AI techniques to solve Earth system challenges.
+From **27–29 August 2025**, I had the opportunity to participate in the [CESOC Hackathon on Machine Learning for the Earth System](https://cesoc.net/hackathon-on-machine-learning-for-the-earth-system/) in Bonn, Germany.This event brought together teams interested in applying machine learning and AI techniques to solve Earth system challenges.
 
-I was part of the **Observation / Satellite Data Challenge (Challenge 3)**, where our task was to train and finetune the AIFS model on observational precipitation data (IMERG) to improve global total precipitation forecasts.
+I was part of the **Observation / Satellite Data Challenge (Challenge 3)**, where our task was to improve precipitation predictions by working with satellite data. The original AIFS model, trained on ERA5 reanalysis data, struggled to capture realistic precipitation features. Our goal was to enhance its performance.
 
-### The Challenge
+**Our Approach: Fine-Tuning with IMERG Data**\
+Our solution involved fine-tuning the AIFS model using IMERG (Integrated Multi-satellitE Retrievals for GPM), a high-quality satellite-based observational dataset. Unlike ERA5, IMERG is known for capturing more realistic precipitation patterns and better handling extreme events.
 
-Challenge 3 required us to:
+This creative approach led to the development of our model, AIFS-Indra.
 
--   Work with the Anemoi framework, which provides state-of-the-art weather and climate ML models (AIFS).
--   Train and finetune AIFS model on satellite-based precipitation data (IMERG).
--   Use HPC clusters with GPU reservations to efficiently train models and run inferences for forecasting.
+**Implementation and Results**\
+To fine-tune the model, we implemented a few key changes. We decreased the learning rate and added warm-up steps to help the model escape local minima during training. Due to GPU limitations, we were only able to train for ten epochs, but despite this the results showed significant improvements.
 
-### Our Approach
+Our results were promising: the precipitation distribution from AIFS-Indra began to align closely with the IMERG data. We also showed a notable decrease in the global RMSE when compared against an independent year of IMERG data, confirming the positive impact of our fine-tuning.
 
-We structured our work in three main phases:
+Ultimately, despite constraints like resolution and limited compute, our project successfully demonstrated the benefits of integrating observational data into large-scale climate models.
 
-1.  **HPC setup & baseline model testing**
-    -   Reserved GPUs on HPC systems to handle computationally demanding training runs.
-    -   Used the Anemoi framework to run baseline experiments with the AIFS model.
-    -   Validated the model’s performance against IMERG precipitation data.
-2.  **Fine-tuning with IMERG data**
-    -   Integrated IMERG global precipitation datasets to improve AIFS accuracy.
-    -   Conducted multiple experiments adjusting hyperparameters and loss functions.
-    -   Compared global fine-tuning vs. regional fine-tuning to test adaptability.
-3.  **Visualization & presentation**
-    -   Developed maps and plots comparing baseline vs. finetuned outputs.
-    -   Highlighted case studies of extreme precipitation events to show improvements.
-    -   Packaged results into a clear, engaging presentation for the hackathon jury.
+Here’s our full presentation for more insights on the challenge:
 
-### Results & Achievements
-
-Here’s our full presentation:
-
-<iframe src="AIFS-Indra.pdf" width="100%" height="800px" style="border: none;">
+<iframe src="AIFS-Indra.pdf" width="100%" height="500px" style="border: none;">
 
 This browser does not support PDFs. Please download the PDF to view it: <a href="files/AIFS-Indra.pdf">Download PDF</a>
 
 </iframe>
 
-Our efforts paid off!! We won 1st place for Challenge 3.
+The creativity of our approach was recognized by the judges, and our team was honored to be named the winner of the challenge!
 
 ![](dreamteampic.jpeg){fig-align="center" width="501"}
-
-**Key outcomes:**\
-- Improved global precipitation forecasts by fine-tuning AIFS with IMERG.\
-- Better detection of extreme rainfall events compared to the baseline model.
-
-### Reflections & Learnings
-
-Participating in this hackathon was an intense but rewarding experience. I learned to:
-
--   Efficiently use GPUs on HPC systems for ML training and inference.
--   Work with the Anemoi framework for weather and climate modeling.
--   Balance technical accuracy with clear communication of results.
--   Collaborate effectively in a high pressure environment.

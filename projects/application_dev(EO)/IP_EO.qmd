@@ -1,8 +1,13 @@
 ---
-title: "Final project # change to project title"
+title: "GUI for Agricultural Land Cover Change Detection using Object-Based Time Series Analysis in eCognition"
 layout: default
-#image: "main_logo.png"
-draft: true
-description: "Application development (EO) #replace with description of project"
+image: "img9.png"
+description: " "
 categories: [Earth Observation, Remote Sensing, OBIA]
 ---
+
+<iframe src="FinalProjectReport.pdf" width="100%" height="800px" style="border: none;">
+
+This browser does not support PDFs. Please download the PDF to view it: <a href="files/FinalProjectReport.pdf">Download PDF</a>
+
+</iframe>

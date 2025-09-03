@@ -17,9 +17,7 @@ listing:
       image: "images/img7.png"
       description: "Developed an open-source package for preprocessing SAR data both SLC and GRD formats with example noteboooks."
       categories: [Practice Software development(Python)]
-    #- projects/application_dev(EO)
-    #- projects/project_management
-    #- projects/scientific writing
+    - projects/application_dev(EO)
 
   sort: false
   type: grid
