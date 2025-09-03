@@ -6,25 +6,25 @@ description: "A report on my internship at the Center for Remote Sensing of Land
 categories: [Machine Learning, Earth Observation, Remote Sensing]
 ---
 
-### Overview
+## Overview
 
 During my two-month internship, **1st July to 29th August 2025**, at the [Center for Remote Sensing of Land Surfaces (ZFL)](https://www.zfl.uni-bonn.de/) at the University of Bonn, I contributed to the [WetlandHealth4UNgoals](https://www.zfl.uni-bonn.de/research/projects/wetlandhealth) project. The project aims to develop Earth Observation (EO)-based information products to monitor vegetation vitality and wetland conditions, using endorheic wetlands in Kenya's Rift Valley as an example.
 
 My main responsibilities included *delineating wetland extents* and *classifying wetland types*, providing a basis for the ongoing ecological monitoring.
 
-#### Study Area
+### Study Area
 
 Lake Baringo is an endorheic freshwater lake in Kenya's Rift Valley, surrounded by diverse wetland habitats. These wetlands are vital for biodiversity, water purification, and local livelihoods, including agriculture and fishing. Accurate monitoring of wetland conditions is crucial for ecological management and informed policy-making.
 
 ![Study Area: Planet Imagery of Lake Baringo Wetland, Kenya](images/clipboard-3316938238.png){fig-align="center" width="482"}
 
-### Tasks and Outcomes
+## Tasks and Outcomes
 
 The workflow below summarizes the sequence of tasks I undertook during the internship to delineate and classify wetlands at Lake Baringo.
 
-![](images/clipboard-801217152.png)
+![Workflow](images/clipboard-801217152.png)
 
-#### Wetland Extent Delineation
+### Wetland Extent Delineation
 
 The main aim of this first task was to accurately delineate the wetland extent within the study area.
 
@@ -42,7 +42,7 @@ The wetland extent map for each year of the study period 2018 to 2024. The figur
 
 ![](images/clipboard-4264063918.png){fig-align="center"}
 
-#### Wetland Type Classification
+### Wetland Type Classification
 
 The aim of this task was to classify the wetland types within the study area using high resolution satellite imagery.
 
@@ -60,25 +60,23 @@ The planet imagery was then masked using the wetland extent derived in Task 1. M
 
 The area (in hectares) covered by each class in 2024 was:
 
-| Class                    | Area (ha)  |
-|--------------------------|------------|
-| Permanent Lakes          | 22,889.14  |
-| Permanent Marshes        | 614.73     |
-| Rivers                   | 517.56     |
-| Peatlands                | 2,763.60   |
-| Alluvial Fans            | 5,652.97   |
-| Shrub-dominated Wetlands | 8,344.23   |
-| Tree-dominated Wetlands  | 2,788.25   |
-| Agricultural Land        | 10,909.74  |
-| Ponds                    | 31.19      |
-| Clay Pan                 | 1,619.29   |
-| Total                    | 221,974.71 |
+Permanent Lakes = 22,889.14\
+Permanent Marshes = 614.73\
+Rivers = 517.56\
+Peatlands = 2,763.60\
+Alluvial Fans = 5,652.97\
+Shrub-dominated Wetlands = 8,344.23\
+Tree-dominated Wetlands = 2,788.25\
+Agricultural Land = 10,909.74\
+Ponds = 31.19\
+Clay Pan = 1,619.29\
+**Total = 221,974.71**
 
-#### Documentation
+### Documentation
 
 The analysis code and results are fully documented and version controlled in GitHub here: <https://github.com/ZFL-Uni-Bonn/Wetland_Delienation_Classification>
 
-### Conclusion
+## Conclusion
 
 During my two-month internship at ZFL, I had the opportunity to contribute to an ongoing project. The internship allowed me to apply and further develop skills I had acquired over the past year, including Object-Based Image Analysis (OBIA) and applying classification algorithms, as well as programming in Python. My supervisors provided valuable guidance and regular feedback, which supported my learning and timely task completion.
 

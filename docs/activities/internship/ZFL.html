@@ -120,8 +120,16 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#tasks-and-outcomes" id="toc-tasks-and-outcomes" class="nav-link" data-scroll-target="#tasks-and-outcomes">Tasks and Outcomes</a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a>
+  <ul class="collapse">
+  <li><a href="#study-area" id="toc-study-area" class="nav-link" data-scroll-target="#study-area">Study Area</a></li>
+  </ul></li>
+  <li><a href="#tasks-and-outcomes" id="toc-tasks-and-outcomes" class="nav-link" data-scroll-target="#tasks-and-outcomes">Tasks and Outcomes</a>
+  <ul class="collapse">
+  <li><a href="#wetland-extent-delineation" id="toc-wetland-extent-delineation" class="nav-link" data-scroll-target="#wetland-extent-delineation">Wetland Extent Delineation</a></li>
+  <li><a href="#wetland-type-classification" id="toc-wetland-type-classification" class="nav-link" data-scroll-target="#wetland-type-classification">Wetland Type Classification</a></li>
+  <li><a href="#documentation" id="toc-documentation" class="nav-link" data-scroll-target="#documentation">Documentation</a></li>
+  </ul></li>
   <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
   </ul>
 </nav>
@@ -158,12 +166,12 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="overview" class="level3">
-<h3 class="anchored" data-anchor-id="overview">Overview</h3>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
 <p>During my two-month internship, <strong>1st July to 29th August 2025</strong>, at the <a href="https://www.zfl.uni-bonn.de/">Center for Remote Sensing of Land Surfaces (ZFL)</a> at the University of Bonn, I contributed to the <a href="https://www.zfl.uni-bonn.de/research/projects/wetlandhealth">WetlandHealth4UNgoals</a> project. The project aims to develop Earth Observation (EO)-based information products to monitor vegetation vitality and wetland conditions, using endorheic wetlands in Kenya’s Rift Valley as an example.</p>
 <p>My main responsibilities included <em>delineating wetland extents</em> and <em>classifying wetland types</em>, providing a basis for the ongoing ecological monitoring.</p>
-<section id="study-area" class="level4">
-<h4 class="anchored" data-anchor-id="study-area">Study Area</h4>
+<section id="study-area" class="level3">
+<h3 class="anchored" data-anchor-id="study-area">Study Area</h3>
 <p>Lake Baringo is an endorheic freshwater lake in Kenya’s Rift Valley, surrounded by diverse wetland habitats. These wetlands are vital for biodiversity, water purification, and local livelihoods, including agriculture and fishing. Accurate monitoring of wetland conditions is crucial for ecological management and informed policy-making.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -173,8 +181,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </section>
 </section>
-<section id="tasks-and-outcomes" class="level3">
-<h3 class="anchored" data-anchor-id="tasks-and-outcomes">Tasks and Outcomes</h3>
+<section id="tasks-and-outcomes" class="level2">
+<h2 class="anchored" data-anchor-id="tasks-and-outcomes">Tasks and Outcomes</h2>
 <p>The workflow below summarizes the sequence of tasks I undertook during the internship to delineate and classify wetlands at Lake Baringo.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -182,8 +190,8 @@ ul.task-list li input[type="checkbox"] {
 <figcaption>Workflow</figcaption>
 </figure>
 </div>
-<section id="wetland-extent-delineation" class="level4">
-<h4 class="anchored" data-anchor-id="wetland-extent-delineation">Wetland Extent Delineation</h4>
+<section id="wetland-extent-delineation" class="level3">
+<h3 class="anchored" data-anchor-id="wetland-extent-delineation">Wetland Extent Delineation</h3>
 <p>The main aim of this first task was to accurately delineate the wetland extent within the study area.</p>
 <p><strong>Activities:</strong></p>
 <p>This task involved a series of subtasks including data acquisition, data processing, model training and validation, classification, and extent delineation as shown in figure 1.</p>
@@ -197,8 +205,8 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 </section>
-<section id="wetland-type-classification" class="level4">
-<h4 class="anchored" data-anchor-id="wetland-type-classification">Wetland Type Classification</h4>
+<section id="wetland-type-classification" class="level3">
+<h3 class="anchored" data-anchor-id="wetland-type-classification">Wetland Type Classification</h3>
 <p>The aim of this task was to classify the wetland types within the study area using high resolution satellite imagery.</p>
 <p><strong>Activities</strong>:</p>
 <p>This task involved several subtasks including data acquisition, data processing, wetland classes crosswalk, model training and validation, and classification as shown in figure 1.</p>
@@ -211,68 +219,25 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 <p>The area (in hectares) covered by each class in 2024 was:</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Class</th>
-<th>Area (ha)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Permanent Lakes</td>
-<td>22,889.14</td>
-</tr>
-<tr class="even">
-<td>Permanent Marshes</td>
-<td>614.73</td>
-</tr>
-<tr class="odd">
-<td>Rivers</td>
-<td>517.56</td>
-</tr>
-<tr class="even">
-<td>Peatlands</td>
-<td>2,763.60</td>
-</tr>
-<tr class="odd">
-<td>Alluvial Fans</td>
-<td>5,652.97</td>
-</tr>
-<tr class="even">
-<td>Shrub-dominated Wetlands</td>
-<td>8,344.23</td>
-</tr>
-<tr class="odd">
-<td>Tree-dominated Wetlands</td>
-<td>2,788.25</td>
-</tr>
-<tr class="even">
-<td>Agricultural Land</td>
-<td>10,909.74</td>
-</tr>
-<tr class="odd">
-<td>Ponds</td>
-<td>31.19</td>
-</tr>
-<tr class="even">
-<td>Clay Pan</td>
-<td>1,619.29</td>
-</tr>
-<tr class="odd">
-<td>Total</td>
-<td>221,974.71</td>
-</tr>
-</tbody>
-</table>
+<p>Permanent Lakes = 22,889.14<br>
+Permanent Marshes = 614.73<br>
+Rivers = 517.56<br>
+Peatlands = 2,763.60<br>
+Alluvial Fans = 5,652.97<br>
+Shrub-dominated Wetlands = 8,344.23<br>
+Tree-dominated Wetlands = 2,788.25<br>
+Agricultural Land = 10,909.74<br>
+Ponds = 31.19<br>
+Clay Pan = 1,619.29<br>
+<strong>Total = 221,974.71</strong></p>
 </section>
-<section id="documentation" class="level4">
-<h4 class="anchored" data-anchor-id="documentation">Documentation</h4>
+<section id="documentation" class="level3">
+<h3 class="anchored" data-anchor-id="documentation">Documentation</h3>
 <p>The analysis code and results are fully documented and version controlled in GitHub here: <a href="https://github.com/ZFL-Uni-Bonn/Wetland_Delienation_Classification" class="uri">https://github.com/ZFL-Uni-Bonn/Wetland_Delienation_Classification</a></p>
 </section>
 </section>
-<section id="conclusion" class="level3">
-<h3 class="anchored" data-anchor-id="conclusion">Conclusion</h3>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
 <p>During my two-month internship at ZFL, I had the opportunity to contribute to an ongoing project. The internship allowed me to apply and further develop skills I had acquired over the past year, including Object-Based Image Analysis (OBIA) and applying classification algorithms, as well as programming in Python. My supervisors provided valuable guidance and regular feedback, which supported my learning and timely task completion.</p>
 <p>Additionally, I gained experience in working with remote servers and virtual machines to process high-resolution imagery which was essential especially when handling large Earth observation datasets. I was also introduced to other remote sensing approaches, such as simulations using DART and 3D radiative transfer models, which, although not directly applied in my tasks, provided insight into the different technologies available in remote sensing.</p>
 <p>Some challenges arose in my assigned tasks during the internship. Integrating multiple datasets from various sources required significant pre-processing, and the computational load of processing high-resolution imagery was higher. The classification relied on initial field data, which was limited which highlighted the need for a more robust training data for increase in accuracy in the classification. Despite these limitations, the outcomes of my tasks provided an important foundation for subsequent monitoring and analysis.</p>
