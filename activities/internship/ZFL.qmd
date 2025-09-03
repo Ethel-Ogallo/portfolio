@@ -60,17 +60,7 @@ The planet imagery was then masked using the wetland extent derived in Task 1. M
 
 The area (in hectares) covered by each class in 2024 was:
 
-Permanent Lakes = 22,889.14\
-Permanent Marshes = 614.73\
-Rivers = 517.56\
-Peatlands = 2,763.60\
-Alluvial Fans = 5,652.97\
-Shrub-dominated Wetlands = 8,344.23\
-Tree-dominated Wetlands = 2,788.25\
-Agricultural Land = 10,909.74\
-Ponds = 31.19\
-Clay Pan = 1,619.29\
-**Total = 221,974.71**
+Permanent Lakes = 22,889.14 ; Permanent Marshes = 614.73; Rivers = 517.56; Peatlands = 2,763.60; Alluvial Fans = 5,652.97; Shrub-dominated Wetlands = 8,344.23; Tree-dominated Wetlands = 2,788.25; Agricultural Land = 10,909.74; Ponds = 31.19; Clay Pan = 1,619.29
 
 ### Documentation
 
