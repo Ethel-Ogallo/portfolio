@@ -1,8 +1,0 @@
----
-title: "Summer School: AI4EO 2025"
-layout: default
-#image: "main_logo.png"
-draft: true
-description: "Hackathon prepared for students by students at teh University of South Britanny (UBS), Vannes France."
-categories: [Machine Learning, Earth Observation, AI]
----

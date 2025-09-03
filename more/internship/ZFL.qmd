@@ -1,8 +1,0 @@
----
-title: "Internship Report"
-layout: default
-#image: "main_logo.png"
-draft: true
-description: "ZFL Bonn, Germany"
-categories: [Machine Learning, Earth Observation, Remote Sensing]
----

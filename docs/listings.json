@@ -7,7 +7,8 @@
       "/projects/Remote sensing/radar.html",
       "/projects/SDI/DEFGA.html",
       "/projects/Spatial databases/spatial_databases.html",
-      "/projects/Spatial thinking/Change_detection_OBIA.html"
+      "/projects/Spatial thinking/Change_detection_OBIA.html",
+      "/projects/application_dev(EO)/IP_EO.html"
     ]
   },
   {
@@ -29,8 +30,17 @@
   {
     "listing": "/more.html",
     "items": [
+      "/more/internship/ZFL.html",
       "/more/copernicus_hubs/copernicus_hubs.html",
       "/more/spain_ss/digital_twins.html"
+    ]
+  },
+  {
+    "listing": "/activities.html",
+    "items": [
+      "/activities/internship/ZFL.html",
+      "/activities/copernicus_hubs/copernicus_hubs.html",
+      "/activities/spain_ss/digital_twins.html"
     ]
   }
 ]
