@@ -3,7 +3,7 @@ title: "GUI for Agricultural Land Cover Change Detection using Object-Based Time
 layout: default
 image: "img9.png"
 description: " "
-categories: [Earth Observation, Remote Sensing, OBIA]
+categories: [Application Development (Earth Observation)]
 ---
 
 <iframe src="FinalProjectReport.pdf" width="100%" height="800px" style="border: none;">
