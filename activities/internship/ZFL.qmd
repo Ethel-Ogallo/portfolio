@@ -1,8 +1,8 @@
 ---
-title: "Remote Sensing Intern"
+title: "Remote Sensing Internship"
 layout: default
 image: "zfl logo.png"
-description: "A report on my internship at the Center for Remote Sensing of Land Suraces (ZFL), Bonn Germany, within the project WetlandHealth4UNgoals" 
+description: "This report summarizes my internship at the Center for Remote Sensing of Land Surfaces (ZFL) in Bonn, Germany, within the WetlandHealth4UNgoals project. It covers my tasks, outcomes, challenges and lessons learnt.The internship provided practical experience in remote sensing workflows, environmental monitoring, and the application of machine learning techniques for ecosystem assessment." 
 categories: [Machine Learning, Earth Observation, Remote Sensing]
 ---
 

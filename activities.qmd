@@ -1,5 +1,5 @@
 ---
-title: "Experience beyond the classroom"
+title: ""
 listing:
   contents:
     #- activities/ubs_ss
@@ -10,8 +10,7 @@ listing:
     - path: https://storymaps.arcgis.com/stories/da2b859e2c8a47f48997b73c967159eb 
       title: "Blended Intensive Programme (BIP)"
       image: "images/img5.jpg"
-      description: "Quantifying Vulnerability to Natural Hazards
-A digital narrative developed during the BIP 2025 field programme in Romania"
+      description: "This digital narrative showcases the outcomes of the BIP, Quantifying Vulnerability to Natural Hazards, held in Romania focusing on assessing vulnerability to natural hazards. Collaborating with students from various European and African institutions, the program combined virtual learning with fieldwork in the Buzău Mountains. Participants engaged in challenge-based learning, applying interdisciplinary approaches to understand the dynamics of hazard susceptibility, impact, and resilience in a changing climate."
        
   sort: "date"
   type: grid
@@ -25,5 +24,3 @@ format:
   html:
     link-external-newwindow: true
 ---
-
-This section highlights the projects and programs undertaken alongside my coursework.

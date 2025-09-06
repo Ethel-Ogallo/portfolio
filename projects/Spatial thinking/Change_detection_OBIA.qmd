@@ -4,7 +4,7 @@ title: "OBIA for estimating building density"
 layout: default
 image: "images/kakuma_camp.png"
 draft: false
-description: "Utilizing OBIA to assess building density patterns, presented in a scientific poster format for spatial analysis applications."
+description: "This project employs Object-Based Image Analysis (OBIA) to assess building density patterns, focusing on the Kakuma refugee camp in Kenya. Utilizing high-resolution drone imagery, OBIA segments the buildings which are then analyzed to estimate building density, providing insights into settlement patterns. The findings, presented in a scientific poster format, demonstrate OBIA's effectiveness in spatial analysis applications within complex environments."
 categories: [Spatial Thinking]
 ---
 

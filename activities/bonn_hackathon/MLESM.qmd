@@ -1,8 +1,8 @@
 ---
-title: "Machine Learning for Earth System Modelling"
+title: "Machine Learning for Earth System Modelling Hackathon"
 layout: default
 image: "logo.png"
-description: "A Hackathon hosted at the University of Bonn, Germany"
+description: "This hackathon at the University of Bonn explored machine learning applications for Earth System Modeling. Participants worked with satellite and observational data to develop predictive models for environmental variables such as precipitation. Using AI frameworks and high-performance computing, our team fine-tuned models, evaluated performance, and implemented innovative solutions. The event fostered collaboration and hands-on experience, bridging data science, remote sensing, and climate modeling for actionable environmental insights."
 categories: [Machine Learning, HPCs, AI]
 ---
 

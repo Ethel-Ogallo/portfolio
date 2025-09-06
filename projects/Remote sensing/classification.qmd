@@ -2,7 +2,7 @@
 title: "Object Features For Classification in Remote Sensing"
 layout: default
 image: "images/logo.JPG"
-description: "Object-based classification using eCognition, making use of advanced segmentation, feature selection, and hierarchical segmentation."
+description: "This project applies object-based image analysis (OBIA) in eCognition to move beyond traditional pixel-based methods. Using advanced segmentation, feature extraction, and hierarchical classification, imagery is transformed into meaningful objects with spectral, spatial, and geometric attributes. These features provide more accurate and context-aware classification results. The approach demonstrates how OBIA enhances remote sensing workflows for detailed and reliable environmental analysis."
 categories: [Advanced Remote sensing]
 ---
 

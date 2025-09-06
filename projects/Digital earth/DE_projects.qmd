@@ -7,7 +7,7 @@ format:
     toc: true 
     css: DE_styles.css 
 draft: false
-description: "Exploring cloud-based platforms and big data analytics for EO, including temporal analysis in GEE, soil moisture monitoring, and seasonal water mapping using Sen2Cube."
+description: "This project highlights the use of cloud-based platforms for big data analytics in Earth Observation. It discusses three studies: temporal forest change detection in GEE, soil moisture monitoring using EO Browser, and seasonal water mapping with Sen2Cube. Collectively, these projects show how scalable cloud tools can process vast datasets, generate environmental insights, and support sustainable resource management."
 categories: [Digital Earth-Big Earth Data Concepts]
 ---
 

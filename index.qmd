@@ -1,6 +1,6 @@
 ---
 title: "Ethel Ogallo"
-image: images/profile_pic5.jpg
+image: images/profile_pic4.jpg
 about:
   template: trestles
   image-width: 20em

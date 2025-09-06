@@ -2,7 +2,7 @@
 title: "GUI for Agricultural Land Cover Change Detection using Object-Based Time Series Analysis in eCognition"
 layout: default
 image: "img9.png"
-description: " "
+description: "This project develops a GUI within eCognition to facilitate object-based time series analysis for detecting agricultural land cover changes. The GUI streamlines the process of segmenting satellite imagery, extracting temporal features, and classifying land cover transitions. By automating complex workflows, it enhances accessibility for users with varying levels of expertise, enabling efficient monitoring of agricultural landscapes and supporting informed decision-making in land management."
 categories: [Application Development (Earth Observation)]
 ---
 

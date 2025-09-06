@@ -2,13 +2,13 @@
   {
     "listing": "/projects.html",
     "items": [
-      "/projects/Digital earth/DE_projects.html",
-      "/projects/Remote sensing/classification.html",
-      "/projects/Remote sensing/radar.html",
-      "/projects/SDI/DEFGA.html",
+      "/projects/application_dev(EO)/IP_EO.html",
       "/projects/Spatial databases/spatial_databases.html",
+      "/projects/Digital earth/DE_projects.html",
+      "/projects/SDI/DEFGA.html",
       "/projects/Spatial thinking/Change_detection_OBIA.html",
-      "/projects/application_dev(EO)/IP_EO.html"
+      "/projects/Remote sensing/classification.html",
+      "/projects/Remote sensing/radar.html"
     ]
   },
   {

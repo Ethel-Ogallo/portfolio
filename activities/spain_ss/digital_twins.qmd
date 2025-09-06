@@ -2,7 +2,7 @@
 title: "Summer School I"
 layout: default
 image: "images/ss logo.jpg"
-description: "Building smart and sustainbale cities: Exploring advanced technologies for building and visualizing Digital Twins"
+description: "This program focused on building smart and sustainable cities through hands-on exploration of Digital Twin technologies. We engaged in 3D modeling, GeoAI applications, and interactive simulations to understand urban systems. The activities emphasized practical skills, interdisciplinary collaboration, and innovative approaches for visualizing and analyzing city infrastructure, equipping attendees with insights and tools to support future urban planning and sustainable development projects."
 categories: [Digital Twins, 3D Modeling , GeoAI]
 ---
 

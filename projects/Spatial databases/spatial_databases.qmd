@@ -3,7 +3,7 @@ title: "Design and Implementation of a Spatial Database"
 layout: default
 image: "images/afro_nation.jpg"
 #draft: true
-description: "Developing a structured spatial database for a fictional WebGIS application, optimizing geospatial data storage, querying, and interoperability using PostGIS."
+description: "This project involved designing and implementing a spatial database backend for a WebGIS application supporting a city festival. Utilizing PostGIS, the database efficiently managed geospatial data such as booth locations, event zones, and facilities. It facilitated dynamic, location-based queries for users and organizers, enhancing real-time decision-making. The design emphasized data normalization, spatial indexing, and seamless integration with QGIS for data visualization."
 categories: [Spatial Databases]
 ---
 

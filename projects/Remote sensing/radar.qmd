@@ -2,7 +2,7 @@
 title: "Radar Analysis of Ground Deformation Using Sentinel-1 SAR Data"
 layout: default
 image: "images/lava_lake.jpg"
-description: "Monitoring Displacement: Mt. Nyiragongo Volcanic Eruption"
+description: "This project applies Interferometric Synthetic Aperture Radar (InSAR) using Sentinel-1 data to assess ground deformation using SNAP . Through a workflow of data preparation, interferogram generation, topographic removal, filtering, phase unwrapping, and displacement mapping, changes in ground movement were visualized in Google Earth. The resulting maps highlight zones of significant deformation—critical for risk assessment and disaster preparedness in volcanic regions."
 categories: [Advanced Remote Sensing]
 ---
 
