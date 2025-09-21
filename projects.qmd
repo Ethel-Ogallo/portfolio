@@ -3,16 +3,21 @@ title: ""
 listing:
   contents:
     - projects/application_dev(EO)
+
     - path: https://github.com/rabinatwayana/pysarflow 
       title: "PySARFlow: An open-source python library for SAR data processing"
       image: "images/img7.png"
       description: "PySARFlow is an open-source Python library designed to streamline the preprocessing of Synthetic Aperture Radar (SAR) data in both Single-Look Complex (SLC) and Ground Range Detected (GRD) formats. The package offers a modular pipeline for tasks such as data import, calibration, geocoding, and visualization. Accompanied by comprehensive example notebooks, PySARFlow facilitates efficient SAR data analysis, making it accessible for researchers and practitioners in remote sensing."
       categories: [Practice Software development(Python)]
+      date: 2025-08-22   
+
     - path: https://github.com/Ethel-Ogallo/Wetland_Inundation_DE-Africa 
       title: "Wetland Inundation"
       image: "images/img8.jpg" 
       description: "This project utilizes Digital Earth Africa's STAC catalog to assess wetland dynamics in the Zambezi Delta, Mozambique. Through processing Landsat imagery, key indicators such as surface water extent and vegetation patterns are derived, providing insights into the spatial and temporal changes in wetland characteristics. The analysis aids in understanding the ecological health and seasonal variations of this vital ecosystem."
       categories: [Analysis and Modelling (RS)]
+      date: 2025-07-31  
+
     - projects/Spatial databases
     - projects/Digital earth
     - projects/SDI

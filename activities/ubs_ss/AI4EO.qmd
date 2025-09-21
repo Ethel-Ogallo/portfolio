@@ -1,8 +1,67 @@
 ---
-title: "Summer School: AI4EO 2025"
+title: "Summer School II"
 layout: default
-#image: "main_logo.png"
-draft: true
-description: "Hackathon prepared for students by students at teh University of South Britanny (UBS), Vannes France."
+image: "logo.png"
+description: "Attended the AI4EO 2025 Symposium in Rennes, France that focused on AI applications for Earth observation through keynotes, posters, and networking with experts, researchers and students."
 categories: [Machine Learning, Earth Observation, AI]
 ---
+
+### AI4EO 2025 Symposium Report
+
+![](logo.png){fig-align="center" width="393"}
+
+**Overview**
+
+The AI4EO Symposium 2025 took place in **Rennes, France, from 11–12 September 2025**. It was organized by the OBELIX team of IRISA, the EMJM Copernicus Master in Digital Earth and other partners. The symposium gathered researchers, students, and practitioners working at the intersection of artificial intelligence and Earth observation (EO). Its main aim was to showcase research, promote collaboration, and explore challenges and opportunities in applying AI to EO data.
+
+The two-day programme combined **keynote speeches, oral presentations, poster sessions, panel discussion, and social activities** such as a guided city tour. This mix allowed for both networking and knowledge exchange.
+
+### Day 1 (September 11th 2025)
+
+**Keynotes:**
+
+1.  **Responsible AI for Earth Observation** — *Caroline Gevaert (University of Twente)*\
+    Discussed explainable AI, highlighting fairness and bias in machine learning models for EO, and emphasized responsible practices when applying AI to sensitive environmental and societal challenges.
+
+2.  **Destination Earth: Digital Twins of the Earth System** — *Bertrand Le Saux (ESA Phi-lab)*\
+    Introduced the concept of digital twins of the Earth system for climate change adaptation and resilience planning.
+
+We also had oral presentations on various research topics and a poster session.
+
+**Posters i found interesting**
+
+::: columns
+![](images/poster_day1.jpg){.column fig-alt="Poster 1" width="300"} ![](images/poster2_day1.jpg){.column fig-alt="Poster 2" width="300"} ![](images/poster3_day1.jpg){.column fig-alt="Poster 3" width="300"} ![](images/poster4_day1.jpg){.column fig-alt="Keynote" width="300"}
+:::
+
+### Day 2 (September 12th 2025)
+
+**Keynotes:**
+
+1.  **Machine Learning for Large-Scale EO** — *Christian Igel (University of Copenhagen)*\
+    Discussed the importance of simple but effective ML models in large-scale EO contexts, including scalability and balancing accuracy with efficiency.
+
+2.  **Foundation Models and Their Adaptation to Remote Sensing** — *Maria Vakalopoulou (CentraleSupélec)*\
+    Explained foundation models, their architecture and implementation, and adaptation for EO tasks, including training challenges and domain transfer.
+
+Oral presentations and poster sessions were included as well.
+
+**Posters i found interesting**
+
+::: columns
+![](images/poster_day2.jpg){.column fig-alt="Poster 1" width="300"} ![](images/poster2_day2.jpg){.column fig-alt="Poster 2" width="300"} ![](images/poster3_day2.jpg){.column fig-alt="Poster 3" width="300"} ![](images/poster4_day2.jpg){.column fig-alt="Poster 3" width="300"}
+:::
+
+### Reflection
+
+Overall, AI4EO 2025 offered a good balance of technical and practical applications. The keynote talks provided an understanding of where the field is heading, from responsible AI practices to digital Earth twins and scalable machine learning.
+
+The poster sessions were particularly valuable, giving me the chance to engage directly with researchers, ask questions about their methods, limitations and successes, and gain insights into conducting strong research.
+
+Attending this symposium was very motivating. It strengthened my understanding of AI for EO, introduced emerging trends such as foundation models, and connected me with a growing community of researchers. I left with new ideas, practical insights, and directions to explore in my own work.
+
+**Gallery of the city tour**
+
+::: columns
+![](images/tour2.jpg){.column fig-alt="Tour 2" width="300"} ![](images/tour3.jpg){.column fig-alt="Tour 3" width="300"} ![](images/tour4.jpg){.column fig-alt="Tour 4" width="300"} ![](images/tour5.jpg){.column fig-alt="Tour 5" width="300"} ![](images/tour6.jpg){.column fig-alt="Tour 6" width="300"} ![](images/tour7.jpg){.column fig-alt="Tour 7" width="300"}
+:::

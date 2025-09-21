@@ -2,7 +2,7 @@
 title: ""
 listing:
   contents:
-    #- activities/ubs_ss
+    - activities/ubs_ss
     - activities/bonn_hackathon
     - activities/internship
     - activities/copernicus_hubs
