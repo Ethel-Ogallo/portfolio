@@ -1,38 +1,105 @@
 ---
 title: ""
-listing:
-  contents:
-    - projects/application_dev(EO)
-
-    - path: https://github.com/rabinatwayana/pysarflow 
-      title: "PySARFlow: An open-source python library for SAR data processing"
-      image: "images/img7.png"
-      description: "PySARFlow is an open-source Python library designed to streamline the preprocessing of Synthetic Aperture Radar (SAR) data in both Single-Look Complex (SLC) and Ground Range Detected (GRD) formats. The package offers a modular pipeline for tasks such as data import, calibration, geocoding, and visualization. Accompanied by comprehensive example notebooks, PySARFlow facilitates efficient SAR data analysis, making it accessible for researchers and practitioners in remote sensing."
-      categories: [Practice Software development(Python)]
-      date: 2025-08-22   
-
-    - path: https://github.com/Ethel-Ogallo/Wetland_Inundation_DE-Africa 
-      title: "Wetland Inundation"
-      image: "images/img8.jpg" 
-      description: "This project utilizes Digital Earth Africa's STAC catalog to assess wetland dynamics in the Zambezi Delta, Mozambique. Through processing Landsat imagery, key indicators such as surface water extent and vegetation patterns are derived, providing insights into the spatial and temporal changes in wetland characteristics. The analysis aids in understanding the ecological health and seasonal variations of this vital ecosystem."
-      categories: [Analysis and Modelling (RS)]
-      date: 2025-07-31  
-
-    - projects/Spatial databases
-    - projects/Digital earth
-    - projects/SDI
-    - projects/Spatial thinking
-    - projects/Remote sensing
-
-  sort: "date"
-  type: grid
-  #categories: true
-  sort-ui: false
-  filter-ui: false
-  fields: [image, title, description, categories]
 page-layout: full
-title-block-banner: false
+title-block-banner: true
 format:
   html:
     link-external-newwindow: true
+
+listing:
+  type: grid
+  sort: none
+  filter-ui: true
+  fields: [image, title, description, categories, author]
+  contents:
+
+# ----------------- Semester 3 cards ----------------------------------
+
+    - path: https://github.com/Ethel-Ogallo/UBS_BigData/tree/master/Projects/project%201
+      title: "Scaling Machine Learning using Spark"
+      image: "images/project/fractal.png"
+      description: "This project demonstrates how to scale machine learning workflows using Apache Spark on AWS cloud infrastructure."
+      categories: [Big Data]
+      author: "Semester 3"
+
+    - path: https://github.com/Ethel-Ogallo/UBS_ML/tree/main/Projects
+      title: "Machine Learning: Crop Yield Estimation"
+      image: "images/project/crop.png"
+      description: "This project develops a machine learning workflow for a supervised regression task."
+      categories: [Machine Learning]
+      author: "Semester 3"
+
+# --------------- Semester 2 cards ----------------------
+
+    - path: projects/Semester 2/application_dev(EO)/IP_EO.qmd
+      title: "Agricultural Land Cover Change Detection using SITS in eCognition"
+      layout: default
+      image: "images/project/img9.png"
+      description: "This project develops a GUI within eCognition to facilitate object-based time series analysis for detecting agricultural land cover changes."
+      categories: [Application Development (Earth Observation)]
+      author: "Semester 2"
+
+    - path: https://github.com/rabinatwayana/pysarflow
+      title: "PySARFlow"
+      image: "images/project/img7.png"
+      description: "PySARFlow is an open-source Python library designed to streamline the preprocessing of Synthetic Aperture Radar (SAR) data."
+      categories: [Practice Software development(Python)]
+      author: "Semester 2"
+
+    - path: https://github.com/Ethel-Ogallo/Wetland_Inundation_DE-Africa
+      title: "Wetland Inundation"
+      image: "images/img8.jpg"
+      description: "This project utilizes Digital Earth Africa's STAC catalog to assess wetland dynamics in the Zambezi Delta, Mozambique."
+      categories: [Analysis and Modelling (RS)]
+      author: "Semester 2"
+
+# --------- Semester 1 cards ---------------------------
+
+    - path: projects/Semester 1/Spatial databases/spatial_databases.qmd
+      title: "Design and Implementation of a Spatial Database"
+      layout: default
+      image: "images/project/afro_nation.jpg"
+      description: "This project involved designing and implementing a spatial database backend for a WebGIS application supporting a city festival."
+      categories: [Spatial Databases]
+      author: "Semester 1"
+
+    - path: projects/Semester 1/Digital earth/DE_projects.qmd
+      title: "Big Data"
+      layout: default
+      image: "images/project/main_logo.png"
+      description: "This project highlights the use of cloud-based platforms for big data analytics in Earth Observation."
+      categories: [Digital Earth-Big Earth Data Concepts]
+      author: "Semester 1"
+
+    - path: projects/Semester 1/SDI/DEFGA.qmd
+      title: "Spatial Data Infrastructure (SDI) for Gender Employment Trends in Austria"
+      layout: default
+      image: "images/project/sdi_logo.jpg"
+      description: "This project focuses on designing a Spatial Data Infrastructure (SDI) to integrate and visualize gender-disaggregated employment data across Austria."
+      categories: [SDI]
+      author: "Semester 1"
+
+    - path: projects/Semester 1/Spatial thinking/Change_detection_OBIA.qmd
+      title: "OBIA for estimating building density"
+      layout: default
+      image: "images/project/kakuma.png"
+      description: "This project employs Object-Based Image Analysis (OBIA) to assess building density patterns, focusing on the Kakuma refugee camp in Kenya."
+      categories: [Spatial Thinking]
+      author: "Semester 1"
+
+    - path: projects/Semester 1/Remote sensing/radar.qmd
+      title: "Radar Analysis of Ground Deformation Using Sentinel-1 SAR Data"
+      layout: default
+      image: "images/project/lava_lake.jpg"
+      description: "This project applies Interferometric Synthetic Aperture Radar (InSAR) using Sentinel-1 data to assess ground deformation."
+      categories: [Advanced Remote Sensing]
+      author: "Semester 1"
+
+    - path: projects/Semester 1/Remote sensing/classification.qmd
+      title: "Object Features For Classification in Remote Sensing"
+      layout: default
+      image: "images/project/logo.JPG"
+      description: "This project applies object-based image analysis (OBIA) in eCognition to move beyond traditional pixel-based methods."
+      categories: [Advanced Remote Sensing]
+      author: "Semester 1"
 ---

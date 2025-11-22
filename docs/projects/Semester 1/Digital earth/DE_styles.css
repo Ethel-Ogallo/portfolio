@@ -1,0 +1,56 @@
+/* css styles */
+
+/* Card container */
+.cards-container {
+  display: flex;
+  flex-direction: column; /* Vertical stacking */
+  gap: 1.5rem;
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding: 1rem;
+  max-height: 80vh; /* Restrict container height to make it scrollable */
+  margin: 0 auto; /* Center the cards container */
+  width: 100%; /* Full-page width */
+  box-sizing: border-box; /* Include padding in width */
+}
+
+/* Individual card */
+.card {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  width: 100%; /* Full width of container */
+  box-sizing: border-box; /* Include padding in width */
+  height: 500px; /* Increase card height */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Ensure no overflow */
+  text-overflow: ellipsis; /* Add ellipsis if content exceeds */
+  white-space: normal; /* Allow text wrapping */
+}
+
+.card h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.card p {
+  font-size: 1rem;
+  line-height: 1.5; /* Better line spacing for readability */
+  color: #666;
+  overflow: hidden; /* Prevent overflow */
+  text-overflow: ellipsis; /* Add ellipsis to long text */
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #0073e6;
+  text-decoration: none;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+

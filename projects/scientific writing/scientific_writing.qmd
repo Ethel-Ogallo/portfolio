@@ -1,8 +1,0 @@
----
-title: "Estimating Carbon Stock in Wetlands "
-layout: default
-#image: "main_logo.png"
-draft: true
-description: "A Review of Remote Sensing and Machine Learning Applications"
-categories: [Machine Learning, Earth Observation, Remote Sensing]
----

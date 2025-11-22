@@ -2,13 +2,13 @@
   {
     "listing": "/projects.html",
     "items": [
-      "/projects/application_dev(EO)/IP_EO.html",
-      "/projects/Spatial databases/spatial_databases.html",
-      "/projects/Digital earth/DE_projects.html",
-      "/projects/SDI/DEFGA.html",
-      "/projects/Spatial thinking/Change_detection_OBIA.html",
-      "/projects/Remote sensing/classification.html",
-      "/projects/Remote sensing/radar.html"
+      "/projects/Semester 2/application_dev(EO)/IP_EO.html",
+      "/projects/Semester 1/Spatial databases/spatial_databases.html",
+      "/projects/Semester 1/Digital earth/DE_projects.html",
+      "/projects/Semester 1/SDI/DEFGA.html",
+      "/projects/Semester 1/Spatial thinking/Change_detection_OBIA.html",
+      "/projects/Semester 1/Remote sensing/radar.html",
+      "/projects/Semester 1/Remote sensing/classification.html"
     ]
   },
   {

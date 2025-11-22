@@ -78,9 +78,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-image','listing-title','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-image','listing-title','listing-description','listing-categories','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -134,7 +134,7 @@ window.Quarto = {
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -179,7 +179,7 @@ window.Quarto = {
         
     </div>
 <!-- main -->
-<main class="content column-page" id="quarto-document-content">
+<main class="content quarto-banner-title-block column-page" id="quarto-document-content">
 
 
 
@@ -189,8 +189,122 @@ window.Quarto = {
 
 
 <div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
+<div class="listing-actions-group">
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="Analysis and Modelling (RS)" data-listing-date-sort="1753912800000">
+<div class="g-col-1" data-index="0" data-categories="Big Data">
+<a href="https://github.com/Ethel-Ogallo/UBS_BigData/tree/master/Projects/project%201" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="images/project/fractal.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Scaling Machine Learning using Spark
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Big Data'); return false;">
+Big Data
+</div>
+</div>
+<div class="card-text listing-description">
+This project demonstrates how to scale machine learning workflows using Apache Spark on AWS cloud infrastructure.
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Semester 3
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="1" data-categories="Machine Learning">
+<a href="https://github.com/Ethel-Ogallo/UBS_ML/tree/main/Projects" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="images/project/crop.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Machine Learning: Crop Yield Estimation
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Machine Learning'); return false;">
+Machine Learning
+</div>
+</div>
+<div class="card-text listing-description">
+This project develops a machine learning workflow for a supervised regression task.
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Semester 3
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="2" data-categories="Application Development (Earth Observation)" data-listing-file-modified-sort="1758135874770" data-listing-reading-time-sort="1" data-listing-word-count-sort="21">
+<a href="./projects/Semester 2/application_dev(EO)/IP_EO.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="images/project/img9.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Agricultural Land Cover Change Detection using SITS in eCognition
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Application Development (Earth Observation)'); return false;">
+Application Development (Earth Observation)
+</div>
+</div>
+<div class="card-text listing-description">
+This project develops a GUI within eCognition to facilitate object-based time series analysis for detecting agricultural land cover changes.
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Semester 2
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="3" data-categories="Practice Software development(Python)">
+<a href="https://github.com/rabinatwayana/pysarflow" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="images/project/img7.png" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+PySARFlow
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Practice Software development(Python)'); return false;">
+Practice Software development(Python)
+</div>
+</div>
+<div class="card-text listing-description">
+PySARFlow is an open-source Python library designed to streamline the preprocessing of Synthetic Aperture Radar (SAR) data.
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Semester 2
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="4" data-categories="Analysis and Modelling (RS)">
 <a href="https://github.com/Ethel-Ogallo/Wetland_Inundation_DE-Africa" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
@@ -206,61 +320,22 @@ Analysis and Modelling (RS)
 </div>
 </div>
 <div class="card-text listing-description">
-This project utilizes Digital Earth Africa’s STAC catalog to assess wetland dynamics in the Zambezi Delta, Mozambique. Through processing Landsat imagery, key indicators…
+This project utilizes Digital Earth Africa’s STAC catalog to assess wetland dynamics in the Zambezi Delta, Mozambique.
 </div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Semester 2
 </div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="Practice Software development(Python)" data-listing-date-sort="1755813600000">
-<a href="https://github.com/rabinatwayana/pysarflow" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="images/img7.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-PySARFlow: An open-source python library for SAR data processing
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Practice Software development(Python)'); return false;">
-Practice Software development(Python)
-</div>
-</div>
-<div class="card-text listing-description">
-PySARFlow is an open-source Python library designed to streamline the preprocessing of Synthetic Aperture Radar (SAR) data in both Single-Look Complex (SLC) and Ground Range…
 </div>
 </div>
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="Application Development (Earth Observation)" data-listing-file-modified-sort="1758135874770" data-listing-reading-time-sort="1" data-listing-word-count-sort="21">
-<a href="./projects/application_dev(EO)/IP_EO.html" class="quarto-grid-link">
+<div class="g-col-1" data-index="5" data-categories="Spatial Databases" data-listing-file-modified-sort="1757168628281" data-listing-reading-time-sort="11" data-listing-word-count-sort="2047">
+<a href="./projects/Semester 1/Spatial databases/spatial_databases.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" src="./projects/application_dev(EO)/img9.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-GUI for Agricultural Land Cover Change Detection using Object-Based Time Series Analysis in eCognition
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Application Development (Earth Observation)'); return false;">
-Application Development (Earth Observation)
-</div>
-</div>
-<div class="card-text listing-description">
-This project develops a GUI within eCognition to facilitate object-based time series analysis for detecting agricultural land cover changes. The GUI streamlines the process…
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="3" data-categories="Spatial Databases" data-listing-file-modified-sort="1757168628281" data-listing-reading-time-sort="11" data-listing-word-count-sort="2047">
-<a href="./projects/Spatial databases/spatial_databases.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./projects/Spatial databases/images/afro_nation.jpg" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="images/project/afro_nation.jpg" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -272,17 +347,22 @@ Spatial Databases
 </div>
 </div>
 <div class="card-text listing-description">
-This project involved designing and implementing a spatial database backend for a WebGIS application supporting a city festival. Utilizing PostGIS, the database efficiently…
+This project involved designing and implementing a spatial database backend for a WebGIS application supporting a city festival.
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Semester 1
+</div>
 </div>
 </div>
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="4" data-categories="Digital Earth-Big Earth Data Concepts" data-listing-file-modified-sort="1757167606325" data-listing-reading-time-sort="8" data-listing-word-count-sort="1543">
-<a href="./projects/Digital earth/DE_projects.html" class="quarto-grid-link">
+<div class="g-col-1" data-index="6" data-categories="Digital Earth-Big Earth Data Concepts" data-listing-file-modified-sort="1757167606325" data-listing-reading-time-sort="8" data-listing-word-count-sort="1543">
+<a href="./projects/Semester 1/Digital earth/DE_projects.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" src="./projects/Digital earth/main_logo.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="images/project/main_logo.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -294,17 +374,22 @@ Digital Earth-Big Earth Data Concepts
 </div>
 </div>
 <div class="card-text listing-description">
-This project highlights the use of cloud-based platforms for big data analytics in Earth Observation. It discusses three studies: temporal forest change detection in GEE…
+This project highlights the use of cloud-based platforms for big data analytics in Earth Observation.
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Semester 1
+</div>
 </div>
 </div>
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="5" data-categories="SDI" data-listing-file-modified-sort="1757168759738" data-listing-reading-time-sort="3" data-listing-word-count-sort="461">
-<a href="./projects/SDI/DEFGA.html" class="quarto-grid-link">
+<div class="g-col-1" data-index="7" data-categories="SDI" data-listing-file-modified-sort="1757168759738" data-listing-reading-time-sort="3" data-listing-word-count-sort="461">
+<a href="./projects/Semester 1/SDI/DEFGA.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" src="./projects/SDI/images/sdi_logo.jpg" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="images/project/sdi_logo.jpg" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -316,17 +401,22 @@ SDI
 </div>
 </div>
 <div class="card-text listing-description">
-This project focuses on designing a Spatial Data Infrastructure (SDI) to integrate and visualize gender-disaggregated employment data across Austria. Utilizing open-source…
+This project focuses on designing a Spatial Data Infrastructure (SDI) to integrate and visualize gender-disaggregated employment data across Austria.
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Semester 1
+</div>
 </div>
 </div>
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="6" data-categories="Spatial Thinking" data-listing-file-modified-sort="1757168963249" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
-<a href="./projects/Spatial thinking/Change_detection_OBIA.html" class="quarto-grid-link">
+<div class="g-col-1" data-index="8" data-categories="Spatial Thinking" data-listing-file-modified-sort="1757168963249" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+<a href="./projects/Semester 1/Spatial thinking/Change_detection_OBIA.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" src="./projects/Spatial thinking/images/kakuma_camp.png" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="images/project/kakuma.png" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -338,39 +428,22 @@ Spatial Thinking
 </div>
 </div>
 <div class="card-text listing-description">
-This project employs Object-Based Image Analysis (OBIA) to assess building density patterns, focusing on the Kakuma refugee camp in Kenya. Utilizing high-resolution drone…
+This project employs Object-Based Image Analysis (OBIA) to assess building density patterns, focusing on the Kakuma refugee camp in Kenya.
 </div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Semester 1
 </div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="7" data-categories="Advanced Remote sensing" data-listing-file-modified-sort="1757167946471" data-listing-reading-time-sort="3" data-listing-word-count-sort="578">
-<a href="./projects/Remote sensing/classification.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./projects/Remote sensing/images/logo.JPG" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Object Features For Classification in Remote Sensing
-</h5>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Advanced Remote sensing'); return false;">
-Advanced Remote sensing
-</div>
-</div>
-<div class="card-text listing-description">
-This project applies object-based image analysis (OBIA) in eCognition to move beyond traditional pixel-based methods. Using advanced segmentation, feature extraction, and…
 </div>
 </div>
 </div>
 </a>
 </div>
-<div class="g-col-1" data-index="8" data-categories="Advanced Remote Sensing" data-listing-file-modified-sort="1757168379646" data-listing-reading-time-sort="5" data-listing-word-count-sort="812">
-<a href="./projects/Remote sensing/radar.html" class="quarto-grid-link">
+<div class="g-col-1" data-index="9" data-categories="Advanced Remote Sensing" data-listing-file-modified-sort="1757168379646" data-listing-reading-time-sort="5" data-listing-word-count-sort="812">
+<a href="./projects/Semester 1/Remote sensing/radar.html" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
 <p class="card-img-top">
-<img loading="lazy" src="./projects/Remote sensing/images/lava_lake.jpg" class="thumbnail-image card-img" style="height: 150px;">
+<img loading="lazy" src="images/project/lava_lake.jpg" class="thumbnail-image card-img" style="height: 150px;">
 </p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
@@ -382,7 +455,39 @@ Advanced Remote Sensing
 </div>
 </div>
 <div class="card-text listing-description">
-This project applies Interferometric Synthetic Aperture Radar (InSAR) using Sentinel-1 data to assess ground deformation using SNAP . Through a workflow of data preparation…
+This project applies Interferometric Synthetic Aperture Radar (InSAR) using Sentinel-1 data to assess ground deformation.
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Semester 1
+</div>
+</div>
+</div>
+</div>
+</a>
+</div>
+<div class="g-col-1" data-index="10" data-categories="Advanced Remote Sensing" data-listing-file-modified-sort="1757167946471" data-listing-reading-time-sort="3" data-listing-word-count-sort="578">
+<a href="./projects/Semester 1/Remote sensing/classification.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="images/project/logo.JPG" class="thumbnail-image card-img" style="height: 150px;">
+</p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Object Features For Classification in Remote Sensing
+</h5>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Advanced Remote Sensing'); return false;">
+Advanced Remote Sensing
+</div>
+</div>
+<div class="card-text listing-description">
+This project applies object-based image analysis (OBIA) in eCognition to move beyond traditional pixel-based methods.
+</div>
+<div class="card-attribution card-text-small start">
+<div class="listing-author">
+Semester 1
+</div>
 </div>
 </div>
 </div>

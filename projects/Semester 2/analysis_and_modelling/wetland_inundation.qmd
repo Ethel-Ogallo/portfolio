@@ -1,0 +1,10 @@
+---
+title: "Wetland Inundation"
+layout: default
+image: "img8.jpg" 
+description: "This project utilizes Digital Earth Africa's STAC catalog to assess wetland dynamics in the Zambezi Delta, Mozambique. Through processing Landsat imagery, key indicators such as surface water extent and vegetation patterns are derived, providing insights into the spatial and temporal changes in wetland characteristics. The analysis aids in understanding the ecological health and seasonal variations of this vital ecosystem."
+categories: [Analysis and Modelling (RS)]
+---
+
+<meta http-equiv="refresh" content="0; url=https://github.com/Ethel-Ogallo/Wetland_Inundation_DE-Africa" />
+           

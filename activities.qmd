@@ -10,13 +10,12 @@ listing:
     - path: https://storymaps.arcgis.com/stories/da2b859e2c8a47f48997b73c967159eb 
       title: "Blended Intensive Programme (BIP)"
       image: "images/img5.jpg"
-      description: "This digital narrative showcases the outcomes of the BIP, Quantifying Vulnerability to Natural Hazards, held in Romania focusing on assessing vulnerability to natural hazards. Collaborating with students from various European and African institutions, the program combined virtual learning with fieldwork in the Buzău Mountains. Participants engaged in challenge-based learning, applying interdisciplinary approaches to understand the dynamics of hazard susceptibility, impact, and resilience in a changing climate."
+      description: "This digital narrative showcases the outcomes of the BIP, Quantifying Vulnerability to Natural Hazards, held in Romania focusing on assessing vulnerability to natural hazards."
+      author: "Semester 2"
        
-  sort: "date"
+  sort: none
   type: grid
   categories: false
-  sort-ui: false
-  filter-ui: false
 page-layout: full
 title-block-banner: false
 layout: default
