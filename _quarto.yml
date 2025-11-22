@@ -33,7 +33,7 @@ website:
 
 format:
   html:
-    theme: spacelab
+    theme: cosmo
     css: styles.css
     fontsize: 1em
     fontcolor: black

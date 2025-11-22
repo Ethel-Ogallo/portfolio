@@ -17,7 +17,7 @@ listing:
   type: grid
   categories: false
 page-layout: full
-title-block-banner: false
+title-block-banner: true
 layout: default
 format:
   html:
