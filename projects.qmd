@@ -88,7 +88,7 @@ listing:
       author: "Semester 1"
 
     - path: projects/Semester 1/Remote sensing/radar.qmd
-      title: "Radar Analysis of Ground Deformation Using Sentinel-1 SAR Data"
+      title: "Assessing Post-Eruption Surface Displacement with Sentinel-1 InSAR"
       layout: default
       image: "images/project/lava_lake.jpg"
       description: "This project applies Interferometric Synthetic Aperture Radar (InSAR) using Sentinel-1 data to assess ground deformation."
