@@ -51,7 +51,7 @@ listing:
       image: "images/project/img8.jpg"
       description: "This project utilizes Digital Earth Africa's STAC catalog to assess wetland dynamics in the Zambezi Delta, Mozambique."
       categories: [Analysis and Modelling (RS)]
-      # author: "Semester 2"
+      author: "Semester 2"
 
 # --------- Semester 1 cards ---------------------------
 
