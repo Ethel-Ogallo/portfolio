@@ -11,7 +11,6 @@ listing:
       title: "Blended Intensive Programme (BIP)"
       image: "images/img5.jpg"
       description: "This digital narrative showcases the outcomes of the BIP, Quantifying Vulnerability to Natural Hazards, held in Romania focusing on assessing vulnerability to natural hazards."
-      author: "Semester 2"
        
   sort: none
   type: grid

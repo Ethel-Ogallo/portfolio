@@ -48,7 +48,7 @@ listing:
 
     - path: https://github.com/Ethel-Ogallo/Wetland_Inundation_DE-Africa
       title: "Wetland Inundation"
-      image: "images/img8.jpg"
+      image: "images/project/img8.jpg"
       description: "This project utilizes Digital Earth Africa's STAC catalog to assess wetland dynamics in the Zambezi Delta, Mozambique."
       categories: [Analysis and Modelling (RS)]
       author: "Semester 2"

@@ -1,5 +1,5 @@
 ---
-title: "Radar Analysis of Ground Deformation Using Sentinel-1 SAR Data"
+title: "Assessing Post-Eruption Surface Displacement with Sentinel-1 InSAR"
 layout: default
 image: "images/lava_lake.jpg"
 description: "This project applies Interferometric Synthetic Aperture Radar (InSAR) using Sentinel-1 data to assess ground deformation using SNAP . Through a workflow of data preparation, interferogram generation, topographic removal, filtering, phase unwrapping, and displacement mapping, changes in ground movement were visualized in Google Earth. The resulting maps highlight zones of significant deformation—critical for risk assessment and disaster preparedness in volcanic regions."
@@ -31,7 +31,7 @@ The next critical step was coregistration, where the before-eruption image (May 
 Initial interferogram generation revealed significant noise, particularly in the phase image, making fringes (which indicate displacement) less visible. However, the coherent image clearly highlighted coherent zones, areas where the radar signal remained consistent between the two acquisition dates. To improve the signal, TOPSAR debursting was applied to the interferometric phase.
 
 |                                      |                                      |
-|------------------------------------|------------------------------------|
+|--------------------------------------|--------------------------------------|
 | ![](images/clipboard-1643438388.png) | ![](images/clipboard-3300168893.png) |
 
 : Figure 2 shows a) coherent product and b) interferometric phase after deburst.
