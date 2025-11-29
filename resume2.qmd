@@ -35,7 +35,7 @@ Bachelor of Applied Science in Geoinformatics
 
 ##### *Remote Sensing Intern* *(Jul 2025 - Aug 2025)*
 
--   Developed machine learning workflow for wetland delineation and classification of Lake Baringo wetland in Kenya under the WetlandHealth4UNgoals project.
+-   Developed machine learning workflow for wetland delineation and classification of Lake Baringo wetland in Kenya under the WetlandHealth4UNgoals project. [GitHub Repository](https://github.com/ZFL-Uni-Bonn/Wetland_Delienation_Classification)
 
 ##### **CEMA-Africa**
 
