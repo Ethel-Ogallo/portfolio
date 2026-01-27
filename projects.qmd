@@ -24,7 +24,7 @@ listing:
     - path: https://github.com/Ethel-Ogallo/multitask_regression_deeplearning
       title: "Multitask Regression using Resnet50"
       image: "images/project/typhoon.png"
-      description: "This project demonstrates a deep learning workflow for multitask regression"
+      description: "This project demonstrates a deep learning workflow for multitask regression using CNN based deep learning model"
       categories: [Deep Learning for Computer Vision]
       author: "Semester 3"
 
