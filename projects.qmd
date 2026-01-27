@@ -21,7 +21,7 @@ listing:
       categories: [Big Data]
       author: "Semester 3"
       
-    - path: https://github.com/Ethel-Ogallo/UBS_BigData/tree/master
+    - path: https://github.com/Ethel-Ogallo/multitask_regression_deeplearning
       title: "Multitask Regression using Resnet50"
       image: "images/project/typhoon.png"
       description: "This project demonstrates a deep learning workflow for multitask regression"
