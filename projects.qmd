@@ -14,8 +14,28 @@ listing:
   contents:
 
 # ----------------- Semester 3 cards ----------------------------------
+    - path: https://github.com/Ethel-Ogallo/bigearthnet-dl-distributed/tree/master
+      title: "Scaling Deep Learning using Petastorm and Tensorflow"
+      image: "images/project/bigearthnet.png"
+      description: "This project demonstrates how to scale deep learning workflows using on AWS cloud infrastructure."
+      categories: [Big Data]
+      author: "Semester 3"
+      
+    - path: https://github.com/Ethel-Ogallo/UBS_BigData/tree/master
+      title: "Multitask Regression using Resnet50"
+      image: "images/project/typhoon.png"
+      description: "This project demonstrates a deep learning workflow for multitask regression"
+      categories: [Deep Learning for Computer Vision]
+      author: "Semester 3"
 
-    - path: https://github.com/Ethel-Ogallo/UBS_BigData/tree/master/Projects/project%201
+    - path: https://github.com/Ethel-Ogallo/Ship_Detection_DeepLearning
+      title: "Ship Object Detection"
+      image: "images/project/ship.png"
+      description: "This project demonstrates a deep learning workflow for object detection on SAR"
+      categories: [Deep Learning for Computer Vision]
+      author: "Semester 3"
+
+    - path: https://github.com/Ethel-Ogallo/UBS_BigData/tree/master
       title: "Scaling Machine Learning using Spark"
       image: "images/project/fractal.png"
       description: "This project demonstrates how to scale machine learning workflows using Apache Spark on AWS cloud infrastructure."
