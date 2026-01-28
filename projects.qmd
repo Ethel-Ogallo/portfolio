@@ -15,30 +15,37 @@ listing:
 
 # ----------------- Semester 3 cards ----------------------------------
     - path: https://github.com/Ethel-Ogallo/bigearthnet-dl-distributed/tree/master
-      title: "Scaling Deep Learning using Petastorm and Tensorflow"
+      title: "Distributed Deep learning"
       image: "images/project/bigearthnet.png"
-      description: "This project demonstrates how to scale deep learning workflows using on AWS cloud infrastructure."
+      description: "Implemented scalable deep learning workflows on AWS using Petastorm and TensorFlow, enabling efficient training on Bigearthnet dataset."
       categories: [Big Data]
       author: "Semester 3"
       
     - path: https://github.com/Ethel-Ogallo/multitask_regression_deeplearning
-      title: "Multitask Regression using Resnet50"
+      title: "Multitask Regression on DigitalTyphoon data"
       image: "images/project/typhoon.png"
-      description: "This project demonstrates a deep learning workflow for multitask regression using CNN based deep learning model"
+      description: "Developed a multitask regression pipeline using ResNet50 to predict multiple continuous targets simultaneously from image data"
       categories: [Deep Learning for Computer Vision]
       author: "Semester 3"
 
     - path: https://github.com/Ethel-Ogallo/Ship_Detection_DeepLearning
       title: "Ship Object Detection"
       image: "images/project/ship.png"
-      description: "This project demonstrates a deep learning workflow for object detection on SAR"
+      description: "Built a deep learning workflow for detecting ships in SAR imagery, comparing 3 different deep learning models."
       categories: [Deep Learning for Computer Vision]
+      author: "Semester 3"
+      
+    - path: https://github.com/Ethel-Ogallo/UBS_ERSIP/blob/main/Final%20Project/Activity_3/patter_spectrum2.ipynb
+      title: "Tree-based Image Processing"
+      image: "images/project/ersip.png"
+      description: "Applied tree-based algorithms for image analysis to efficiently detect large building structures in remote sensing imagery."
+      categories: [Efficient Remote Sensing Image Processing]
       author: "Semester 3"
 
     - path: https://github.com/Ethel-Ogallo/UBS_BigData/tree/master
-      title: "Scaling Machine Learning using Spark"
+      title: "Distributed Machine Learning"
       image: "images/project/fractal.png"
-      description: "This project demonstrates how to scale machine learning workflows using Apache Spark on AWS cloud infrastructure."
+      description: "Implemented scalable machine learning workflows on AWS using Apache Spark to process and analyze Fractal datastet efficiently"
       categories: [Big Data]
       author: "Semester 3"
 
