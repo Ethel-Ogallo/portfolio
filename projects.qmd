@@ -10,6 +10,7 @@ listing:
   type: grid
   sort: none
   filter-ui: true
+  image-height: auto
   fields: [image, title, description, categories, author]
   contents:
 

@@ -14,6 +14,7 @@ listing:
        
   sort: none
   type: grid
+  image-height: auto
   categories: false
 page-layout: full
 title-block-banner: true
