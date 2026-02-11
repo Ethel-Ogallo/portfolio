@@ -32,7 +32,7 @@ listing:
     - path: https://github.com/Ethel-Ogallo/Ship_Detection_DeepLearning
       title: "Ship Object Detection"
       image: "images/project/ship.png"
-      description: "Built a deep learning workflow for detecting ships in SAR imagery, comparing 3 different deep learning models."
+      description: "Developed a deep learning workflow for detecting ships in SAR imagery, comparing 3 different deep learning models."
       categories: [Deep Learning for Computer Vision]
       author: "Semester 3"
       
