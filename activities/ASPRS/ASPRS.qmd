@@ -1,0 +1,46 @@
+---
+title: "ASPRS International Technical Symposium "
+layout: default
+image: "logo.png"
+description: "Presentation of PySARFlow, an open-source Python library designed to simplify Synthetic Aperture Radar (SAR) data processing workflows, at the ASPRS 2025 International Technical Symposium."
+categories: [Remote Sensing, SAR, Open Source, Python]
+---
+
+## Introduction
+
+From **27–30 October 2025**, I participated in the **ASPRS International Technical Symposium** under the theme **Active Remote Sensing**. Together with *Rabina Twayana, Omowonuola Molayosi Akintola, and Beatriz Peres*, we presented our project ***PySARFlow: An Open-Source Python Library for SAR Data Processing*****.**
+
+**Project Resources**
+
+**PyPI Package:** <https://pypi.org/project/pysarflow/>\
+**Documentation:** <https://rabinatwayana.github.io/pysarflow/>\
+**GitHub Repository:** <https://github.com/rabinatwayana/pysarflow>\
+**Conference Session Recording:** <https://community.asprs.org/2025symposium/symposium-program/technical-sessions/2802>
+
+## **Abstract**
+
+Synthetic Aperture Radar (SAR) data has become increasingly valuable for environmental monitoring, disaster management, and geospatial research. However, its processing remains complex, often requiring specialized desktop tools such as ESA SNAP, that pose significant barriers for students, researchers, and non-experts. To address these challenges, we introduce PySARFlow, an open-source Python library designed to streamline SAR data preprocessing and analysis. Built on the esa-snappy library, a wrapper for the SNAP Java engine, PySARFlow provides similar robust functionality available through the SNAP Desktop application while offering a Python-based environment for greater accessibility, and integration with modern geospatial pipelines.
+
+The package architecture separates the SLC and GRD pre-processing standard workflows into individual Python modules to enhance usability and maintainability. These modules cover essential steps such as orbit file application, coregistration, radiometric calibration, speckle filtering, terrain correction, interferometric processing, and geocoding, while producing outputs that remain fully compatible with widely used geospatial data formats and pipelines.Recognizing SAR data processing complexity and that multi-step workflows often overwhelm beginners, PySARFlow offers simplified, ready-to-use processing chains for Sentinel-1 GRD and SLC data. Rather than requiring users to configure individual operators step-by-step, our package provides complete workflows for real-world applications, lowering entry barriers for non-experts and enhancing automation for advanced users.
+
+To demonstrate its utility, PySARFlow has been applied in two distinct case studies: (1) Earthquake displacement mapping using Sentinel-1 SLC products, where interferometric workflows were automated to estimate displacement values for the Morocco Earthquake in 2023, (2) Flood mapping in Valencia, Spain (2024) using Sentinel-1 GRD data, with image classification into Flood, Non-flood, and Permanent Water classes.
+
+By bridging the gap between desktop-based SAR processing and Python-driven geospatial workflows, PySARFlow empowers a broader community to harness the potential of SAR data for real-world applications.
+
+## **Presentation**
+
+<iframe src="28_asprs_pysarflow.pdf" width="100%" height="500px" style="border: none;">
+
+This browser does not support PDFs. Please download the PDF to view it: <a href="files/28_asprs_pysarflow.pdf">Download PDF</a>
+
+</iframe>
+
+**Event Highlight:**
+
+![](28_online.jpeg){fig-align="center"}
+
+**Certificate:**
+
+![](28_certificate.png){fig-align="center"}
+
+*Note: The certificate was issued under one team member’s name, but it represents the collective contribution of the entire group.*
