@@ -36,10 +36,10 @@ listing:
       categories: [Deep Learning for Computer Vision]
       author: "Semester 3"
       
-    - path: https://github.com/Ethel-Ogallo/UBS_ERSIP/blob/main/Final%20Project/Activity_3/patter_spectrum2.ipynb
+    - path: https://github.com/Ethel-Ogallo/Efficient_Remotes_Sensing_Image_Processing/tree/main/Final%20Project
       title: "Tree-based Image Processing"
       image: "images/project/ersip.png"
-      description: "Applied tree-based algorithms for image analysis to efficiently detect large building structures in remote sensing imagery."
+      description: "Activity3: Applied tree-based algorithms for image analysis to efficiently detect large building structures in remote sensing imagery."
       categories: [Efficient Remote Sensing Image Processing]
       author: "Semester 3"
 
