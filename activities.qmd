@@ -2,6 +2,7 @@
 title: ""
 listing:
   contents:
+    - activities/ASPRS
     - activities/ubs_ss
     - activities/bonn_hackathon
     - activities/internship
