@@ -2,24 +2,67 @@
 title: ""
 listing:
   contents:
-    - activities/ASPRS
-    - activities/ubs_ss
-    - activities/bonn_hackathon
-    - activities/internship
-    - activities/copernicus_hubs
-    - activities/spain_ss
+    - path: https://github.com/Ethel-Ogallo/ICPR-Contest-2026
+      title: "ICPR 2026 Competition"
+      image: "images/project/icprs.png"
+      description: "Participation in the ICPR 2026 competition on Kaggle, Beyond Visible Spectrum: AI for Agriculture. The project explores self-supervised learning (SSL) methods to improve crop disease classification using multispectral Sentinel satellite imagery."
+
+    - path: activities/ASPRS/ASPRS.qmd
+      title: "ASPRS International Technical Symposium"
+      layout: default
+      image: "activities/ASPRS/logo.png"
+      description: "Presentation of PySARFlow, an open-source Python library designed to simplify Synthetic Aperture Radar (SAR) data processing workflows, at the ASPRS 2025 International Technical Symposium."
+      categories: [Remote Sensing, SAR, Open Source, Python]
+
+    - path: activities/ubs_ss/AI4EO.qmd
+      title: "Summer School II"
+      layout: default
+      image: "activities/ubs_ss/logo.png"
+      description: "Attended the AI4EO 2025 Symposium in Rennes, France that focused on AI applications for Earth observation through keynotes, posters, and networking with experts, researchers and students."
+      categories: [Machine Learning, Earth Observation, AI]
+
+    - path: activities/bonn_hackathon/MLESM.qmd
+      title: "Machine Learning for Earth System Modelling Hackathon"
+      layout: default
+      image: "activities/bonn_hackathon/logo.png"
+      description: "This hackathon at the University of Bonn explored machine learning applications for Earth System Modeling. Participants worked with satellite and observational data to develop predictive models for environmental variables such as precipitation. Using AI frameworks and high-performance computing, our team fine-tuned models, evaluated performance, and implemented innovative solutions. The event fostered collaboration and hands-on experience, bridging data science, remote sensing, and climate modeling for actionable environmental insights."
+      categories: [Machine Learning, HPCs, AI]
+
+    - path: activities/internship/ZFL.qmd
+      title: "Remote Sensing Internship"
+      layout: default
+      image: "activities/internship/zfl logo.png"
+      description: "This report summarizes my internship at the Center for Remote Sensing of Land Surfaces (ZFL) in Bonn, Germany, within the WetlandHealth4UNgoals project. It covers my tasks, outcomes, challenges and lessons learnt.The internship provided practical experience in remote sensing workflows, environmental monitoring, and the application of machine learning techniques for ecosystem assessment." 
+      categories: [Machine Learning, Earth Observation, Remote Sensing]
+
+    - path: activities/copernicus_hubs/copernicus_hubs.qmd
+      title: "Copernicus Hubs and Institutions"
+      layout: default
+      image: "activities/copernicus_hubs/img9.jpg"
+      description: "This report documents an excursion to key institutions within the EU Copernicus Data Space Ecosystem (CDSE), including the Earth Observation Data Centre (EODC) at the University of Vienna and the Environmental Agency (UBV). The visit provided firsthand exposure to the infrastructure supporting Europe's Earth observation capabilities, highlighting advancements in satellite data processing, storage solutions, and collaborative research initiatives aimed at enhancing environmental monitoring and climate resilience."
+      categories: [Big Data, Cloud computing, Open Data]
+
+    - path: activities/spain_ss/digital_twins.qmd
+      title: "Summer School I"
+      layout: default
+      image: "activities/spain_ss/images/ss logo.jpg"
+      description: "This program focused on building smart and sustainable cities through hands-on exploration of Digital Twin technologies. We engaged in 3D modeling, GeoAI applications, and interactive simulations to understand urban systems. The activities emphasized practical skills, interdisciplinary collaboration, and innovative approaches for visualizing and analyzing city infrastructure, equipping attendees with insights and tools to support future urban planning and sustainable development projects."
+      categories: [Digital Twins, 3D Modeling , GeoAI]
+
     - path: https://storymaps.arcgis.com/stories/da2b859e2c8a47f48997b73c967159eb 
       title: "Blended Intensive Programme (BIP)"
       image: "images/img5.jpg"
       description: "This digital narrative showcases the outcomes of the BIP, Quantifying Vulnerability to Natural Hazards, held in Romania focusing on assessing vulnerability to natural hazards."
-       
+
   sort: none
   type: grid
   image-height: auto
   categories: false
+
 page-layout: full
 title-block-banner: true
 layout: default
+
 format:
   html:
     link-external-newwindow: true
