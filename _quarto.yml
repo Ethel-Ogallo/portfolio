@@ -14,7 +14,7 @@ website:
         text: Projects
       - href: activities.qmd
         text: Activities
-      - href: resume2.qmd
+      - href: resume.qmd
         text: CV
     pinned: true
 
