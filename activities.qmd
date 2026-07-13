@@ -2,7 +2,7 @@
 title: ""
 listing:
   contents:
-    - path: https://github.com/Ethel-Ogallo/ICPR-Contest-2026
+    - path: https://github.com/Omowonuola-Akintola/ICPR-Contest-2026
       title: "ICPR 2026 Competition"
       image: "images/project/icprs.png"
       description: "Participation in the ICPR 2026 competition on Kaggle, Beyond Visible Spectrum: AI for Agriculture. The project explores self-supervised learning (SSL) methods to improve crop disease classification using multispectral Sentinel satellite imagery."
