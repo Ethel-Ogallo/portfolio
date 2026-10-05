@@ -1,0 +1,32 @@
+---
+title: "MSc. Thesis"
+layout: default
+image: "images/project/thesis_logo.png"
+draft: false
+description: "Towards Super-resolution of Thermal Infrared Imagery to assess Temperature Spatial Heterogeneity in Rivers"
+categories: [Deep Learning, Super-resolution, TIR]
+---
+
+## Abstract
+
+Monitoring river thermal heterogeneity involves using thermal infrared remote sensing to provide continuous observations of river temperature patterns. However, these observations are constrained by the trade-off between spatial and temporal resolution, limiting their ability to capture these complex river thermal patterns consistently. Super-resolution provides a potential solution of bridging this gap by recovering high-resolution imagery from coarse-resolution imagery. This thesis investigates the use of deep learning-based super-resolution using airborne thermal infrared (TIR) imagery (0.36−1.6m spatial resolution) from 11 field campaigns over the Rhône River in France and the corresponding Landsat thermal infrared imagery (30m spatial resolution). First, four state-of-the-art single image super-resolution models were benchmarked to evaluate their performance when directly applied to TIR imagery. Second, the selected baseline is extended by integrating auxiliary spatial information, a temporal weighted loss function and high- resolution semantic conditioning to enhance reconstruction of high-quality images. Finally, by considering the river as a spatial sequence, a sequential super-resolution technique was evaluated where contextual information from neighbouring patches is utilised within the reconstruction task. Benchmarking demonstrated that transformer-based models achieve strong pixel-level reconstruction performance, whereas the generative adversarial network-based model produced outputs with higher perceptual quality. The proposed guided super-resolution model significantly improved reconstruction from the baseline, reducing the water-region mean absolute error from 2.52°C to 1.74°C. Though the sequential super-resolution approach did not outperform the guided single-image super-resolution in terms of image-level reconstruction metrics, it demonstrated potential to preserve longitudinal thermal continuity along the river profile. Hence, the findings of this thesis provide a foundation for future research on guided single-image super-resolution on real- world thermal infrared imagery and investigating sequential super-resolution approaches for plausible reconstruction that are more physically consistent to river thermal dynamics.
+
+**Keywords: River thermal heterogeneity, thermal infrared remote sensing, guided super-resolution**
+
+**Resources:** <https://github.com/Ethel-Ogallo/Superresolution-TIR>
+
+## Defense
+
+<iframe src="Ogallo_SR_Thesis_Presentation.pdf" width="100%" height="800px" style="border: none;">
+
+This browser does not support PDFs. Please download the PDF to view it: <a href="files/Ogallo_SR_Thesis_Presentation.pdf">Download PDF</a>
+
+</iframe>
+
+## Thesis
+
+<iframe src="Ogallo_MasterThesis.pdf" width="100%" height="800px" style="border: none;">
+
+This browser does not support PDFs. Please download the PDF to view it: <a href="files/Ogallo_MasterThesis.pdf">Download PDF</a>
+
+</iframe>
