@@ -15,14 +15,14 @@ listing:
   contents:
 
 
-# ----------------- Semester 4 cards ----------------------------------
+# ----------------- Masters Thesis cards ----------------------------------
     - path: projects/Thesis/Masters_thesis.qmd
-      title: "MSc. Thesis"
+      title: "Masters' Thesis"
       layout: default
       image: "images/project/thesis_logo.png"
       description: "Towards Super-resolution of Thermal Infrared Imagery to assess Temperature Spatial Heterogeneity in Rivers"
       categories: [Super-resolution, Deep Learning, TIR]
-      author: "Semester 4 "
+      author: "Semester 4"
       
 # ----------------- Semester 3 cards ----------------------------------
     - path: https://github.com/Ethel-Ogallo/bigearthnet-dl-distributed/tree/master
