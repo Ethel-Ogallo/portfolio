@@ -1,5 +1,6 @@
 ---
 title: "Ethel Ogallo"
+subtitle: "Earth Observation | GeoAI"
 image: images/profile_pic6.jpg
 about:
   template: trestles
@@ -16,6 +17,8 @@ about:
       href: mailto:ogalloethel@gmail.com      
 ---
 
-I am an Earth Observation and GeoAI researcher with professional experience in geostatistics, public health and environmental management. I have recently completed the ([Copernicus Master in Digital Earth](https://master-cde.eu/)), specializing in GeoData Science, where my research involved super-resolution, using deep learning, of real-world thermal infrared imagery to asses temperature spatial heterogeneity in rivers.  
+I am a geoinformatics professional with about 4 years experience ranging from environmental monitoring to public health. With a masters in GeoData Science, my work falls in the intersection of artificial intelligence and Earth Observation. 
 
-My research interests lie at the intersection of artificial intelligence and Earth Observation. My experience spans academic research, public health data science, geostatistics and remote sensing; working with organisations on solutions ranging from wetland monitoring to healthcare accessibility. Beyond research, I actively engage with the broader geospatial community for example through building open-source tools and automated EO workflows. 
+My goal is to build practical solutions for real-world environmental problems and as such I am also interested in trustworthy GeoAI and combining domain knowledge with machine learning models to ensure not only accuracy but reliable in practice. 
+
+Feel free to look through my work at the Projects or Activities tab. If our interests align, I’d love to connect!

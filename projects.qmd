@@ -15,83 +15,80 @@ listing:
   contents:
 
 
-# ----------------- Masters Thesis cards ----------------------------------
+# ----------------- GeoAI  ----------------------------------
     - path: projects/Thesis/Masters_thesis.qmd
       title: "Masters' Thesis"
       layout: default
       image: "images/project/thesis_logo.png"
       description: "Towards Super-resolution of Thermal Infrared Imagery to assess Temperature Spatial Heterogeneity in Rivers"
       categories: [Super-resolution, Deep Learning, TIR]
-      author: "Semester 4"
-      
-# ----------------- Semester 3 cards ----------------------------------
-    - path: https://github.com/Ethel-Ogallo/bigearthnet-dl-distributed/tree/master
-      title: "Distributed Deep learning"
-      image: "images/project/bigearthnet.png"
-      description: "Implemented scalable deep learning workflows on AWS using Petastorm and TensorFlow, enabling efficient training on Bigearthnet dataset."
-      categories: [Big Data]
-      author: "Semester 3"
-      
+      author: "GeoAI"
+
     - path: https://github.com/Ethel-Ogallo/multitask_regression_deeplearning
       title: "Multitask Regression on DigitalTyphoon data"
       image: "images/project/typhoon.png"
       description: "Developed a multitask regression pipeline using ResNet50 to predict multiple continuous targets simultaneously from image data"
-      categories: [Deep Learning for Computer Vision]
-      author: "Semester 3"
-
+      categories: [Deep Learning, Climate]
+      author: "GeoAI"
+      
     - path: https://github.com/Ethel-Ogallo/Ship_Detection_DeepLearning
       title: "Ship Object Detection"
       image: "images/project/ship.png"
       description: "Developed a deep learning workflow for detecting ships in SAR imagery, comparing 3 different deep learning models."
-      categories: [Deep Learning for Computer Vision]
-      author: "Semester 3"
+      categories: [Deep Learning, Object Detection]
+      author: "GeoAI"
       
-    - path: https://github.com/Ethel-Ogallo/Efficient_Remotes_Sensing_Image_Processing/tree/main/Final%20Project
-      title: "Tree-based Image Processing"
-      image: "images/project/ersip.png"
-      description: "Activity3: Applied tree-based algorithms for image analysis to efficiently detect large building structures in remote sensing imagery."
-      categories: [Efficient Remote Sensing Image Processing]
-      author: "Semester 3"
+    - path: https://github.com/Ethel-Ogallo/UBS_ML/tree/main/Projects
+      title: "Machine Learning: Crop Yield Estimation"
+      image: "images/project/crop.png"
+      description: "This project develops a machine learning workflow for a supervised regression task."
+      categories: [Machine Learning, Agriculture]
+      author: "GeoAI"           
+
+# ----------------- Open-source and Cloud EO ----------------------------------
+    - path: https://github.com/Ethel-Ogallo/bigearthnet-dl-distributed/tree/master
+      title: "Distributed Deep learning"
+      image: "images/project/bigearthnet.png"
+      description: "Implemented scalable deep learning workflows on AWS using Petastorm and TensorFlow, enabling efficient training on Bigearthnet dataset."
+      categories: [HPC, Deep Learning]
+      author: "Open-source and Cloud EO"
 
     - path: https://github.com/Ethel-Ogallo/UBS_BigData/tree/master
       title: "Distributed Machine Learning"
       image: "images/project/fractal.png"
       description: "Implemented scalable machine learning workflows on AWS using Apache Spark to process and analyze Fractal datastet efficiently"
-      categories: [Big Data]
-      author: "Semester 3"
-
-    - path: https://github.com/Ethel-Ogallo/UBS_ML/tree/main/Projects
-      title: "Machine Learning: Crop Yield Estimation"
-      image: "images/project/crop.png"
-      description: "This project develops a machine learning workflow for a supervised regression task."
-      categories: [Machine Learning]
-      author: "Semester 3"
-
-# --------------- Semester 2 cards ----------------------
+      categories: [HPC, Machine Learning]
+      author: "Open-source and Cloud EO"
+      
+    - path: https://github.com/rabinatwayana/pysarflow
+      title: "PySARFlow"
+      image: "images/project/img7.png"
+      description: "PySARFlow is an open-source Python library designed to streamline the preprocessing of Synthetic Aperture Radar (SAR) data."
+      categories: [Python library]
+      author: "Open-source and Cloud EO"
+                                          
+# ----------------- Applied Remote Sensing ----------------------------------
+    - path: https://github.com/Ethel-Ogallo/Efficient_Remotes_Sensing_Image_Processing/tree/main/Final%20Project
+      title: "Tree-based Image Processing"
+      image: "images/project/ersip.png"
+      description: "Activity3: Applied tree-based algorithms for image analysis to efficiently detect large building structures in remote sensing imagery."
+      categories: [Image Processing]
+      author: "Applied Remote Sensing"
 
     - path: projects/Semester 2/application_dev(EO)/IP_EO.qmd
       title: "Agricultural Land Cover Change Detection using SITS in eCognition"
       layout: default
       image: "images/project/img9.png"
       description: "This project develops a GUI within eCognition to facilitate object-based time series analysis for detecting agricultural land cover changes."
-      categories: [Application Development (Earth Observation)]
-      author: "Semester 2"
-
-    - path: https://github.com/rabinatwayana/pysarflow
-      title: "PySARFlow"
-      image: "images/project/img7.png"
-      description: "PySARFlow is an open-source Python library designed to streamline the preprocessing of Synthetic Aperture Radar (SAR) data."
-      categories: [Practice Software development(Python)]
-      author: "Semester 2"
+      categories: [Satellite Image Time Series]
+      author: "Applied Remote Sensing"
 
     - path: https://github.com/Ethel-Ogallo/Wetland_Inundation_DE-Africa
       title: "Wetland Inundation"
       image: "images/project/img8.jpg"
       description: "This project utilizes Digital Earth Africa's STAC catalog to assess wetland dynamics in the Zambezi Delta, Mozambique."
-      categories: [Analysis and Modelling (RS)]
-      author: "Semester 2"
-
-# --------- Semester 1 cards ---------------------------
+      categories: [Data Cube, STAC]
+      author: "Applied Remote Sensing"
 
     - path: projects/Semester 1/Spatial databases/spatial_databases.qmd
       title: "Design and Implementation of a Spatial Database"
@@ -99,15 +96,15 @@ listing:
       image: "images/project/afro_nation.jpg"
       description: "This project involved designing and implementing a spatial database backend for a WebGIS application supporting a city festival."
       categories: [Spatial Databases]
-      author: "Semester 1"
-
+      author: "Applied Remote Sensing"
+                
     - path: projects/Semester 1/Digital earth/DE_projects.qmd
       title: "Big Data"
       layout: default
       image: "images/project/main_logo.png"
       description: "This project highlights the use of cloud-based platforms for big data analytics in Earth Observation."
-      categories: [Digital Earth-Big Earth Data Concepts]
-      author: "Semester 1"
+      categories: [GEE, Semantic Data Cube]
+      author: "Applied Remote Sensing"
 
     - path: projects/Semester 1/SDI/DEFGA.qmd
       title: "Spatial Data Infrastructure (SDI) for Gender Employment Trends in Austria"
@@ -115,29 +112,29 @@ listing:
       image: "images/project/sdi_logo.jpg"
       description: "This project focuses on designing a Spatial Data Infrastructure (SDI) to integrate and visualize gender-disaggregated employment data across Austria."
       categories: [SDI]
-      author: "Semester 1"
+      author: "Applied Remote Sensing"
 
     - path: projects/Semester 1/Spatial thinking/Change_detection_OBIA.qmd
       title: "OBIA for estimating building density"
       layout: default
       image: "images/project/kakuma.png"
       description: "This project employs Object-Based Image Analysis (OBIA) to assess building density patterns, focusing on the Kakuma refugee camp in Kenya."
-      categories: [Spatial Thinking]
-      author: "Semester 1"
+      categories: [OBIA; Humanitarian GIS]
+      author: "Applied Remote Sensing"
 
     - path: projects/Semester 1/Remote sensing/radar.qmd
       title: "Assessing Post-Eruption Surface Displacement with Sentinel-1 InSAR"
       layout: default
       image: "images/project/lava_lake.jpg"
       description: "This project applies Interferometric Synthetic Aperture Radar (InSAR) using Sentinel-1 data to assess ground deformation."
-      categories: [Advanced Remote Sensing]
-      author: "Semester 1"
+      categories: [Radar]
+      author: "Applied Remote Sensing"
 
     - path: projects/Semester 1/Remote sensing/classification.qmd
       title: "Object Features For Classification in Remote Sensing"
       layout: default
       image: "images/project/logo.JPG"
       description: "This project applies object-based image analysis (OBIA) in eCognition to move beyond traditional pixel-based methods."
-      categories: [Advanced Remote Sensing]
-      author: "Semester 1"
+      categories: [OBIA]
+      author: "Applied Remote Sensing"
 ---
